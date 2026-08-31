@@ -1,0 +1,648 @@
+/opt/pytorch/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+============================================================
+NutriVision — Fine-Tuned Inference
+============================================================
+  Ablation target: qformer
+  Checkpoint:      best
+  Adapter path:    /home/ubuntu/nutrivision/checkpoints/lora_flan-t5-xl_qformer/best
+
+Loading base model: Salesforce/blip2-flan-t5-xl...
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 3057.07it/s]
+Loading weights:   0%|          | 0/1289 [00:00<?, ?it/s]Loading weights:   1%|          | 12/1289 [00:00<01:24, 15.17it/s]Loading weights:   1%|          | 16/1289 [00:01<01:49, 11.63it/s]Loading weights:   2%|▏         | 21/1289 [00:01<01:51, 11.42it/s]Loading weights:   2%|▏         | 23/1289 [00:01<01:43, 12.28it/s]Loading weights:   2%|▏         | 26/1289 [00:02<03:01,  6.96it/s]Loading weights:   2%|▏         | 30/1289 [00:03<02:49,  7.42it/s]Loading weights:   3%|▎         | 35/1289 [00:03<02:33,  8.19it/s]Loading weights:   3%|▎         | 40/1289 [00:04<03:05,  6.74it/s]Loading weights:   3%|▎         | 44/1289 [00:05<02:59,  6.93it/s]Loading weights:   4%|▍         | 49/1289 [00:05<02:34,  8.02it/s]Loading weights:   4%|▍         | 54/1289 [00:06<03:17,  6.24it/s]Loading weights:   5%|▍         | 59/1289 [00:07<02:46,  7.38it/s]Loading weights:   5%|▍         | 60/1289 [00:07<02:44,  7.46it/s]Loading weights:   5%|▍         | 64/1289 [00:07<02:31,  8.11it/s]Loading weights:   5%|▌         | 68/1289 [00:08<03:23,  5.99it/s]Loading weights:   6%|▌         | 73/1289 [00:09<02:46,  7.32it/s]Loading weights:   6%|▌         | 74/1289 [00:09<02:43,  7.43it/s]Loading weights:   6%|▌         | 78/1289 [00:09<02:21,  8.59it/s]Loading weights:   6%|▌         | 79/1289 [00:09<02:32,  7.93it/s]Loading weights:   6%|▋         | 82/1289 [00:10<03:23,  5.92it/s]Loading weights:   7%|▋         | 86/1289 [00:11<03:01,  6.63it/s]Loading weights:   7%|▋         | 91/1289 [00:11<02:37,  7.63it/s]Loading weights:   7%|▋         | 96/1289 [00:12<03:04,  6.46it/s]Loading weights:   8%|▊         | 100/1289 [00:13<02:53,  6.83it/s]Loading weights:   8%|▊         | 105/1289 [00:13<02:32,  7.77it/s]Loading weights:   8%|▊         | 108/1289 [00:14<03:26,  5.72it/s]Loading weights:   9%|▉         | 114/1289 [00:15<02:39,  7.38it/s]Loading weights:   9%|▉         | 115/1289 [00:15<02:36,  7.52it/s]Loading weights:   9%|▉         | 119/1289 [00:15<02:18,  8.44it/s]Loading weights:   9%|▉         | 120/1289 [00:15<02:26,  8.01it/s]Loading weights:   9%|▉         | 121/1289 [00:16<04:22,  4.45it/s]Loading weights:  10%|▉         | 128/1289 [00:17<02:36,  7.42it/s]Loading weights:  10%|█         | 133/1289 [00:17<02:20,  8.26it/s]Loading weights:  10%|█         | 134/1289 [00:17<02:19,  8.30it/s]Loading weights:  11%|█         | 138/1289 [00:18<03:03,  6.28it/s]Loading weights:  11%|█         | 142/1289 [00:19<02:46,  6.90it/s]Loading weights:  11%|█▏        | 147/1289 [00:19<02:22,  8.00it/s]Loading weights:  11%|█▏        | 148/1289 [00:19<02:21,  8.09it/s]Loading weights:  12%|█▏        | 149/1289 [00:20<04:13,  4.49it/s]Loading weights:  12%|█▏        | 156/1289 [00:21<02:35,  7.31it/s]Loading weights:  12%|█▏        | 161/1289 [00:21<02:16,  8.26it/s]Loading weights:  13%|█▎        | 162/1289 [00:21<02:18,  8.13it/s]Loading weights:  13%|█▎        | 166/1289 [00:22<02:59,  6.25it/s]Loading weights:  13%|█▎        | 170/1289 [00:23<02:45,  6.74it/s]Loading weights:  14%|█▎        | 175/1289 [00:23<02:23,  7.77it/s]Loading weights:  14%|█▍        | 180/1289 [00:24<02:52,  6.44it/s]Loading weights:  14%|█▍        | 184/1289 [00:25<02:38,  6.97it/s]Loading weights:  15%|█▍        | 189/1289 [00:25<02:23,  7.66it/s]Loading weights:  15%|█▌        | 194/1289 [00:26<02:46,  6.59it/s]Loading weights:  15%|█▌        | 198/1289 [00:27<02:36,  6.97it/s]Loading weights:  16%|█▌        | 203/1289 [00:27<02:18,  7.87it/s]Loading weights:  16%|█▌        | 206/1289 [00:28<03:08,  5.75it/s]Loading weights:  16%|█▋        | 212/1289 [00:28<02:26,  7.34it/s]Loading weights:  17%|█▋        | 213/1289 [00:29<02:25,  7.40it/s]Loading weights:  17%|█▋        | 217/1289 [00:29<02:06,  8.46it/s]Loading weights:  17%|█▋        | 218/1289 [00:29<02:06,  8.43it/s]Loading weights:  17%|█▋        | 219/1289 [00:30<04:01,  4.43it/s]Loading weights:  18%|█▊        | 226/1289 [00:30<02:26,  7.27it/s]Loading weights:  18%|█▊        | 231/1289 [00:31<02:10,  8.14it/s]Loading weights:  18%|█▊        | 234/1289 [00:31<01:48,  9.71it/s]Loading weights:  18%|█▊        | 236/1289 [00:32<02:57,  5.94it/s]Loading weights:  19%|█▊        | 240/1289 [00:32<02:35,  6.74it/s]Loading weights:  19%|█▉        | 242/1289 [00:33<02:16,  7.66it/s]Loading weights:  19%|█▉        | 245/1289 [00:33<02:17,  7.58it/s]Loading weights:  19%|█▉        | 248/1289 [00:34<03:19,  5.22it/s]Loading weights:  20%|█▉        | 254/1289 [00:34<02:23,  7.23it/s]Loading weights:  20%|█▉        | 256/1289 [00:35<02:06,  8.17it/s]Loading weights:  20%|██        | 259/1289 [00:35<02:06,  8.15it/s]Loading weights:  20%|██        | 261/1289 [00:35<01:57,  8.73it/s]Loading weights:  20%|██        | 264/1289 [00:36<02:56,  5.79it/s]Loading weights:  21%|██        | 268/1289 [00:36<02:33,  6.66it/s]Loading weights:  21%|██        | 271/1289 [00:37<02:02,  8.31it/s]Loading weights:  21%|██        | 273/1289 [00:37<02:16,  7.47it/s]Loading weights:  21%|██▏       | 276/1289 [00:38<03:20,  5.06it/s]Loading weights:  22%|██▏       | 282/1289 [00:38<02:22,  7.07it/s]Loading weights:  22%|██▏       | 286/1289 [00:39<01:45,  9.50it/s]Loading weights:  22%|██▏       | 288/1289 [00:39<02:10,  7.68it/s]Loading weights:  22%|██▏       | 290/1289 [00:40<03:18,  5.03it/s]Loading weights:  23%|██▎       | 296/1289 [00:40<02:21,  7.02it/s]Loading weights:  23%|██▎       | 301/1289 [00:41<02:09,  7.61it/s]Loading weights:  24%|██▎       | 304/1289 [00:42<02:52,  5.71it/s]Loading weights:  24%|██▍       | 310/1289 [00:42<02:12,  7.37it/s]Loading weights:  24%|██▍       | 315/1289 [00:43<01:58,  8.20it/s]Loading weights:  25%|██▍       | 317/1289 [00:43<01:51,  8.72it/s]Loading weights:  25%|██▍       | 320/1289 [00:44<02:37,  6.17it/s]Loading weights:  25%|██▌       | 324/1289 [00:44<02:26,  6.59it/s]Loading weights:  26%|██▌       | 329/1289 [00:45<02:05,  7.65it/s]Loading weights:  26%|██▌       | 334/1289 [00:46<02:26,  6.51it/s]Loading weights:  26%|██▋       | 339/1289 [00:46<02:06,  7.49it/s]Loading weights:  27%|██▋       | 345/1289 [00:47<02:17,  6.85it/s]Loading weights:  27%|██▋       | 349/1289 [00:48<02:09,  7.25it/s]Loading weights:  27%|██▋       | 350/1289 [00:49<03:17,  4.75it/s]Loading weights:  28%|██▊       | 358/1289 [00:49<02:10,  7.11it/s]Loading weights:  28%|██▊       | 363/1289 [00:50<02:24,  6.40it/s]Loading weights:  28%|██▊       | 367/1289 [00:51<02:14,  6.85it/s]Loading weights:  29%|██▊       | 370/1289 [00:52<02:49,  5.41it/s]Loading weights:  29%|██▉       | 376/1289 [00:52<02:10,  7.01it/s]Loading weights:  29%|██▉       | 377/1289 [00:52<02:07,  7.13it/s]Loading weights:  29%|██▉       | 378/1289 [00:53<03:22,  4.50it/s]Loading weights:  30%|██▉       | 385/1289 [00:54<02:08,  7.06it/s]Loading weights:  30%|███       | 390/1289 [00:55<02:27,  6.10it/s]Loading weights:  31%|███       | 394/1289 [00:55<02:16,  6.56it/s]Loading weights:  31%|███       | 397/1289 [00:56<02:50,  5.24it/s]Loading weights:  31%|███▏      | 403/1289 [00:57<02:12,  6.70it/s]Loading weights:  32%|███▏      | 408/1289 [00:58<02:23,  6.14it/s]Loading weights:  32%|███▏      | 412/1289 [00:58<02:12,  6.60it/s]Loading weights:  32%|███▏      | 417/1289 [00:59<02:25,  5.99it/s]Loading weights:  33%|███▎      | 421/1289 [01:00<02:16,  6.36it/s]Loading weights:  33%|███▎      | 426/1289 [01:01<02:23,  5.99it/s]Loading weights:  33%|███▎      | 430/1289 [01:01<02:12,  6.47it/s]Loading weights:  34%|███▎      | 435/1289 [01:02<02:24,  5.89it/s]Loading weights:  34%|███▍      | 439/1289 [01:03<02:11,  6.49it/s]Loading weights:  34%|███▍      | 444/1289 [01:04<02:24,  5.85it/s]Loading weights:  35%|███▍      | 448/1289 [01:04<02:14,  6.23it/s]Loading weights:  35%|███▌      | 453/1289 [01:05<02:21,  5.90it/s]Loading weights:  35%|███▌      | 457/1289 [01:06<02:11,  6.34it/s]Loading weights:  36%|███▌      | 462/1289 [01:07<02:21,  5.86it/s]Loading weights:  36%|███▌      | 466/1289 [01:07<02:08,  6.41it/s]Loading weights:  36%|███▋      | 468/1289 [01:08<02:53,  4.74it/s]Loading weights:  37%|███▋      | 475/1289 [01:08<01:58,  6.84it/s]Loading weights:  37%|███▋      | 480/1289 [01:09<02:12,  6.11it/s]Loading weights:  38%|███▊      | 484/1289 [01:10<02:03,  6.51it/s]Loading weights:  38%|███▊      | 489/1289 [01:11<02:20,  5.68it/s]Loading weights:  38%|███▊      | 494/1289 [01:11<01:57,  6.79it/s]Loading weights:  38%|███▊      | 495/1289 [01:12<01:54,  6.92it/s]Loading weights:  39%|███▊      | 498/1289 [01:12<02:18,  5.72it/s]Loading weights:  39%|███▉      | 502/1289 [01:13<02:04,  6.33it/s]Loading weights:  39%|███▉      | 507/1289 [01:14<02:14,  5.81it/s]Loading weights:  40%|███▉      | 511/1289 [01:14<02:04,  6.27it/s]Loading weights:  40%|████      | 516/1289 [01:15<02:15,  5.69it/s]Loading weights:  40%|████      | 520/1289 [01:16<02:04,  6.15it/s]Loading weights:  41%|████      | 525/1289 [01:17<02:11,  5.81it/s]Loading weights:  41%|████      | 529/1289 [01:17<02:00,  6.29it/s]Loading weights:  41%|████▏     | 534/1289 [01:18<02:09,  5.82it/s]Loading weights:  42%|████▏     | 538/1289 [01:19<01:58,  6.36it/s]Loading weights:  42%|████▏     | 543/1289 [01:20<02:07,  5.85it/s]Loading weights:  42%|████▏     | 547/1289 [01:20<01:57,  6.33it/s]Loading weights:  43%|████▎     | 552/1289 [01:22<02:37,  4.69it/s]Loading weights:  43%|████▎     | 557/1289 [01:26<04:37,  2.64it/s]Loading weights:  43%|████▎     | 558/1289 [01:26<05:06,  2.38it/s]Loading weights:  50%|█████     | 648/1289 [01:27<00:23, 27.17it/s]Loading weights:  52%|█████▏    | 674/1289 [01:27<00:18, 33.52it/s]Loading weights:  54%|█████▍    | 695/1289 [01:27<00:15, 38.92it/s]Loading weights:  55%|█████▌    | 712/1289 [01:27<00:13, 42.09it/s]Loading weights:  56%|█████▋    | 726/1289 [01:28<00:11, 48.09it/s]Loading weights:  57%|█████▋    | 739/1289 [01:28<00:10, 51.23it/s]Loading weights:  58%|█████▊    | 750/1289 [01:28<00:09, 56.07it/s]Loading weights:  59%|█████▉    | 761/1289 [01:28<00:08, 60.96it/s]Loading weights:  60%|█████▉    | 771/1289 [01:28<00:08, 59.12it/s]Loading weights:  61%|██████    | 785/1289 [01:28<00:07, 68.23it/s]Loading weights:  62%|██████▏   | 796/1289 [01:28<00:07, 67.76it/s]Loading weights:  63%|██████▎   | 808/1289 [01:29<00:06, 72.72it/s]Loading weights:  63%|██████▎   | 818/1289 [01:29<00:07, 65.76it/s]Loading weights:  64%|██████▍   | 826/1289 [01:30<00:16, 27.65it/s]Loading weights:  65%|██████▍   | 837/1289 [01:30<00:16, 27.57it/s]Loading weights:  65%|██████▌   | 842/1289 [01:31<00:22, 19.95it/s]Loading weights:  66%|██████▌   | 849/1289 [01:31<00:21, 20.75it/s]Loading weights:  66%|██████▌   | 853/1289 [01:31<00:20, 20.99it/s]Loading weights:  66%|██████▋   | 856/1289 [01:31<00:23, 18.63it/s]Loading weights:  67%|██████▋   | 861/1289 [01:32<00:21, 19.48it/s]Loading weights:  67%|██████▋   | 864/1289 [01:32<00:23, 18.10it/s]Loading weights:  68%|██████▊   | 873/1289 [01:33<00:32, 12.68it/s]Loading weights:  69%|██████▊   | 885/1289 [01:33<00:22, 18.01it/s]Loading weights:  69%|██████▉   | 888/1289 [01:34<00:29, 13.68it/s]Loading weights:  70%|██████▉   | 897/1289 [01:34<00:25, 15.42it/s]Loading weights:  70%|███████   | 903/1289 [01:34<00:22, 16.84it/s]Loading weights:  71%|███████   | 909/1289 [01:35<00:27, 14.07it/s]Loading weights:  71%|███████   | 911/1289 [01:35<00:27, 13.98it/s]Loading weights:  71%|███████▏  | 921/1289 [01:36<00:19, 18.84it/s]Loading weights:  72%|███████▏  | 924/1289 [01:36<00:27, 13.14it/s]Loading weights:  72%|███████▏  | 933/1289 [01:36<00:21, 16.36it/s]Loading weights:  73%|███████▎  | 935/1289 [01:37<00:21, 16.15it/s]Loading weights:  73%|███████▎  | 939/1289 [01:37<00:20, 16.78it/s]Loading weights:  73%|███████▎  | 945/1289 [01:37<00:23, 14.90it/s]Loading weights:  73%|███████▎  | 947/1289 [01:37<00:23, 14.60it/s]Loading weights:  74%|███████▍  | 957/1289 [01:38<00:20, 15.98it/s]Loading weights:  74%|███████▍  | 959/1289 [01:38<00:26, 12.68it/s]Loading weights:  75%|███████▌  | 969/1289 [01:39<00:17, 18.00it/s]Loading weights:  75%|███████▌  | 971/1289 [01:39<00:21, 15.05it/s]Loading weights:  76%|███████▌  | 975/1289 [01:39<00:18, 16.79it/s]Loading weights:  76%|███████▌  | 981/1289 [01:40<00:18, 16.45it/s]Loading weights:  76%|███████▋  | 983/1289 [01:40<00:21, 14.55it/s]Loading weights:  77%|███████▋  | 987/1289 [01:40<00:16, 17.83it/s]Loading weights:  77%|███████▋  | 993/1289 [01:40<00:18, 16.18it/s]Loading weights:  77%|███████▋  | 995/1289 [01:41<00:21, 13.56it/s]Loading weights:  78%|███████▊  | 1005/1289 [01:41<00:17, 16.10it/s]Loading weights:  78%|███████▊  | 1007/1289 [01:41<00:19, 14.77it/s]Loading weights:  79%|███████▉  | 1017/1289 [01:42<00:17, 15.57it/s]Loading weights:  79%|███████▉  | 1019/1289 [01:42<00:18, 14.64it/s]Loading weights:  80%|███████▉  | 1029/1289 [01:43<00:16, 16.08it/s]Loading weights:  80%|███████▉  | 1031/1289 [01:43<00:16, 15.25it/s]Loading weights:  81%|████████  | 1041/1289 [01:44<00:16, 14.83it/s]Loading weights:  81%|████████  | 1043/1289 [01:44<00:16, 15.22it/s]Loading weights:  82%|████████▏ | 1053/1289 [01:44<00:13, 16.94it/s]Loading weights:  82%|████████▏ | 1055/1289 [01:44<00:17, 13.57it/s]Loading weights:  83%|████████▎ | 1065/1289 [01:45<00:12, 17.54it/s]Loading weights:  83%|████████▎ | 1067/1289 [01:45<00:15, 14.06it/s]Loading weights:  84%|████████▎ | 1077/1289 [01:46<00:12, 16.46it/s]Loading weights:  84%|████████▎ | 1079/1289 [01:46<00:13, 15.56it/s]Loading weights:  84%|████████▍ | 1089/1289 [01:47<00:13, 15.05it/s]Loading weights:  85%|████████▍ | 1091/1289 [01:47<00:13, 14.43it/s]Loading weights:  85%|████████▌ | 1101/1289 [01:47<00:10, 17.32it/s]Loading weights:  86%|████████▌ | 1103/1289 [01:48<00:13, 13.57it/s]Loading weights:  86%|████████▋ | 1113/1289 [01:48<00:11, 15.98it/s]Loading weights:  87%|████████▋ | 1115/1289 [01:48<00:11, 15.56it/s]Loading weights:  87%|████████▋ | 1125/1289 [01:49<00:09, 16.78it/s]Loading weights:  87%|████████▋ | 1127/1289 [01:49<00:11, 13.81it/s]Loading weights:  88%|████████▊ | 1137/1289 [01:50<00:08, 17.15it/s]Loading weights:  88%|████████▊ | 1139/1289 [01:50<00:10, 14.88it/s]Loading weights:  89%|████████▊ | 1143/1289 [01:50<00:08, 16.53it/s]Loading weights:  89%|████████▉ | 1149/1289 [01:50<00:08, 16.96it/s]Loading weights:  89%|████████▉ | 1151/1289 [01:51<00:09, 14.78it/s]Loading weights:  90%|████████▉ | 1155/1289 [01:51<00:07, 17.45it/s]Loading weights:  90%|█████████ | 1161/1289 [01:51<00:08, 14.35it/s]Loading weights:  91%|█████████ | 1167/1289 [01:51<00:06, 18.63it/s]Loading weights:  91%|█████████ | 1173/1289 [01:52<00:08, 14.36it/s]Loading weights:  91%|█████████ | 1176/1289 [01:52<00:08, 13.63it/s]Loading weights:  92%|█████████▏| 1185/1289 [01:53<00:05, 18.15it/s]Loading weights:  92%|█████████▏| 1188/1289 [01:53<00:07, 13.49it/s]Loading weights:  93%|█████████▎| 1197/1289 [01:53<00:05, 16.31it/s]Loading weights:  93%|█████████▎| 1199/1289 [01:54<00:05, 15.88it/s]Loading weights:  93%|█████████▎| 1203/1289 [01:54<00:05, 16.88it/s]Loading weights:  94%|█████████▍| 1209/1289 [01:54<00:05, 13.70it/s]Loading weights:  94%|█████████▍| 1211/1289 [01:54<00:05, 14.31it/s]Loading weights:  95%|█████████▍| 1221/1289 [01:55<00:04, 16.32it/s]Loading weights:  95%|█████████▍| 1223/1289 [01:55<00:05, 12.58it/s]Loading weights:  96%|█████████▌| 1233/1289 [01:56<00:03, 15.59it/s]Loading weights:  96%|█████████▌| 1235/1289 [01:56<00:03, 15.22it/s]Loading weights:  96%|█████████▌| 1239/1289 [01:56<00:02, 17.03it/s]Loading weights:  97%|█████████▋| 1245/1289 [01:57<00:02, 15.54it/s]Loading weights:  97%|█████████▋| 1247/1289 [01:57<00:03, 13.64it/s]Loading weights:  98%|█████████▊| 1257/1289 [01:57<00:02, 15.89it/s]Loading weights:  98%|█████████▊| 1259/1289 [01:58<00:02, 13.75it/s]Loading weights:  98%|█████████▊| 1269/1289 [01:58<00:01, 16.23it/s]Loading weights:  99%|█████████▊| 1271/1289 [01:58<00:01, 14.17it/s]Loading weights:  99%|█████████▉| 1281/1289 [01:59<00:00, 17.88it/s]Loading weights: 100%|█████████▉| 1283/1289 [01:59<00:00, 17.15it/s]Loading weights: 100%|██████████| 1289/1289 [01:59<00:00, 10.79it/s]
+[transformers] The tied weights mapping and config for this model specifies to tie language_model.shared.weight to language_model.lm_head.weight, but both are present in the checkpoints with different values, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning.
+/opt/pytorch/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+  Base model loaded on cuda:0
+Loading LoRA adapter (qformer)...
+  LoRA adapter loaded
+  Trainable: 0 (0.00%)
+
+  Test dishes: 507
+
+============================================================
+INFERENCE STARTED
+============================================================
+  [1/507] dish_1556575327 — 4.2s this dish, ~36min remaining
+  [2/507] dish_1557861216 — 1.7s this dish, ~25min remaining
+  [3/507] dish_1557862345 — 1.6s this dish, ~21min remaining
+  [4/507] dish_1557862696 — 1.7s this dish, ~20min remaining
+  [5/507] dish_1557862738 — 2.6s this dish, ~20min remaining
+  [6/507] dish_1557862783 — 3.4s this dish, ~21min remaining
+  [7/507] dish_1557936555 — 1.7s this dish, ~20min remaining
+  [8/507] dish_1557936599 — 1.7s this dish, ~19min remaining
+  [9/507] dish_1557936645 — 1.7s this dish, ~19min remaining
+  [10/507] dish_1557937037 — 1.7s this dish, ~18min remaining
+  [11/507] dish_1557937079 — 1.7s this dish, ~18min remaining
+  [12/507] dish_1557937157 — 2.4s this dish, ~18min remaining
+  [13/507] dish_1557937335 — 1.7s this dish, ~18min remaining
+  [14/507] dish_1557937427 — 1.7s this dish, ~17min remaining
+  [15/507] dish_1557937574 — 1.7s this dish, ~17min remaining
+  [16/507] dish_1557937615 — 1.6s this dish, ~17min remaining
+  [17/507] dish_1557937715 — 1.7s this dish, ~17min remaining
+  [18/507] dish_1557937758 — 2.6s this dish, ~17min remaining
+  [19/507] dish_1558030182 — 1.6s this dish, ~17min remaining
+  [20/507] dish_1558030289 — 2.1s this dish, ~17min remaining
+  [21/507] dish_1558030383 — 1.6s this dish, ~16min remaining
+  [22/507] dish_1558030435 — 2.2s this dish, ~16min remaining
+  [23/507] dish_1558031133 — 1.8s this dish, ~16min remaining
+  [24/507] dish_1558031237 — 1.8s this dish, ~16min remaining
+  [25/507] dish_1558031302 — 1.6s this dish, ~16min remaining
+  [26/507] dish_1558031351 — 1.9s this dish, ~16min remaining
+  [27/507] dish_1558031394 — 2.5s this dish, ~16min remaining
+  [28/507] dish_1558110297 — 1.7s this dish, ~16min remaining
+  [29/507] dish_1558110335 — 1.6s this dish, ~16min remaining
+  [30/507] dish_1558110385 — 1.7s this dish, ~16min remaining
+  [31/507] dish_1558110436 — 1.8s this dish, ~16min remaining
+  [32/507] dish_1558110478 — 2.2s this dish, ~16min remaining
+  [33/507] dish_1558113430 — 1.9s this dish, ~16min remaining
+  [34/507] dish_1558113477 — 1.8s this dish, ~16min remaining
+  [35/507] dish_1558113941 — 2.0s this dish, ~16min remaining
+  [36/507] dish_1558114086 — 1.6s this dish, ~15min remaining
+  [37/507] dish_1558114145 — 1.7s this dish, ~15min remaining
+  [38/507] dish_1558114209 — 1.8s this dish, ~15min remaining
+  [39/507] dish_1558114284 — 2.4s this dish, ~15min remaining
+  [40/507] dish_1558372948 — 1.9s this dish, ~15min remaining
+  [41/507] dish_1558373008 — 1.8s this dish, ~15min remaining
+  [42/507] dish_1558373074 — 1.6s this dish, ~15min remaining
+  [43/507] dish_1558373159 — 1.9s this dish, ~15min remaining
+  [44/507] dish_1558375667 — 1.7s this dish, ~15min remaining
+  [45/507] dish_1558375732 — 1.8s this dish, ~15min remaining
+  [46/507] dish_1558375833 — 1.6s this dish, ~15min remaining
+  [47/507] dish_1558375886 — 2.1s this dish, ~15min remaining
+  [48/507] dish_1558376212 — 1.8s this dish, ~15min remaining
+  [49/507] dish_1558376306 — 1.6s this dish, ~15min remaining
+  [50/507] dish_1558376364 — 1.8s this dish, ~15min remaining
+  [51/507] dish_1558376437 — 1.8s this dish, ~15min remaining
+  [52/507] dish_1558376483 — 2.2s this dish, ~15min remaining
+  [53/507] dish_1558376734 — 1.8s this dish, ~15min remaining
+  [54/507] dish_1558376768 — 1.6s this dish, ~14min remaining
+  [55/507] dish_1558376801 — 2.3s this dish, ~15min remaining
+  [56/507] dish_1558376874 — 1.7s this dish, ~14min remaining
+  [57/507] dish_1558376938 — 1.7s this dish, ~14min remaining
+  [58/507] dish_1558376984 — 2.6s this dish, ~14min remaining
+  [59/507] dish_1558461431 — 1.8s this dish, ~14min remaining
+  [60/507] dish_1558461607 — 1.7s this dish, ~14min remaining
+  [61/507] dish_1558461692 — 1.7s this dish, ~14min remaining
+  [62/507] dish_1558461760 — 1.7s this dish, ~14min remaining
+  [63/507] dish_1558461792 — 2.2s this dish, ~14min remaining
+  [64/507] dish_1558544663 — 1.7s this dish, ~14min remaining
+  [65/507] dish_1558545738 — 1.7s this dish, ~14min remaining
+  [66/507] dish_1558546434 — 1.9s this dish, ~14min remaining
+  [67/507] dish_1558546558 — 1.8s this dish, ~14min remaining
+  [68/507] dish_1558546663 — 2.5s this dish, ~14min remaining
+  [69/507] dish_1558549413 — 1.8s this dish, ~14min remaining
+  [70/507] dish_1558549605 — 1.8s this dish, ~14min remaining
+  [71/507] dish_1558549773 — 2.0s this dish, ~14min remaining
+  [72/507] dish_1558549806 — 2.0s this dish, ~14min remaining
+  [73/507] dish_1558630176 — 1.7s this dish, ~14min remaining
+  [74/507] dish_1558630207 — 1.9s this dish, ~14min remaining
+  [75/507] dish_1558630288 — 1.9s this dish, ~14min remaining
+  [76/507] dish_1558630325 — 2.2s this dish, ~14min remaining
+  [77/507] dish_1558635400 — 1.8s this dish, ~14min remaining
+  [78/507] dish_1558635489 — 1.9s this dish, ~14min remaining
+  [79/507] dish_1558635523 — 1.7s this dish, ~14min remaining
+  [80/507] dish_1558635546 — 1.6s this dish, ~14min remaining
+  [81/507] dish_1558635618 — 2.3s this dish, ~14min remaining
+  [82/507] dish_1558639412 — 2.0s this dish, ~14min remaining
+  [83/507] dish_1558639440 — 1.7s this dish, ~14min remaining
+  [84/507] dish_1558639482 — 1.8s this dish, ~13min remaining
+  [85/507] dish_1558639526 — 1.6s this dish, ~13min remaining
+  [86/507] dish_1558639555 — 2.9s this dish, ~13min remaining
+  [87/507] dish_1558639787 — 1.6s this dish, ~13min remaining
+  [88/507] dish_1558639818 — 1.9s this dish, ~13min remaining
+  [89/507] dish_1558639849 — 1.6s this dish, ~13min remaining
+  [90/507] dish_1558639876 — 2.2s this dish, ~13min remaining
+  [91/507] dish_1558641164 — 1.6s this dish, ~13min remaining
+  [92/507] dish_1558641200 — 1.6s this dish, ~13min remaining
+  [93/507] dish_1558641253 — 2.0s this dish, ~13min remaining
+  [94/507] dish_1558641287 — 1.7s this dish, ~13min remaining
+  [95/507] dish_1558641320 — 2.7s this dish, ~13min remaining
+  [96/507] dish_1558717604 — 1.6s this dish, ~13min remaining
+  [97/507] dish_1558718587 — 1.6s this dish, ~13min remaining
+  [98/507] dish_1558718610 — 2.0s this dish, ~13min remaining
+  [99/507] dish_1558718649 — 1.9s this dish, ~13min remaining
+  [100/507] dish_1558718680 — 1.8s this dish, ~13min remaining
+  [101/507] dish_1558718906 — 2.4s this dish, ~13min remaining
+  [102/507] dish_1558719570 — 1.6s this dish, ~13min remaining
+  [103/507] dish_1558719994 — 1.8s this dish, ~13min remaining
+  [104/507] dish_1558720097 — 1.6s this dish, ~13min remaining
+  [105/507] dish_1558720133 — 1.7s this dish, ~13min remaining
+  [106/507] dish_1558720236 — 2.3s this dish, ~13min remaining
+  [107/507] dish_1558722125 — 1.7s this dish, ~13min remaining
+  [108/507] dish_1558722171 — 1.7s this dish, ~13min remaining
+  [109/507] dish_1558722207 — 1.7s this dish, ~13min remaining
+  [110/507] dish_1558722247 — 2.0s this dish, ~13min remaining
+  [111/507] dish_1559157454 — 2.3s this dish, ~13min remaining
+  [112/507] dish_1559157777 — 1.9s this dish, ~13min remaining
+  [113/507] dish_1559157919 — 2.6s this dish, ~13min remaining
+  [114/507] dish_1559233445 — 1.6s this dish, ~13min remaining
+  [115/507] dish_1559233570 — 1.7s this dish, ~12min remaining
+  [116/507] dish_1559233627 — 1.7s this dish, ~12min remaining
+  [117/507] dish_1559233715 — 1.7s this dish, ~12min remaining
+  [118/507] dish_1559233756 — 2.2s this dish, ~12min remaining
+  [119/507] dish_1559238993 — 1.7s this dish, ~12min remaining
+  [120/507] dish_1559239151 — 2.1s this dish, ~12min remaining
+  [121/507] dish_1559239256 — 1.7s this dish, ~12min remaining
+  [122/507] dish_1559239369 — 2.6s this dish, ~12min remaining
+  [123/507] dish_1559578551 — 1.6s this dish, ~12min remaining
+  [124/507] dish_1559578579 — 1.9s this dish, ~12min remaining
+  [125/507] dish_1559578599 — 2.0s this dish, ~12min remaining
+  [126/507] dish_1559841950 — 1.7s this dish, ~12min remaining
+  [127/507] dish_1559841979 — 2.1s this dish, ~12min remaining
+  [128/507] dish_1559842047 — 2.5s this dish, ~12min remaining
+  [129/507] dish_1559844272 — 1.7s this dish, ~12min remaining
+  [130/507] dish_1559844323 — 2.1s this dish, ~12min remaining
+  [131/507] dish_1559844366 — 2.1s this dish, ~12min remaining
+  [132/507] dish_1559844458 — 1.8s this dish, ~12min remaining
+  [133/507] dish_1559844490 — 2.3s this dish, ~12min remaining
+  [134/507] dish_1559846688 — 2.4s this dish, ~12min remaining
+  [135/507] dish_1559849020 — 1.7s this dish, ~12min remaining
+  [136/507] dish_1559849053 — 2.0s this dish, ~12min remaining
+  [137/507] dish_1559849097 — 2.1s this dish, ~12min remaining
+  [138/507] dish_1559849412 — 1.8s this dish, ~12min remaining
+  [139/507] dish_1559849466 — 2.3s this dish, ~12min remaining
+  [140/507] dish_1559849497 — 2.1s this dish, ~12min remaining
+  [141/507] dish_1559849537 — 2.4s this dish, ~12min remaining
+  [142/507] dish_1559850283 — 1.8s this dish, ~12min remaining
+  [143/507] dish_1559850314 — 2.3s this dish, ~12min remaining
+  [144/507] dish_1559850338 — 2.2s this dish, ~12min remaining
+  [145/507] dish_1559934477 — 2.0s this dish, ~12min remaining
+  [146/507] dish_1560203400 — 1.9s this dish, ~12min remaining
+  [147/507] dish_1560203424 — 2.1s this dish, ~12min remaining
+  [148/507] dish_1560367904 — 3.1s this dish, ~12min remaining
+  [149/507] dish_1560367926 — 2.8s this dish, ~12min remaining
+  [150/507] dish_1560367952 — 3.6s this dish, ~12min remaining
+  [151/507] dish_1560367980 — 3.2s this dish, ~12min remaining
+  [152/507] dish_1560368019 — 4.1s this dish, ~12min remaining
+  [153/507] dish_1560368395 — 1.9s this dish, ~12min remaining
+  [154/507] dish_1560368464 — 3.0s this dish, ~12min remaining
+  [155/507] dish_1560368506 — 4.8s this dish, ~12min remaining
+  [156/507] dish_1560368570 — 5.5s this dish, ~12min remaining
+  [157/507] dish_1560444869 — 2.1s this dish, ~12min remaining
+  [158/507] dish_1560444892 — 2.2s this dish, ~12min remaining
+  [159/507] dish_1560444914 — 2.2s this dish, ~12min remaining
+  [160/507] dish_1560444931 — 2.5s this dish, ~12min remaining
+  [161/507] dish_1560444948 — 4.0s this dish, ~12min remaining
+  [162/507] dish_1560444967 — 3.9s this dish, ~12min remaining
+  [163/507] dish_1560444985 — 3.2s this dish, ~12min remaining
+  [164/507] dish_1560445004 — 3.6s this dish, ~12min remaining
+  [165/507] dish_1560456305 — 2.7s this dish, ~12min remaining
+  [166/507] dish_1560456326 — 3.6s this dish, ~12min remaining
+  [167/507] dish_1560456348 — 4.1s this dish, ~12min remaining
+  [168/507] dish_1560456370 — 4.2s this dish, ~12min remaining
+  [169/507] dish_1560526408 — 2.9s this dish, ~12min remaining
+  [170/507] dish_1560526447 — 3.8s this dish, ~12min remaining
+  [171/507] dish_1560526472 — 2.8s this dish, ~12min remaining
+  [172/507] dish_1560526490 — 3.0s this dish, ~12min remaining
+  [173/507] dish_1560526514 — 3.3s this dish, ~12min remaining
+  [174/507] dish_1560526530 — 3.5s this dish, ~12min remaining
+  [175/507] dish_1560526552 — 9.1s this dish, ~12min remaining
+  [176/507] dish_1560800918 — 3.0s this dish, ~12min remaining
+  [177/507] dish_1560800951 — 3.8s this dish, ~12min remaining
+  [178/507] dish_1560800988 — 3.7s this dish, ~12min remaining
+  [179/507] dish_1560801020 — 5.1s this dish, ~12min remaining
+  [180/507] dish_1560801041 — 9.6s this dish, ~12min remaining
+  [181/507] dish_1560801773 — 1.6s this dish, ~12min remaining
+  [182/507] dish_1560801797 — 2.0s this dish, ~12min remaining
+  [183/507] dish_1560801829 — 2.2s this dish, ~12min remaining
+  [184/507] dish_1560801859 — 3.8s this dish, ~12min remaining
+  [185/507] dish_1560801883 — 8.9s this dish, ~12min remaining
+  [186/507] dish_1560975491 — 2.1s this dish, ~12min remaining
+  [187/507] dish_1560975517 — 2.4s this dish, ~12min remaining
+  [188/507] dish_1560975572 — 2.5s this dish, ~12min remaining
+  [189/507] dish_1560975601 — 6.4s this dish, ~12min remaining
+  [190/507] dish_1560975628 — 4.3s this dish, ~12min remaining
+  [191/507] dish_1561147944 — 2.5s this dish, ~12min remaining
+  [192/507] dish_1561147967 — 3.1s this dish, ~12min remaining
+  [193/507] dish_1561147997 — 2.6s this dish, ~12min remaining
+  [194/507] dish_1561148021 — 4.6s this dish, ~12min remaining
+  [195/507] dish_1561148042 — 3.3s this dish, ~12min remaining
+  [196/507] dish_1561393715 — 1.8s this dish, ~12min remaining
+  [197/507] dish_1561393741 — 2.5s this dish, ~12min remaining
+  [198/507] dish_1561393764 — 2.1s this dish, ~12min remaining
+  [199/507] dish_1561405332 — 1.6s this dish, ~12min remaining
+  [200/507] dish_1561405356 — 3.7s this dish, ~12min remaining
+  [201/507] dish_1561405389 — 3.3s this dish, ~12min remaining
+  [202/507] dish_1561405411 — 4.6s this dish, ~12min remaining
+  [203/507] dish_1561574368 — 2.0s this dish, ~12min remaining
+  [204/507] dish_1561574394 — 3.7s this dish, ~12min remaining
+  [205/507] dish_1561574428 — 6.6s this dish, ~12min remaining
+  [206/507] dish_1561574456 — 5.1s this dish, ~12min remaining
+  [207/507] dish_1561574479 — 6.4s this dish, ~12min remaining
+  [208/507] dish_1561574783 — 4.2s this dish, ~12min remaining
+  [209/507] dish_1561574815 — 3.9s this dish, ~12min remaining
+  [210/507] dish_1561574848 — 4.3s this dish, ~12min remaining
+  [211/507] dish_1561577848 — 4.4s this dish, ~12min remaining
+  [212/507] dish_1561577947 — 5.0s this dish, ~12min remaining
+  [213/507] dish_1561578775 — 1.7s this dish, ~12min remaining
+  [214/507] dish_1561578800 — 3.1s this dish, ~12min remaining
+  [215/507] dish_1561578839 — 4.2s this dish, ~12min remaining
+  [216/507] dish_1561578865 — 3.1s this dish, ~12min remaining
+  [217/507] dish_1561654326 — 2.4s this dish, ~12min remaining
+  [218/507] dish_1561654346 — 2.7s this dish, ~12min remaining
+  [219/507] dish_1561654374 — 4.4s this dish, ~12min remaining
+  [220/507] dish_1561654392 — 4.0s this dish, ~12min remaining
+  [221/507] dish_1561661324 — 2.1s this dish, ~12min remaining
+  [222/507] dish_1561661347 — 2.5s this dish, ~12min remaining
+  [223/507] dish_1561661377 — 10.4s this dish, ~12min remaining
+  [224/507] dish_1561662160 — 3.1s this dish, ~12min remaining
+  [225/507] dish_1561662190 — 3.2s this dish, ~12min remaining
+  [226/507] dish_1561662216 — 3.6s this dish, ~12min remaining
+  [227/507] dish_1561662814 — 2.8s this dish, ~12min remaining
+  [228/507] dish_1561662842 — 4.4s this dish, ~12min remaining
+  [229/507] dish_1561662869 — 4.6s this dish, ~12min remaining
+  [230/507] dish_1561662926 — 4.9s this dish, ~12min remaining
+  [231/507] dish_1561663541 — 2.8s this dish, ~12min remaining
+  [232/507] dish_1561663580 — 3.6s this dish, ~12min remaining
+  [233/507] dish_1561663606 — 4.0s this dish, ~12min remaining
+  [234/507] dish_1561667207 — 2.8s this dish, ~12min remaining
+  [235/507] dish_1561667238 — 4.6s this dish, ~12min remaining
+  [236/507] dish_1561739160 — 1.8s this dish, ~12min remaining
+  [237/507] dish_1561739188 — 2.4s this dish, ~12min remaining
+  [238/507] dish_1561739212 — 2.5s this dish, ~12min remaining
+  [239/507] dish_1561739238 — 2.8s this dish, ~12min remaining
+  [240/507] dish_1561739265 — 3.0s this dish, ~12min remaining
+  [241/507] dish_1561741063 — 1.8s this dish, ~11min remaining
+  [242/507] dish_1561741090 — 2.0s this dish, ~11min remaining
+  [243/507] dish_1562008936 — 1.9s this dish, ~11min remaining
+  [244/507] dish_1562008979 — 7.1s this dish, ~11min remaining
+  [245/507] dish_1562009006 — 4.2s this dish, ~11min remaining
+  [246/507] dish_1562009810 — 1.9s this dish, ~11min remaining
+  [247/507] dish_1562009894 — 4.7s this dish, ~11min remaining
+  [248/507] dish_1562009934 — 6.0s this dish, ~11min remaining
+  [249/507] dish_1562085672 — 1.7s this dish, ~11min remaining
+  [250/507] dish_1562099053 — 1.8s this dish, ~11min remaining
+  [251/507] dish_1562099076 — 1.9s this dish, ~11min remaining
+  [252/507] dish_1562099134 — 5.4s this dish, ~11min remaining
+  [253/507] dish_1562099157 — 3.3s this dish, ~11min remaining
+  [254/507] dish_1562168648 — 2.2s this dish, ~11min remaining
+  [255/507] dish_1562168673 — 3.2s this dish, ~11min remaining
+  [256/507] dish_1562168696 — 3.3s this dish, ~11min remaining
+  [257/507] dish_1562168800 — 2.6s this dish, ~11min remaining
+  [258/507] dish_1562172561 — 1.8s this dish, ~11min remaining
+  [259/507] dish_1562172600 — 2.4s this dish, ~11min remaining
+  [260/507] dish_1562172643 — 2.7s this dish, ~11min remaining
+  [261/507] dish_1562617703 — 1.8s this dish, ~11min remaining
+  [262/507] dish_1562617939 — 3.0s this dish, ~11min remaining
+  [263/507] dish_1562618000 — 3.5s this dish, ~11min remaining
+  [264/507] dish_1562690886 — 2.0s this dish, ~11min remaining
+  [265/507] dish_1562690917 — 2.1s this dish, ~11min remaining
+  [266/507] dish_1562690950 — 2.3s this dish, ~11min remaining
+  [267/507] dish_1562691000 — 2.8s this dish, ~11min remaining
+  [268/507] dish_1562691032 — 2.9s this dish, ~10min remaining
+  [269/507] dish_1562691064 — 3.5s this dish, ~10min remaining
+  [270/507] dish_1562700496 — 1.7s this dish, ~10min remaining
+  [271/507] dish_1562700568 — 7.3s this dish, ~10min remaining
+  [272/507] dish_1562700593 — 7.4s this dish, ~10min remaining
+  [273/507] dish_1562703345 — 1.7s this dish, ~10min remaining
+  [274/507] dish_1562703382 — 2.1s this dish, ~10min remaining
+  [275/507] dish_1562703408 — 3.4s this dish, ~10min remaining
+  [276/507] dish_1562703447 — 2.9s this dish, ~10min remaining
+  [277/507] dish_1562774099 — 2.6s this dish, ~10min remaining
+  [278/507] dish_1562774129 — 2.7s this dish, ~10min remaining
+  [279/507] dish_1562774159 — 3.0s this dish, ~10min remaining
+  [280/507] dish_1562774180 — 3.2s this dish, ~10min remaining
+  [281/507] dish_1562774206 — 4.3s this dish, ~10min remaining
+  [282/507] dish_1562776428 — 2.7s this dish, ~10min remaining
+  [283/507] dish_1562776465 — 2.8s this dish, ~10min remaining
+  [284/507] dish_1562776497 — 4.2s this dish, ~10min remaining
+  [285/507] dish_1562786103 — 1.9s this dish, ~10min remaining
+  [286/507] dish_1562788506 — 2.1s this dish, ~10min remaining
+  [287/507] dish_1562788536 — 3.7s this dish, ~10min remaining
+  [288/507] dish_1562788568 — 4.7s this dish, ~10min remaining
+  [289/507] dish_1562788601 — 4.5s this dish, ~10min remaining
+  [290/507] dish_1562790775 — 3.6s this dish, ~10min remaining
+  [291/507] dish_1562790824 — 3.2s this dish, ~10min remaining
+  [292/507] dish_1562790855 — 4.2s this dish, ~10min remaining
+  [293/507] dish_1562876494 — 2.3s this dish, ~10min remaining
+  [294/507] dish_1562876531 — 2.2s this dish, ~10min remaining
+  [295/507] dish_1562963246 — 1.7s this dish, ~10min remaining
+  [296/507] dish_1562963289 — 2.8s this dish, ~9min remaining
+  [297/507] dish_1562963325 — 4.0s this dish, ~9min remaining
+  [298/507] dish_1563208412 — 1.8s this dish, ~9min remaining
+  [299/507] dish_1563208439 — 2.2s this dish, ~9min remaining
+  [300/507] dish_1563208459 — 2.5s this dish, ~9min remaining
+  [301/507] dish_1563218408 — 1.8s this dish, ~9min remaining
+  [302/507] dish_1563220987 — 3.7s this dish, ~9min remaining
+  [303/507] dish_1563221025 — 3.7s this dish, ~9min remaining
+  [304/507] dish_1563221054 — 4.3s this dish, ~9min remaining
+  [305/507] dish_1563221086 — 6.2s this dish, ~9min remaining
+  [306/507] dish_1563221157 — 3.4s this dish, ~9min remaining
+  [307/507] dish_1563294987 — 2.0s this dish, ~9min remaining
+  [308/507] dish_1563295016 — 1.9s this dish, ~9min remaining
+  [309/507] dish_1563295044 — 2.5s this dish, ~9min remaining
+  [310/507] dish_1563305513 — 1.7s this dish, ~9min remaining
+  [311/507] dish_1563389548 — 1.9s this dish, ~9min remaining
+  [312/507] dish_1563389600 — 2.1s this dish, ~9min remaining
+  [313/507] dish_1563389626 — 2.3s this dish, ~9min remaining
+  [314/507] dish_1563478751 — 3.1s this dish, ~9min remaining
+  [315/507] dish_1563551105 — 1.8s this dish, ~9min remaining
+  [316/507] dish_1563551134 — 2.0s this dish, ~9min remaining
+  [317/507] dish_1563551164 — 2.5s this dish, ~9min remaining
+  [318/507] dish_1563551194 — 3.9s this dish, ~9min remaining
+  [319/507] dish_1563551220 — 6.9s this dish, ~9min remaining
+  [320/507] dish_1563565289 — 2.0s this dish, ~8min remaining
+  [321/507] dish_1563565323 — 4.0s this dish, ~8min remaining
+  [322/507] dish_1563565354 — 3.6s this dish, ~8min remaining
+  [323/507] dish_1563565415 — 4.0s this dish, ~8min remaining
+  [324/507] dish_1563565454 — 4.4s this dish, ~8min remaining
+  [325/507] dish_1563565508 — 3.4s this dish, ~8min remaining
+  [326/507] dish_1563566909 — 2.4s this dish, ~8min remaining
+  [327/507] dish_1563566939 — 3.3s this dish, ~8min remaining
+  [328/507] dish_1563566965 — 3.6s this dish, ~8min remaining
+  [329/507] dish_1563897047 — 2.0s this dish, ~8min remaining
+  [330/507] dish_1563897087 — 1.7s this dish, ~8min remaining
+  [331/507] dish_1563897938 — 1.7s this dish, ~8min remaining
+  [332/507] dish_1563897981 — 2.3s this dish, ~8min remaining
+  [333/507] dish_1563898019 — 3.3s this dish, ~8min remaining
+  [334/507] dish_1563898084 — 10.3s this dish, ~8min remaining
+  [335/507] dish_1563898107 — 3.5s this dish, ~8min remaining
+  [336/507] dish_1563909469 — 3.3s this dish, ~8min remaining
+  [337/507] dish_1563909507 — 2.7s this dish, ~8min remaining
+  [338/507] dish_1563909550 — 2.6s this dish, ~8min remaining
+  [339/507] dish_1563909580 — 3.7s this dish, ~8min remaining
+  [340/507] dish_1563984140 — 1.8s this dish, ~8min remaining
+  [341/507] dish_1563984167 — 2.3s this dish, ~8min remaining
+  [342/507] dish_1563984199 — 2.6s this dish, ~8min remaining
+  [343/507] dish_1563984242 — 3.0s this dish, ~8min remaining
+  [344/507] dish_1563984296 — 3.0s this dish, ~7min remaining
+  [345/507] dish_1563996441 — 3.8s this dish, ~7min remaining
+  [346/507] dish_1563996464 — 4.3s this dish, ~7min remaining
+  [347/507] dish_1563996485 — 7.6s this dish, ~7min remaining
+  [348/507] dish_1563996509 — 6.1s this dish, ~7min remaining
+  [349/507] dish_1563998210 — 2.3s this dish, ~7min remaining
+  [350/507] dish_1563998244 — 3.1s this dish, ~7min remaining
+  [351/507] dish_1563998279 — 6.0s this dish, ~7min remaining
+  [352/507] dish_1563998323 — 4.6s this dish, ~7min remaining
+  [353/507] dish_1563998513 — 13.2s this dish, ~7min remaining
+  [354/507] dish_1564160043 — 1.9s this dish, ~7min remaining
+  [355/507] dish_1564427406 — 1.8s this dish, ~7min remaining
+  [356/507] dish_1564427430 — 2.1s this dish, ~7min remaining
+  [357/507] dish_1564427455 — 2.0s this dish, ~7min remaining
+  [358/507] dish_1564428102 — 2.7s this dish, ~7min remaining
+  [359/507] dish_1564428144 — 5.2s this dish, ~7min remaining
+  [360/507] dish_1564428181 — 4.6s this dish, ~7min remaining
+  [361/507] dish_1564588820 — 1.8s this dish, ~7min remaining
+  [362/507] dish_1564588859 — 2.5s this dish, ~7min remaining
+  [363/507] dish_1564588889 — 2.6s this dish, ~7min remaining
+  [364/507] dish_1564588919 — 3.2s this dish, ~7min remaining
+  [365/507] dish_1564675380 — 1.8s this dish, ~7min remaining
+  [366/507] dish_1564675411 — 2.0s this dish, ~7min remaining
+  [367/507] dish_1564686966 — 2.9s this dish, ~7min remaining
+  [368/507] dish_1564687013 — 3.5s this dish, ~7min remaining
+  [369/507] dish_1564687046 — 4.8s this dish, ~7min remaining
+  [370/507] dish_1564687090 — 3.4s this dish, ~6min remaining
+  [371/507] dish_1564689078 — 2.7s this dish, ~6min remaining
+  [372/507] dish_1564689108 — 3.6s this dish, ~6min remaining
+  [373/507] dish_1564689138 — 4.1s this dish, ~6min remaining
+  [374/507] dish_1564689168 — 3.6s this dish, ~6min remaining
+  [375/507] dish_1564689219 — 3.7s this dish, ~6min remaining
+  [376/507] dish_1564773826 — 2.5s this dish, ~6min remaining
+  [377/507] dish_1564773847 — 3.2s this dish, ~6min remaining
+  [378/507] dish_1564773876 — 2.9s this dish, ~6min remaining
+  [379/507] dish_1564773903 — 3.2s this dish, ~6min remaining
+  [380/507] dish_1564773942 — 4.3s this dish, ~6min remaining
+  [381/507] dish_1564773976 — 4.0s this dish, ~6min remaining
+  [382/507] dish_1565020755 — 1.6s this dish, ~6min remaining
+  [383/507] dish_1565020796 — 1.9s this dish, ~6min remaining
+  [384/507] dish_1565020822 — 2.1s this dish, ~6min remaining
+  [385/507] dish_1565020867 — 2.7s this dish, ~6min remaining
+  [386/507] dish_1565020895 — 4.4s this dish, ~6min remaining
+  [387/507] dish_1565020926 — 3.0s this dish, ~6min remaining
+  [388/507] dish_1565030350 — 3.3s this dish, ~6min remaining
+  [389/507] dish_1565030391 — 16.6s this dish, ~6min remaining
+  [390/507] dish_1565034605 — 2.8s this dish, ~6min remaining
+  [391/507] dish_1565034635 — 2.7s this dish, ~6min remaining
+  [392/507] dish_1565034661 — 3.3s this dish, ~6min remaining
+  [393/507] dish_1565034681 — 3.6s this dish, ~5min remaining
+  [394/507] dish_1565035715 — 1.7s this dish, ~5min remaining
+  [395/507] dish_1565035746 — 1.9s this dish, ~5min remaining
+  [396/507] dish_1565035774 — 2.2s this dish, ~5min remaining
+  [397/507] dish_1565035802 — 2.3s this dish, ~5min remaining
+  [398/507] dish_1565035830 — 2.7s this dish, ~5min remaining
+  [399/507] dish_1565035858 — 3.7s this dish, ~5min remaining
+  [400/507] dish_1565117429 — 1.8s this dish, ~5min remaining
+  [401/507] dish_1565117463 — 3.3s this dish, ~5min remaining
+  [402/507] dish_1565118700 — 3.1s this dish, ~5min remaining
+  [403/507] dish_1565118729 — 3.2s this dish, ~5min remaining
+  [404/507] dish_1565118782 — 13.1s this dish, ~5min remaining
+  [405/507] dish_1565123783 — 1.9s this dish, ~5min remaining
+  [406/507] dish_1565123816 — 2.9s this dish, ~5min remaining
+  [407/507] dish_1565123845 — 3.6s this dish, ~5min remaining
+  [408/507] dish_1565123881 — 4.0s this dish, ~5min remaining
+  [409/507] dish_1565638478 — 2.1s this dish, ~5min remaining
+  [410/507] dish_1565638515 — 4.4s this dish, ~5min remaining
+  [411/507] dish_1565638550 — 3.7s this dish, ~5min remaining
+  [412/507] dish_1565638599 — 5.4s this dish, ~5min remaining
+  [413/507] dish_1565711453 — 1.9s this dish, ~5min remaining
+  [414/507] dish_1565711498 — 2.6s this dish, ~5min remaining
+  [415/507] dish_1565711527 — 2.8s this dish, ~4min remaining
+  [416/507] dish_1565711570 — 2.8s this dish, ~4min remaining
+  [417/507] dish_1565810969 — 1.8s this dish, ~4min remaining
+  [418/507] dish_1565811000 — 2.1s this dish, ~4min remaining
+  [419/507] dish_1565811025 — 2.4s this dish, ~4min remaining
+  [420/507] dish_1565811061 — 2.8s this dish, ~4min remaining
+  [421/507] dish_1565811091 — 2.3s this dish, ~4min remaining
+  [422/507] dish_1565811139 — 2.7s this dish, ~4min remaining
+  [423/507] dish_1565894858 — 1.7s this dish, ~4min remaining
+  [424/507] dish_1565894889 — 1.7s this dish, ~4min remaining
+  [425/507] dish_1565894910 — 1.8s this dish, ~4min remaining
+  [426/507] dish_1565896662 — 4.2s this dish, ~4min remaining
+  [427/507] dish_1565896701 — 4.8s this dish, ~4min remaining
+  [428/507] dish_1565896745 — 4.2s this dish, ~4min remaining
+  [429/507] dish_1565898128 — 3.5s this dish, ~4min remaining
+  [430/507] dish_1565898158 — 4.1s this dish, ~4min remaining
+  [431/507] dish_1565898193 — 5.1s this dish, ~4min remaining
+  [432/507] dish_1565898230 — 4.5s this dish, ~4min remaining
+  [433/507] dish_1565898331 — 3.6s this dish, ~4min remaining
+  [434/507] dish_1565898361 — 4.6s this dish, ~4min remaining
+  [435/507] dish_1565898402 — 4.7s this dish, ~4min remaining
+  [436/507] dish_1565898432 — 5.0s this dish, ~3min remaining
+  [437/507] dish_1565974375 — 1.6s this dish, ~3min remaining
+  [438/507] dish_1565974409 — 2.0s this dish, ~3min remaining
+  [439/507] dish_1565986702 — 3.9s this dish, ~3min remaining
+  [440/507] dish_1565986733 — 4.2s this dish, ~3min remaining
+  [441/507] dish_1566316681 — 1.8s this dish, ~3min remaining
+  [442/507] dish_1566316726 — 2.6s this dish, ~3min remaining
+  [443/507] dish_1566316757 — 2.5s this dish, ~3min remaining
+  [444/507] dish_1566328724 — 1.7s this dish, ~3min remaining
+  [445/507] dish_1566328745 — 1.9s this dish, ~3min remaining
+  [446/507] dish_1566328776 — 2.3s this dish, ~3min remaining
+  [447/507] dish_1566328805 — 2.7s this dish, ~3min remaining
+  [448/507] dish_1566328831 — 4.1s this dish, ~3min remaining
+  [449/507] dish_1566414225 — 2.9s this dish, ~3min remaining
+  [450/507] dish_1566414291 — 3.6s this dish, ~3min remaining
+  [451/507] dish_1566414342 — 3.8s this dish, ~3min remaining
+  [452/507] dish_1566414412 — 8.5s this dish, ~3min remaining
+  [453/507] dish_1566416701 — 2.7s this dish, ~3min remaining
+  [454/507] dish_1566501575 — 2.3s this dish, ~3min remaining
+  [455/507] dish_1566501594 — 2.2s this dish, ~3min remaining
+  [456/507] dish_1566502437 — 3.7s this dish, ~2min remaining
+  [457/507] dish_1566502472 — 3.6s this dish, ~2min remaining
+  [458/507] dish_1566502505 — 3.6s this dish, ~2min remaining
+  [459/507] dish_1566502537 — 4.4s this dish, ~2min remaining
+  [460/507] dish_1566502573 — 4.0s this dish, ~2min remaining
+  [461/507] dish_1566587102 — 3.3s this dish, ~2min remaining
+  [462/507] dish_1566587143 — 3.1s this dish, ~2min remaining
+  [463/507] dish_1566587182 — 3.8s this dish, ~2min remaining
+  [464/507] dish_1566589933 — 3.1s this dish, ~2min remaining
+  [465/507] dish_1566589967 — 6.7s this dish, ~2min remaining
+  [466/507] dish_1566590007 — 3.3s this dish, ~2min remaining
+  [467/507] dish_1566590056 — 6.5s this dish, ~2min remaining
+  [468/507] dish_1566838286 — 1.7s this dish, ~2min remaining
+  [469/507] dish_1566838317 — 2.1s this dish, ~2min remaining
+  [470/507] dish_1566838351 — 2.5s this dish, ~2min remaining
+  [471/507] dish_1566838378 — 2.6s this dish, ~2min remaining
+  [472/507] dish_1566838407 — 2.6s this dish, ~2min remaining
+  [473/507] dish_1566849862 — 1.8s this dish, ~2min remaining
+  [474/507] dish_1566849895 — 2.0s this dish, ~2min remaining
+  [475/507] dish_1566849923 — 2.0s this dish, ~2min remaining
+  [476/507] dish_1566849955 — 2.2s this dish, ~2min remaining
+  [477/507] dish_1566849987 — 2.3s this dish, ~1min remaining
+  [478/507] dish_1566850031 — 3.1s this dish, ~1min remaining
+  [479/507] dish_1566850099 — 3.5s this dish, ~1min remaining
+  [480/507] dish_1566850142 — 3.9s this dish, ~1min remaining
+  [481/507] dish_1566851549 — 1.7s this dish, ~1min remaining
+  [482/507] dish_1566851584 — 2.0s this dish, ~1min remaining
+  [483/507] dish_1566851616 — 2.4s this dish, ~1min remaining
+  [484/507] dish_1566851677 — 5.3s this dish, ~1min remaining
+  [485/507] dish_1566851704 — 10.4s this dish, ~1min remaining
+  [486/507] dish_1566920304 — 1.9s this dish, ~1min remaining
+  [487/507] dish_1566920339 — 2.3s this dish, ~1min remaining
+  [488/507] dish_1566920365 — 2.4s this dish, ~1min remaining
+  [489/507] dish_1567007719 — 2.0s this dish, ~1min remaining
+  [490/507] dish_1567007751 — 2.4s this dish, ~1min remaining
+  [491/507] dish_1567007783 — 2.2s this dish, ~1min remaining
+  [492/507] dish_1567007814 — 2.3s this dish, ~1min remaining
+  [493/507] dish_1567007848 — 2.7s this dish, ~1min remaining
+  [494/507] dish_1567107839 — 5.1s this dish, ~1min remaining
+  [495/507] dish_1567785622 — 1.7s this dish, ~1min remaining
+  [496/507] dish_1567785654 — 1.8s this dish, ~1min remaining
+  [497/507] dish_1567785709 — 3.6s this dish, ~0min remaining
+  [498/507] dish_1567785739 — 2.9s this dish, ~0min remaining
+  [499/507] dish_1567785778 — 13.1s this dish, ~0min remaining
+  [500/507] dish_1568305198 — 2.0s this dish, ~0min remaining
+  [501/507] dish_1568305225 — 4.3s this dish, ~0min remaining
+  [502/507] dish_1568305257 — 4.4s this dish, ~0min remaining
+  [503/507] dish_1568401167 — 2.1s this dish, ~0min remaining
+  [504/507] dish_1568401199 — 2.9s this dish, ~0min remaining
+  [505/507] dish_1568401233 — 3.3s this dish, ~0min remaining
+  [506/507] dish_1568401261 — 2.7s this dish, ~0min remaining
+  [507/507] dish_1568401302 — 4.9s this dish, ~0min remaining
+
+Done! 507 dishes in 25.2 minutes
+Saved to: /home/ubuntu/nutrivision/results/finetuned_qformer/raw_outputs.json
+Samples saved to: /home/ubuntu/nutrivision/results/finetuned_qformer/sample_outputs.txt
+
+============================================================
+DISH: dish_1556575327
+============================================================
+
+--- What's On Your Plate ---
+Prompt: Describe this food plate in detail.
+Output: a plate of brussels sprouts, celery and olives
+
+--- Ingredients Detected ---
+Prompt: List all the ingredients visible in this dish.
+Output: brussels sprouts, celery, olives
+
+--- Estimated Calories ---
+Prompt: Estimate the total calories in this dish.
+Output: 69 calories
+
+--- Nutrition Breakdown ---
+Prompt: What is the macronutrient breakdown of this dish? Include protein, fat, and carbohydrates in grams.
+Output: 0.8g protein, 0.8g fat, 0.8g carbohydrates
+
+--- Dietary Insights ---
+Q: What is the approximate carbohydrate content?
+A: 20.5
+
+Q: Is this dish high in protein?
+A: no
+
+Q: How many calories does this dish have?
+A: 22.9
+
+Q: Is this dish suitable for a low-carb diet?
+A: yes
+
+
+============================================================
+DISH: dish_1557861216
+============================================================
+
+--- What's On Your Plate ---
+Prompt: Describe this food plate in detail.
+Output: a plate of paper plates
+
+--- Ingredients Detected ---
+Prompt: List all the ingredients visible in this dish.
+Output: paper
+
+--- Estimated Calories ---
+Prompt: Estimate the total calories in this dish.
+Output: 66 calories
+
+--- Nutrition Breakdown ---
+Prompt: What is the macronutrient breakdown of this dish? Include protein, fat, and carbohydrates in grams.
+Output: 0.8g protein, 0.2g fat, 0.8g carbohydrates
+
+--- Dietary Insights ---
+Q: Would this be considered a balanced meal?
+A: no
+
+Q: Would this dish be appropriate for a diabetic diet?
+A: yes
+
+Q: What are the main ingredients in this dish?
+A: paper plates
+
+Q: Is this dish high in protein?
+A: no
+
+
+============================================================
+DISH: dish_1557862345
+============================================================
+
+--- What's On Your Plate ---
+Prompt: Describe this food plate in detail.
+Output: a plate of chicken
+
+--- Ingredients Detected ---
+Prompt: List all the ingredients visible in this dish.
+Output: chicken
+
+--- Estimated Calories ---
+Prompt: Estimate the total calories in this dish.
+Output: 69 calories
+
+--- Nutrition Breakdown ---
+Prompt: What is the macronutrient breakdown of this dish? Include protein, fat, and carbohydrates in grams.
+Output: 0.8g protein, 0.2g fat, 0.2g carbohydrates
+
+--- Dietary Insights ---
+Q: What is the approximate carbohydrate content?
+A: 0.8
+
+Q: Is this dish suitable for someone watching their calorie intake?
+A: yes
+
+Q: Is this dish high in protein?
+A: no
+
+Q: Is this a healthy meal option?
+A: yes
+
+
+
+============================================================
+NEXT STEPS:
+  1. Evaluate:
+     python -m src.eval.evaluate --results-dir results/finetuned_qformer 2>&1 | tee logs/14_eval_finetuned_qformer.log
+  2. Compare with zero-shot:
+     python -m src.eval.compare_models --dirs results/zero_shot_flan-t5-xl results/finetuned_qformer
+============================================================

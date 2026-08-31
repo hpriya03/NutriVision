@@ -1,0 +1,153 @@
+
+Loading Zero-Shot...
+  Raw:  results/zero_shot_flan-t5-xl
+  PF:   results/zero_shot_flan-t5-xl/post_filtered
+  (used vqa_overall_accuracy as fallback for zero-shot PF: 76.56%)
+
+Loading Q-Former LoRA...
+  Raw:  results/v2_finetuned_qformer
+  PF:   results/v2_finetuned_qformer/post_filtered
+
+Loading LLM LoRA...
+  Raw:  results/v2_finetuned_llm
+  PF:   results/v2_finetuned_llm/post_filtered
+
+Loading Both LoRA...
+  Raw:  results/v2_finetuned_both
+  PF:   results/v2_finetuned_both/post_filtered
+
+================================================================================
+POST-FILTER COMPARISON: ALL CONFIGURATIONS
+================================================================================
+
+────────────────────────────────────────────────────────────
+  Zero-Shot
+────────────────────────────────────────────────────────────
+
+  Metric                            Raw   Post-Filt       Delta
+  ────────────────────────────────────────────────────────────
+  VQA Accuracy (%)                58.29       76.56  +    18.27
+
+  BLEU-1                         0.2802      0.2802  +   0.0000
+  ROUGE-1                        0.4268      0.4268  +   0.0000
+  METEOR                         0.3094      0.3094  +   0.0000
+  Ingredient F1                  0.2904      0.2907  +   0.0003
+  Calorie MAE                  152.8434    152.8434  +   0.0000
+  Calorie MAPE (%)              67.3048     67.3048  +   0.0000
+  Protein MAE (g)               17.7203     17.7203  +   0.0000
+  Fat MAE (g)                   13.3796     13.3796  +   0.0000
+  Carb MAE (g)                  20.6891     20.6891  +   0.0000
+
+  Post-Filter Statistics:
+    Dishes processed:        507
+    Ingredients removed:     71
+    VQA corrections (total): 352
+      Seen corrections:      0
+      Unseen corrections:    0
+    Atwater inconsistent:    273
+    Cross-task incon.:        36
+
+────────────────────────────────────────────────────────────
+  Q-Former LoRA
+────────────────────────────────────────────────────────────
+
+  Metric                            Raw   Post-Filt       Delta
+  ────────────────────────────────────────────────────────────
+  VQA Seen Acc (%)                74.68       71.29      -3.39
+  VQA Unseen Acc (%)              58.58       77.07  +    18.49
+  VQA Overall Acc (%)             65.48       74.59  +     9.12
+
+  BLEU-1                         0.6297      0.6297  +   0.0000
+  ROUGE-1                        0.7394      0.7394  +   0.0000
+  METEOR                         0.6565      0.6565  +   0.0000
+  Ingredient F1                  0.6551      0.6551  +   0.0000
+  Calorie MAE                   92.5489     92.5489  +   0.0000
+  Calorie MAPE (%)              66.8988     66.8988  +   0.0000
+  Protein MAE (g)               18.6137     18.6137  +   0.0000
+  Fat MAE (g)                    7.1378      7.1378  +   0.0000
+  Carb MAE (g)                  12.5942     12.5942  +   0.0000
+
+  Post-Filter Statistics:
+    Dishes processed:        507
+    Ingredients removed:     2
+    VQA corrections (total): 2149
+      Seen corrections:      891
+      Unseen corrections:    1258
+    Atwater inconsistent:    305
+    Cross-task incon.:        995
+
+────────────────────────────────────────────────────────────
+  LLM LoRA
+────────────────────────────────────────────────────────────
+
+  Metric                            Raw   Post-Filt       Delta
+  ────────────────────────────────────────────────────────────
+  VQA Seen Acc (%)                80.74       80.39      -0.35
+  VQA Unseen Acc (%)              64.79       81.04  +    16.25
+  VQA Overall Acc (%)             71.77       80.76  +     8.99
+
+  BLEU-1                         0.5847      0.5847  +   0.0000
+  ROUGE-1                        0.7025      0.7025  +   0.0000
+  METEOR                         0.6291      0.6291  +   0.0000
+  Ingredient F1                  0.5601      0.5601  +   0.0000
+  Calorie MAE                  111.1311    111.1311  +   0.0000
+  Calorie MAPE (%)             101.6736    101.6736  +   0.0000
+  Protein MAE (g)               13.6236     13.6236  +   0.0000
+  Fat MAE (g)                   11.0883     11.0883  +   0.0000
+  Carb MAE (g)                  16.3363     16.3363  +   0.0000
+
+  Post-Filter Statistics:
+    Dishes processed:        507
+    Ingredients removed:     0
+    VQA corrections (total): 1166
+      Seen corrections:      107
+      Unseen corrections:    1059
+    Atwater inconsistent:    467
+    Cross-task incon.:        811
+
+────────────────────────────────────────────────────────────
+  Both LoRA
+────────────────────────────────────────────────────────────
+
+  Metric                            Raw   Post-Filt       Delta
+  ────────────────────────────────────────────────────────────
+  VQA Seen Acc (%)                83.71       83.61      -0.10
+  VQA Unseen Acc (%)              60.70       80.30  +    19.60
+  VQA Overall Acc (%)             70.57       81.72  +    11.15
+
+  BLEU-1                         0.5903      0.5903  +   0.0000
+  ROUGE-1                        0.6897      0.6897  +   0.0000
+  METEOR                         0.6258      0.6258  +   0.0000
+  Ingredient F1                  0.5774      0.5774  +   0.0000
+  Calorie MAE                   99.4115     99.4115  +   0.0000
+  Calorie MAPE (%)              77.4404     77.4404  +   0.0000
+  Protein MAE (g)               11.4779     11.4779  +   0.0000
+  Fat MAE (g)                    9.2420      9.2420  +   0.0000
+  Carb MAE (g)                  15.9071     15.9071  +   0.0000
+
+  Post-Filter Statistics:
+    Dishes processed:        507
+    Ingredients removed:     0
+    VQA corrections (total): 1506
+      Seen corrections:      55
+      Unseen corrections:    1451
+    Atwater inconsistent:    392
+    Cross-task incon.:        1268
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+  Best overall accuracy:  81.72%  (Both LoRA + Post-Filter)
+  Largest unseen gain:   +19.60 pp  (Both LoRA)
+
+  Seen corrections by config:
+    Zero-Shot             0
+    Q-Former LoRA         891
+    LLM LoRA              107
+    Both LoRA             55
+
+Comparison CSV saved to: results/post_filter_comparison.csv
+HTML dashboard saved to: results/post_filter_comparison.html
+
+Done.

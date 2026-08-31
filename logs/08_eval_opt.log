@@ -1,0 +1,49 @@
+============================================================
+NutriVision — Evaluation: opt
+============================================================
+Loaded 507 model outputs
+Loaded 507 ground truth dishes
+
+============================================================
+RESULTS: opt
+============================================================
+
+--- Task 1: Captioning (What's On Your Plate) ---
+  bleu1     : 0.2537 [0.2397 – 0.2684]
+  bleu2     : 0.1668 [0.1563 – 0.1780]
+  bleu4     : 0.0588 [0.0540 – 0.0644]
+  rouge1    : 0.3785 [0.3643 – 0.3922]
+  rougeL    : 0.3575 [0.3446 – 0.3702]
+  meteor    : 0.2968 [0.2809 – 0.3142]
+
+--- Task 2: Ingredients (Ingredients Detected) ---
+  precision : 0.4863 [0.4535 – 0.5173]
+  recall    : 0.4144 [0.3782 – 0.4495]
+  f1        : 0.3841 [0.3524 – 0.4139]
+  halluc_rate: 0.7688 [0.7351 – 0.8044]
+  Total hallucinated ingredients: 980
+
+--- Task 3: Calories (Estimated Calories) ---
+  MAE       : 244.75 [226.66 – 263.09] cal
+  MAPE      : 98.90 [97.72 – 100.54]%
+  halluc_rate: 0.0042 [0.0000 – 0.0105]
+  Unparseable calorie outputs: 29
+
+--- Task 4: Macros (Nutrition Breakdown) ---
+  protein MAE    : 14.17 [12.43 – 15.95]g
+  protein MAPE   : 95.79 [85.77 – 109.54]%
+  fat MAE        : 10.48 [9.24 – 11.72]g
+  fat MAPE       : 287.74 [221.12 – 371.88]%
+  carb MAE       : 16.42 [14.79 – 17.92]g
+  carb MAPE      : 108.48 [92.14 – 130.12]%
+  Unparseable macro outputs: 127
+
+--- Task 5: VQA (Dietary Insights) ---
+  Accuracy  : 56.51 [53.45 – 59.67]% (590/1044 correct)
+  Numeric MAE: 33.74 [25.25 – 43.22]
+  halluc_rate: 0.0184 [0.0037 – 0.0368]
+  Unparseable VQA answers: 712
+
+Full results saved to: /home/ubuntu/nutrivision/results/zero_shot_opt/evaluation_results.json
+Summary CSV saved to: /home/ubuntu/nutrivision/results/zero_shot_opt/summary_metrics.csv
+Per-dish scores saved to: /home/ubuntu/nutrivision/results/zero_shot_opt/per_dish_scores.csv

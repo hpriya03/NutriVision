@@ -1,0 +1,30 @@
+=======================================================
+NutriVision — Training Visualization
+=======================================================
+  Loaded: qformer (661 entries)
+
+  Plotting: Q-Former Only
+  Saved: /home/ubuntu/nutrivision/results/training_plots/loss_curve_qformer.png
+  Saved: /home/ubuntu/nutrivision/results/training_plots/lr_schedule_qformer.png
+  Saved: /home/ubuntu/nutrivision/results/training_plots/epoch_comparison_qformer.png
+
+=======================================================
+  Q-Former Only
+=======================================================
+  LoRA rank (r):      16
+  LoRA alpha:         32
+  Learning rate:      0.0002
+  Epochs:             3
+  Total steps:        4,134
+  Training time:      158.0 min
+  Best loss:          1.1961
+  Initial loss:       2.7367
+  Final loss:         1.1312
+  Epoch 1 avg loss:   1.6546
+  Epoch 2 avg loss:   1.2778
+  Epoch 3 avg loss:   1.1963
+
+
+=======================================================
+  All charts saved to: /home/ubuntu/nutrivision/results/training_plots/
+=======================================================

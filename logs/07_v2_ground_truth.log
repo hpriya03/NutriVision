@@ -1,0 +1,122 @@
+=======================================================
+NutriVision — Ground Truth Generator (v2)
+=======================================================
+Loaded metadata for 5006 dishes
+Test set: 507 dishes
+
+VQA thresholds (based on dietary guidelines):
+  High calorie:  > 600 cal/meal (FDA DV: 2000 cal/day ÷ 3)
+  Calorie watch: < 500 cal/meal (weight management target)
+  High protein:  > 25g/meal (≥50% of FDA DV 50g/day)
+  High fat:      > 25g/meal (FDA DV: 78g/day ÷ 3)
+  Low carb:      < 30g/meal (standard low-carb threshold)
+  Diabetic safe: < 45g carbs/meal (ADA guideline)
+  Balanced meal: each macro ≥ 20% of total calories
+  Healthy:       < 600 cal AND < 25g fat
+
+  Held-out question thresholds (v2):
+  Low fat:       < 15g/meal
+  Light meal:    < 400 cal/meal
+  High carb:     > 50g/meal
+  Weight loss:   < 450 cal AND < 20g fat
+  Post-workout:  > 20g protein AND > 30g carbs
+
+Dataset statistics (4766 dishes with food):
+  Calories — mean: 224.1, median: 154.3, range: 1–9486
+  Protein  — mean: 15.2g, median: 8.3g
+  Fat      — mean: 11.3g, median: 6.5g
+  Carb     — mean: 17.9g, median: 12.7g
+
+VQA questions: 12 seen + 8 held-out = 20 total
+
+Ground truth built for 507 dishes (0 skipped)
+
+Test set breakdown:
+  Plate-only:    1
+  High calorie:  38 dishes (>600 cal)
+  High protein:  140 dishes (>25g)
+  Low carb:      387 dishes (<30g)
+
+  Held-out question answer distribution:
+    Is this dish low in fat?                         yes=339 ( 67.0%)  no=167
+    Does this dish have more than 500 calories?      yes= 59 ( 11.7%)  no=447
+    Is this a light meal?                            yes=395 ( 78.1%)  no=111
+    Does this dish have more fat than protein?       yes=162 ( 32.0%)  no=344
+    Is this dish high in carbohydrates?              yes= 33 (  6.5%)  no=473
+    Would this be suitable for a weight loss diet... yes=371 ( 73.3%)  no=135
+    Is this a vegetarian dish?                       yes=310 ( 61.3%)  no=196
+    Would this be a good post-workout meal?          yes= 58 ( 11.5%)  no=448
+
+Saved to: /home/ubuntu/nutrivision/results/v2_ground_truth.json
+
+============================================================
+SAMPLE GROUND TRUTH (verify these against the CSV)
+============================================================
+
+dish_1556575327:
+  Calories: 103.3
+  Macros: fat=6.9g, carb=10.6g, protein=2.9g
+  Ingredients: ['brussels sprouts', 'celery', 'olives']
+  VQA answers (seen):
+    How many calories does this dish have? → 103.3
+    Is this dish high in protein? → no
+    What are the main ingredients in this dish? → brussels sprouts, celery, olives
+    Would this be considered a balanced meal? → no
+    Is this dish suitable for a low-carb diet? → yes
+    How much fat does this dish contain? → 6.9
+  VQA answers (unseen / held-out):
+    Is this dish low in fat? → yes
+    Does this dish have more than 500 calories? → no
+    Is this a light meal? → yes
+    Does this dish have more fat than protein? → yes
+    Is this dish high in carbohydrates? → no
+    Would this be suitable for a weight loss diet? → yes
+    Is this a vegetarian dish? → yes
+    Would this be a good post-workout meal? → no
+
+dish_1557862345:
+  Calories: 103.9
+  Macros: fat=2.3g, carb=0.0g, protein=19.5g
+  Ingredients: ['chicken']
+  VQA answers (seen):
+    How many calories does this dish have? → 103.9
+    Is this dish high in protein? → no
+    What are the main ingredients in this dish? → chicken
+    Would this be considered a balanced meal? → no
+    Is this dish suitable for a low-carb diet? → yes
+    How much fat does this dish contain? → 2.3
+  VQA answers (unseen / held-out):
+    Is this dish low in fat? → yes
+    Does this dish have more than 500 calories? → no
+    Is this a light meal? → yes
+    Does this dish have more fat than protein? → no
+    Is this dish high in carbohydrates? → no
+    Would this be suitable for a weight loss diet? → yes
+    Is this a vegetarian dish? → no
+    Would this be a good post-workout meal? → no
+
+dish_1557862696:
+  Calories: 19.2
+  Macros: fat=0.2g, carb=3.9g, protein=1.4g
+  Ingredients: ['cauliflower']
+  VQA answers (seen):
+    How many calories does this dish have? → 19.2
+    Is this dish high in protein? → no
+    What are the main ingredients in this dish? → cauliflower
+    Would this be considered a balanced meal? → no
+    Is this dish suitable for a low-carb diet? → yes
+    How much fat does this dish contain? → 0.2
+  VQA answers (unseen / held-out):
+    Is this dish low in fat? → yes
+    Does this dish have more than 500 calories? → no
+    Is this a light meal? → yes
+    Does this dish have more fat than protein? → no
+    Is this dish high in carbohydrates? → no
+    Would this be suitable for a weight loss diet? → yes
+    Is this a vegetarian dish? → yes
+    Would this be a good post-workout meal? → no
+
+============================================================
+VERIFY: grep a sample dish in the CSV to confirm values match:
+  grep "dish_1556575327" ~/nutrivision/data/raw/metadata/dish_metadata_cafe1.csv
+============================================================

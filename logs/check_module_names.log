@@ -1,0 +1,146 @@
+/opt/pytorch/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 1722.86it/s]
+Loading weights:   0%|          | 0/1289 [00:00<?, ?it/s]Loading weights:   1%|          | 12/1289 [00:00<01:10, 18.06it/s]Loading weights:   1%|          | 16/1289 [00:01<01:40, 12.69it/s]Loading weights:   2%|▏         | 21/1289 [00:01<01:49, 11.59it/s]Loading weights:   2%|▏         | 26/1289 [00:02<02:36,  8.10it/s]Loading weights:   2%|▏         | 30/1289 [00:03<02:35,  8.09it/s]Loading weights:   3%|▎         | 35/1289 [00:03<02:22,  8.78it/s]Loading weights:   3%|▎         | 40/1289 [00:04<02:59,  6.95it/s]Loading weights:   3%|▎         | 44/1289 [00:05<02:50,  7.30it/s]Loading weights:   4%|▍         | 49/1289 [00:05<02:33,  8.08it/s]Loading weights:   4%|▍         | 54/1289 [00:06<03:04,  6.70it/s]Loading weights:   4%|▍         | 58/1289 [00:07<02:58,  6.91it/s]Loading weights:   5%|▍         | 63/1289 [00:07<02:31,  8.11it/s]Loading weights:   5%|▍         | 64/1289 [00:07<02:33,  7.98it/s]Loading weights:   5%|▌         | 68/1289 [00:08<03:14,  6.29it/s]Loading weights:   6%|▌         | 72/1289 [00:09<02:58,  6.81it/s]Loading weights:   6%|▌         | 77/1289 [00:09<02:37,  7.69it/s]Loading weights:   6%|▋         | 82/1289 [00:10<03:04,  6.55it/s]Loading weights:   7%|▋         | 86/1289 [00:11<02:55,  6.87it/s]Loading weights:   7%|▋         | 91/1289 [00:11<02:34,  7.74it/s]Loading weights:   7%|▋         | 96/1289 [00:12<03:02,  6.53it/s]Loading weights:   8%|▊         | 100/1289 [00:13<02:48,  7.05it/s]Loading weights:   8%|▊         | 105/1289 [00:13<02:30,  7.89it/s]Loading weights:   8%|▊         | 107/1289 [00:13<02:17,  8.59it/s]Loading weights:   9%|▊         | 110/1289 [00:14<03:13,  6.11it/s]Loading weights:   9%|▉         | 114/1289 [00:15<02:56,  6.67it/s]Loading weights:   9%|▉         | 119/1289 [00:15<02:30,  7.75it/s]Loading weights:   9%|▉         | 120/1289 [00:15<02:28,  7.88it/s]Loading weights:  10%|▉         | 124/1289 [00:16<03:11,  6.08it/s]Loading weights:  10%|▉         | 128/1289 [00:17<02:53,  6.71it/s]Loading weights:  10%|█         | 133/1289 [00:17<02:31,  7.64it/s]Loading weights:  11%|█         | 136/1289 [00:18<03:26,  5.59it/s]Loading weights:  11%|█         | 142/1289 [00:18<02:36,  7.35it/s]Loading weights:  11%|█         | 143/1289 [00:19<02:34,  7.42it/s]Loading weights:  11%|█▏        | 147/1289 [00:19<02:18,  8.28it/s]Loading weights:  12%|█▏        | 149/1289 [00:19<02:08,  8.89it/s]Loading weights:  12%|█▏        | 152/1289 [00:20<03:09,  5.99it/s]Loading weights:  12%|█▏        | 156/1289 [00:20<02:51,  6.61it/s]Loading weights:  12%|█▏        | 161/1289 [00:21<02:26,  7.68it/s]Loading weights:  13%|█▎        | 166/1289 [00:22<02:54,  6.43it/s]Loading weights:  13%|█▎        | 170/1289 [00:22<02:43,  6.85it/s]Loading weights:  14%|█▎        | 175/1289 [00:23<02:22,  7.82it/s]Loading weights:  14%|█▎        | 176/1289 [00:23<02:20,  7.90it/s]Loading weights:  14%|█▍        | 180/1289 [00:24<02:59,  6.18it/s]Loading weights:  14%|█▍        | 184/1289 [00:24<02:43,  6.78it/s]Loading weights:  15%|█▍        | 189/1289 [00:25<02:23,  7.68it/s]Loading weights:  15%|█▍        | 192/1289 [00:26<03:14,  5.63it/s]Loading weights:  15%|█▌        | 198/1289 [00:26<02:28,  7.36it/s]Loading weights:  16%|█▌        | 200/1289 [00:26<02:13,  8.17it/s]Loading weights:  16%|█▌        | 203/1289 [00:27<02:15,  8.00it/s]Loading weights:  16%|█▌        | 205/1289 [00:27<01:59,  9.05it/s]Loading weights:  16%|█▌        | 207/1289 [00:28<03:23,  5.32it/s]Loading weights:  16%|█▋        | 212/1289 [00:28<02:34,  6.97it/s]Loading weights:  17%|█▋        | 214/1289 [00:28<02:18,  7.78it/s]Loading weights:  17%|█▋        | 217/1289 [00:29<02:15,  7.93it/s]Loading weights:  17%|█▋        | 219/1289 [00:29<02:03,  8.68it/s]Loading weights:  17%|█▋        | 222/1289 [00:30<03:08,  5.65it/s]Loading weights:  18%|█▊        | 226/1289 [00:30<02:44,  6.45it/s]Loading weights:  18%|█▊        | 231/1289 [00:31<02:18,  7.63it/s]Loading weights:  18%|█▊        | 236/1289 [00:32<02:47,  6.30it/s]Loading weights:  19%|█▊        | 240/1289 [00:32<02:32,  6.86it/s]Loading weights:  19%|█▉        | 245/1289 [00:33<02:14,  7.77it/s]Loading weights:  19%|█▉        | 250/1289 [00:34<02:40,  6.48it/s]Loading weights:  20%|█▉        | 254/1289 [00:34<02:28,  6.95it/s]Loading weights:  20%|██        | 259/1289 [00:35<02:11,  7.85it/s]Loading weights:  20%|██        | 260/1289 [00:35<02:11,  7.85it/s]Loading weights:  20%|██        | 264/1289 [00:36<02:43,  6.26it/s]Loading weights:  21%|██        | 268/1289 [00:36<02:30,  6.76it/s]Loading weights:  21%|██        | 273/1289 [00:37<02:11,  7.75it/s]Loading weights:  22%|██▏       | 278/1289 [00:38<02:36,  6.44it/s]Loading weights:  22%|██▏       | 282/1289 [00:38<02:25,  6.91it/s]Loading weights:  22%|██▏       | 287/1289 [00:39<02:09,  7.72it/s]Loading weights:  22%|██▏       | 289/1289 [00:40<03:08,  5.31it/s]Loading weights:  23%|██▎       | 296/1289 [00:40<02:11,  7.53it/s]Loading weights:  23%|██▎       | 297/1289 [00:40<02:11,  7.55it/s]Loading weights:  23%|██▎       | 301/1289 [00:41<01:56,  8.52it/s]Loading weights:  23%|██▎       | 302/1289 [00:41<01:58,  8.30it/s]Loading weights:  24%|██▎       | 304/1289 [00:42<03:14,  5.07it/s]Loading weights:  24%|██▍       | 310/1289 [00:42<02:15,  7.24it/s]Loading weights:  24%|██▍       | 315/1289 [00:43<02:00,  8.11it/s]Loading weights:  25%|██▍       | 317/1289 [00:43<01:47,  9.05it/s]Loading weights:  25%|██▍       | 319/1289 [00:44<02:55,  5.53it/s]Loading weights:  25%|██▌       | 324/1289 [00:44<02:22,  6.77it/s]Loading weights:  26%|██▌       | 329/1289 [00:45<02:03,  7.80it/s]Loading weights:  26%|██▌       | 332/1289 [00:46<02:49,  5.63it/s]Loading weights:  26%|██▋       | 339/1289 [00:46<02:01,  7.83it/s]Loading weights:  26%|██▋       | 341/1289 [00:46<01:49,  8.63it/s]Loading weights:  27%|██▋       | 345/1289 [00:47<02:32,  6.18it/s]Loading weights:  27%|██▋       | 350/1289 [00:48<02:06,  7.44it/s]Loading weights:  27%|██▋       | 352/1289 [00:48<01:52,  8.30it/s]Loading weights:  27%|██▋       | 354/1289 [00:49<02:43,  5.71it/s]Loading weights:  28%|██▊       | 358/1289 [00:49<02:24,  6.44it/s]Loading weights:  28%|██▊       | 363/1289 [00:50<02:38,  5.83it/s]Loading weights:  28%|██▊       | 367/1289 [00:51<02:26,  6.31it/s]Loading weights:  29%|██▉       | 372/1289 [00:52<02:35,  5.88it/s]Loading weights:  29%|██▉       | 376/1289 [00:52<02:25,  6.28it/s]Loading weights:  30%|██▉       | 381/1289 [00:53<02:34,  5.89it/s]Loading weights:  30%|██▉       | 385/1289 [00:54<02:23,  6.29it/s]Loading weights:  30%|███       | 390/1289 [00:55<02:30,  5.97it/s]Loading weights:  31%|███       | 394/1289 [00:55<02:21,  6.32it/s]Loading weights:  31%|███       | 399/1289 [00:56<02:29,  5.93it/s]Loading weights:  31%|███▏      | 403/1289 [00:57<02:17,  6.42it/s]Loading weights:  32%|███▏      | 408/1289 [00:58<02:28,  5.91it/s]Loading weights:  32%|███▏      | 412/1289 [00:58<02:17,  6.40it/s]Loading weights:  32%|███▏      | 417/1289 [00:59<02:27,  5.93it/s]Loading weights:  33%|███▎      | 421/1289 [00:59<02:14,  6.44it/s]Loading weights:  33%|███▎      | 426/1289 [01:00<02:26,  5.90it/s]Loading weights:  33%|███▎      | 430/1289 [01:01<02:15,  6.33it/s]Loading weights:  34%|███▎      | 435/1289 [01:02<02:33,  5.57it/s]Loading weights:  34%|███▍      | 440/1289 [01:02<02:06,  6.71it/s]Loading weights:  34%|███▍      | 441/1289 [01:03<02:03,  6.88it/s]Loading weights:  34%|███▍      | 444/1289 [01:03<02:29,  5.65it/s]Loading weights:  35%|███▍      | 448/1289 [01:04<02:13,  6.32it/s]Loading weights:  35%|███▌      | 453/1289 [01:05<02:25,  5.75it/s]Loading weights:  35%|███▌      | 457/1289 [01:05<02:14,  6.18it/s]Loading weights:  36%|███▌      | 462/1289 [01:06<02:20,  5.89it/s]Loading weights:  36%|███▌      | 466/1289 [01:07<02:07,  6.43it/s]Loading weights:  37%|███▋      | 471/1289 [01:08<02:19,  5.88it/s]Loading weights:  37%|███▋      | 475/1289 [01:08<02:08,  6.36it/s]Loading weights:  37%|███▋      | 480/1289 [01:09<02:17,  5.90it/s]Loading weights:  38%|███▊      | 484/1289 [01:10<02:06,  6.37it/s]Loading weights:  38%|███▊      | 489/1289 [01:11<02:15,  5.90it/s]Loading weights:  38%|███▊      | 493/1289 [01:11<02:04,  6.41it/s]Loading weights:  39%|███▊      | 498/1289 [01:12<02:14,  5.90it/s]Loading weights:  39%|███▉      | 502/1289 [01:13<02:04,  6.31it/s]Loading weights:  39%|███▉      | 507/1289 [01:14<02:12,  5.91it/s]Loading weights:  40%|███▉      | 511/1289 [01:14<02:02,  6.34it/s]Loading weights:  40%|████      | 516/1289 [01:15<02:10,  5.90it/s]Loading weights:  40%|████      | 520/1289 [01:16<02:00,  6.38it/s]Loading weights:  41%|████      | 525/1289 [01:17<02:09,  5.88it/s]Loading weights:  41%|████      | 529/1289 [01:17<01:59,  6.35it/s]Loading weights:  41%|████▏     | 534/1289 [01:18<02:07,  5.92it/s]Loading weights:  42%|████▏     | 538/1289 [01:19<01:56,  6.43it/s]Loading weights:  42%|████▏     | 543/1289 [01:20<02:06,  5.89it/s]Loading weights:  42%|████▏     | 547/1289 [01:20<01:55,  6.41it/s]Loading weights:  43%|████▎     | 552/1289 [01:21<02:04,  5.90it/s]Loading weights:  43%|████▎     | 557/1289 [01:26<05:23,  2.26it/s]Loading weights:  51%|█████     | 651/1289 [01:26<00:30, 21.18it/s]Loading weights:  53%|█████▎    | 680/1289 [01:27<00:22, 26.96it/s]Loading weights:  55%|█████▍    | 703/1289 [01:27<00:18, 32.01it/s]Loading weights:  56%|█████▌    | 721/1289 [01:27<00:15, 36.73it/s]Loading weights:  57%|█████▋    | 736/1289 [01:27<00:13, 40.65it/s]Loading weights:  58%|█████▊    | 749/1289 [01:27<00:11, 46.72it/s]Loading weights:  59%|█████▉    | 762/1289 [01:28<00:10, 49.59it/s]Loading weights:  60%|█████▉    | 773/1289 [01:28<00:10, 51.59it/s]Loading weights:  61%|██████    | 786/1289 [01:28<00:08, 59.14it/s]Loading weights:  62%|██████▏   | 796/1289 [01:28<00:08, 59.30it/s]Loading weights:  63%|██████▎   | 808/1289 [01:28<00:07, 65.27it/s]Loading weights:  63%|██████▎   | 818/1289 [01:28<00:07, 65.65it/s]Loading weights:  64%|██████▍   | 826/1289 [01:29<00:16, 27.34it/s]Loading weights:  65%|██████▍   | 832/1289 [01:29<00:15, 30.23it/s]Loading weights:  65%|██████▌   | 838/1289 [01:30<00:17, 26.31it/s]Loading weights:  65%|██████▌   | 843/1289 [01:30<00:23, 19.27it/s]Loading weights:  66%|██████▌   | 849/1289 [01:31<00:22, 19.72it/s]Loading weights:  66%|██████▌   | 853/1289 [01:31<00:22, 19.47it/s]Loading weights:  66%|██████▋   | 856/1289 [01:31<00:24, 17.93it/s]Loading weights:  67%|██████▋   | 861/1289 [01:32<00:30, 14.09it/s]Loading weights:  67%|██████▋   | 867/1289 [01:32<00:23, 18.26it/s]Loading weights:  68%|██████▊   | 873/1289 [01:32<00:24, 16.71it/s]Loading weights:  68%|██████▊   | 876/1289 [01:33<00:31, 13.10it/s]Loading weights:  69%|██████▊   | 885/1289 [01:33<00:24, 16.80it/s]Loading weights:  69%|██████▉   | 888/1289 [01:33<00:26, 15.32it/s]Loading weights:  69%|██████▉   | 891/1289 [01:33<00:24, 16.27it/s]Loading weights:  70%|██████▉   | 897/1289 [01:34<00:24, 15.99it/s]Loading weights:  70%|██████▉   | 899/1289 [01:34<00:26, 14.79it/s]Loading weights:  70%|███████   | 903/1289 [01:34<00:24, 15.56it/s]Loading weights:  71%|███████   | 909/1289 [01:34<00:23, 16.33it/s]Loading weights:  71%|███████   | 911/1289 [01:35<00:29, 12.83it/s]Loading weights:  71%|███████▏  | 921/1289 [01:35<00:19, 18.44it/s]Loading weights:  72%|███████▏  | 923/1289 [01:35<00:26, 13.93it/s]Loading weights:  72%|███████▏  | 933/1289 [01:36<00:23, 14.96it/s]Loading weights:  73%|███████▎  | 939/1289 [01:36<00:19, 18.03it/s]Loading weights:  73%|███████▎  | 945/1289 [01:37<00:22, 15.46it/s]Loading weights:  73%|███████▎  | 947/1289 [01:37<00:25, 13.25it/s]Loading weights:  74%|███████▍  | 957/1289 [01:37<00:19, 17.44it/s]Loading weights:  74%|███████▍  | 959/1289 [01:38<00:22, 14.40it/s]Loading weights:  75%|███████▌  | 969/1289 [01:38<00:20, 15.30it/s]Loading weights:  76%|███████▌  | 975/1289 [01:39<00:17, 18.27it/s]Loading weights:  76%|███████▌  | 981/1289 [01:39<00:20, 14.68it/s]Loading weights:  76%|███████▋  | 983/1289 [01:39<00:24, 12.69it/s]Loading weights:  77%|███████▋  | 993/1289 [01:40<00:16, 18.06it/s]Loading weights:  77%|███████▋  | 996/1289 [01:40<00:20, 14.22it/s]Loading weights:  78%|███████▊  | 1005/1289 [01:41<00:16, 17.54it/s]Loading weights:  78%|███████▊  | 1007/1289 [01:41<00:17, 15.71it/s]Loading weights:  78%|███████▊  | 1011/1289 [01:41<00:16, 16.55it/s]Loading weights:  79%|███████▉  | 1017/1289 [01:42<00:19, 14.02it/s]Loading weights:  79%|███████▉  | 1023/1289 [01:42<00:15, 17.72it/s]Loading weights:  80%|███████▉  | 1029/1289 [01:42<00:15, 17.23it/s]Loading weights:  80%|████████  | 1032/1289 [01:43<00:20, 12.77it/s]Loading weights:  81%|████████  | 1041/1289 [01:43<00:15, 15.69it/s]Loading weights:  81%|████████  | 1043/1289 [01:43<00:15, 15.68it/s]Loading weights:  81%|████████  | 1047/1289 [01:43<00:14, 16.67it/s]Loading weights:  82%|████████▏ | 1053/1289 [01:44<00:15, 15.69it/s]Loading weights:  82%|████████▏ | 1055/1289 [01:44<00:18, 12.92it/s]Loading weights:  83%|████████▎ | 1065/1289 [01:44<00:12, 18.58it/s]Loading weights:  83%|████████▎ | 1067/1289 [01:45<00:16, 13.53it/s]Loading weights:  84%|████████▎ | 1077/1289 [01:45<00:13, 15.22it/s]Loading weights:  84%|████████▎ | 1079/1289 [01:45<00:13, 15.48it/s]Loading weights:  84%|████████▍ | 1089/1289 [01:46<00:12, 16.24it/s]Loading weights:  85%|████████▍ | 1091/1289 [01:46<00:14, 14.00it/s]Loading weights:  85%|████████▌ | 1101/1289 [01:47<00:11, 16.77it/s]Loading weights:  86%|████████▌ | 1103/1289 [01:47<00:12, 14.62it/s]Loading weights:  86%|████████▋ | 1113/1289 [01:48<00:10, 16.50it/s]Loading weights:  87%|████████▋ | 1115/1289 [01:48<00:12, 13.41it/s]Loading weights:  87%|████████▋ | 1125/1289 [01:48<00:09, 17.51it/s]Loading weights:  87%|████████▋ | 1127/1289 [01:49<00:11, 14.18it/s]Loading weights:  88%|████████▊ | 1137/1289 [01:49<00:08, 17.06it/s]Loading weights:  88%|████████▊ | 1139/1289 [01:49<00:09, 15.37it/s]Loading weights:  89%|████████▉ | 1149/1289 [01:50<00:09, 15.15it/s]Loading weights:  89%|████████▉ | 1151/1289 [01:50<00:08, 15.54it/s]Loading weights:  90%|█████████ | 1161/1289 [01:51<00:07, 16.78it/s]Loading weights:  90%|█████████ | 1163/1289 [01:51<00:09, 13.35it/s]Loading weights:  91%|█████████ | 1173/1289 [01:51<00:06, 16.88it/s]Loading weights:  91%|█████████ | 1175/1289 [01:52<00:07, 14.43it/s]Loading weights:  91%|█████████▏| 1179/1289 [01:52<00:06, 17.00it/s]Loading weights:  92%|█████████▏| 1185/1289 [01:52<00:06, 15.86it/s]Loading weights:  92%|█████████▏| 1187/1289 [01:52<00:06, 14.59it/s]Loading weights:  93%|█████████▎| 1197/1289 [01:53<00:06, 15.25it/s]Loading weights:  93%|█████████▎| 1199/1289 [01:53<00:06, 14.34it/s]Loading weights:  94%|█████████▍| 1209/1289 [01:54<00:05, 15.71it/s]Loading weights:  94%|█████████▍| 1211/1289 [01:54<00:05, 14.59it/s]Loading weights:  95%|█████████▍| 1221/1289 [01:55<00:04, 16.54it/s]Loading weights:  95%|█████████▍| 1223/1289 [01:55<00:04, 14.89it/s]Loading weights:  96%|█████████▌| 1233/1289 [01:55<00:03, 14.46it/s]Loading weights:  97%|█████████▋| 1245/1289 [01:56<00:02, 16.72it/s]Loading weights:  97%|█████████▋| 1247/1289 [01:56<00:03, 13.90it/s]Loading weights:  98%|█████████▊| 1257/1289 [01:57<00:01, 16.20it/s]Loading weights:  98%|█████████▊| 1259/1289 [01:57<00:01, 15.91it/s]Loading weights:  98%|█████████▊| 1268/1289 [01:57<00:00, 23.68it/s]Loading weights:  99%|█████████▊| 1272/1289 [01:58<00:01, 13.98it/s]Loading weights:  99%|█████████▉| 1281/1289 [01:58<00:00, 16.67it/s]Loading weights: 100%|█████████▉| 1284/1289 [01:58<00:00, 16.41it/s]Loading weights: 100%|██████████| 1289/1289 [01:58<00:00, 10.83it/s]
+[transformers] The tied weights mapping and config for this model specifies to tie language_model.shared.weight to language_model.lm_head.weight, but both are present in the checkpoints with different values, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning.
+=== Q-Former Linear layers ===
+  qformer.encoder.layer.0.attention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.0.attention.attention.key  shape=(768, 768)
+  qformer.encoder.layer.0.attention.attention.value  shape=(768, 768)
+  qformer.encoder.layer.0.attention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.0.crossattention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.0.crossattention.attention.key  shape=(768, 1408)
+  qformer.encoder.layer.0.crossattention.attention.value  shape=(768, 1408)
+  qformer.encoder.layer.0.crossattention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.0.intermediate_query.dense  shape=(3072, 768)
+  qformer.encoder.layer.0.output_query.dense  shape=(768, 3072)
+  qformer.encoder.layer.1.attention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.1.attention.attention.key  shape=(768, 768)
+  qformer.encoder.layer.1.attention.attention.value  shape=(768, 768)
+  qformer.encoder.layer.1.attention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.1.intermediate_query.dense  shape=(3072, 768)
+  qformer.encoder.layer.1.output_query.dense  shape=(768, 3072)
+  qformer.encoder.layer.2.attention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.2.attention.attention.key  shape=(768, 768)
+  qformer.encoder.layer.2.attention.attention.value  shape=(768, 768)
+  qformer.encoder.layer.2.attention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.2.crossattention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.2.crossattention.attention.key  shape=(768, 1408)
+  qformer.encoder.layer.2.crossattention.attention.value  shape=(768, 1408)
+  qformer.encoder.layer.2.crossattention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.2.intermediate_query.dense  shape=(3072, 768)
+  qformer.encoder.layer.2.output_query.dense  shape=(768, 3072)
+  qformer.encoder.layer.3.attention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.3.attention.attention.key  shape=(768, 768)
+  qformer.encoder.layer.3.attention.attention.value  shape=(768, 768)
+  qformer.encoder.layer.3.attention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.3.intermediate_query.dense  shape=(3072, 768)
+  qformer.encoder.layer.3.output_query.dense  shape=(768, 3072)
+  qformer.encoder.layer.4.attention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.4.attention.attention.key  shape=(768, 768)
+  qformer.encoder.layer.4.attention.attention.value  shape=(768, 768)
+  qformer.encoder.layer.4.attention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.4.crossattention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.4.crossattention.attention.key  shape=(768, 1408)
+  qformer.encoder.layer.4.crossattention.attention.value  shape=(768, 1408)
+  qformer.encoder.layer.4.crossattention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.4.intermediate_query.dense  shape=(3072, 768)
+  qformer.encoder.layer.4.output_query.dense  shape=(768, 3072)
+  qformer.encoder.layer.5.attention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.5.attention.attention.key  shape=(768, 768)
+  qformer.encoder.layer.5.attention.attention.value  shape=(768, 768)
+  qformer.encoder.layer.5.attention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.5.intermediate_query.dense  shape=(3072, 768)
+  qformer.encoder.layer.5.output_query.dense  shape=(768, 3072)
+  qformer.encoder.layer.6.attention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.6.attention.attention.key  shape=(768, 768)
+  qformer.encoder.layer.6.attention.attention.value  shape=(768, 768)
+  qformer.encoder.layer.6.attention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.6.crossattention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.6.crossattention.attention.key  shape=(768, 1408)
+  qformer.encoder.layer.6.crossattention.attention.value  shape=(768, 1408)
+  qformer.encoder.layer.6.crossattention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.6.intermediate_query.dense  shape=(3072, 768)
+  qformer.encoder.layer.6.output_query.dense  shape=(768, 3072)
+  qformer.encoder.layer.7.attention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.7.attention.attention.key  shape=(768, 768)
+  qformer.encoder.layer.7.attention.attention.value  shape=(768, 768)
+  qformer.encoder.layer.7.attention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.7.intermediate_query.dense  shape=(3072, 768)
+  qformer.encoder.layer.7.output_query.dense  shape=(768, 3072)
+  qformer.encoder.layer.8.attention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.8.attention.attention.key  shape=(768, 768)
+  qformer.encoder.layer.8.attention.attention.value  shape=(768, 768)
+  qformer.encoder.layer.8.attention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.8.crossattention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.8.crossattention.attention.key  shape=(768, 1408)
+  qformer.encoder.layer.8.crossattention.attention.value  shape=(768, 1408)
+  qformer.encoder.layer.8.crossattention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.8.intermediate_query.dense  shape=(3072, 768)
+  qformer.encoder.layer.8.output_query.dense  shape=(768, 3072)
+  qformer.encoder.layer.9.attention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.9.attention.attention.key  shape=(768, 768)
+  qformer.encoder.layer.9.attention.attention.value  shape=(768, 768)
+  qformer.encoder.layer.9.attention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.9.intermediate_query.dense  shape=(3072, 768)
+  qformer.encoder.layer.9.output_query.dense  shape=(768, 3072)
+  qformer.encoder.layer.10.attention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.10.attention.attention.key  shape=(768, 768)
+  qformer.encoder.layer.10.attention.attention.value  shape=(768, 768)
+  qformer.encoder.layer.10.attention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.10.crossattention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.10.crossattention.attention.key  shape=(768, 1408)
+  qformer.encoder.layer.10.crossattention.attention.value  shape=(768, 1408)
+  qformer.encoder.layer.10.crossattention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.10.intermediate_query.dense  shape=(3072, 768)
+  qformer.encoder.layer.10.output_query.dense  shape=(768, 3072)
+  qformer.encoder.layer.11.attention.attention.query  shape=(768, 768)
+  qformer.encoder.layer.11.attention.attention.key  shape=(768, 768)
+  qformer.encoder.layer.11.attention.attention.value  shape=(768, 768)
+  qformer.encoder.layer.11.attention.output.dense  shape=(768, 768)
+  qformer.encoder.layer.11.intermediate_query.dense  shape=(3072, 768)
+  qformer.encoder.layer.11.output_query.dense  shape=(768, 3072)
+
+Total Q-Former Linear layers: 96
+  Self-attention: 48
+  Cross-attention: 24
+  FFN/other: 24
+
+=== FlanT5 LLM Linear layers (first 2 encoder + 2 decoder blocks only) ===
+  language_model.encoder.block.0.layer.0.SelfAttention.q  shape=(2048, 2048)
+  language_model.encoder.block.0.layer.0.SelfAttention.k  shape=(2048, 2048)
+  language_model.encoder.block.0.layer.0.SelfAttention.v  shape=(2048, 2048)
+  language_model.encoder.block.0.layer.0.SelfAttention.o  shape=(2048, 2048)
+  language_model.encoder.block.0.layer.1.DenseReluDense.wi_0  shape=(5120, 2048)
+  language_model.encoder.block.0.layer.1.DenseReluDense.wi_1  shape=(5120, 2048)
+  language_model.encoder.block.0.layer.1.DenseReluDense.wo  shape=(2048, 5120)
+  language_model.encoder.block.1.layer.0.SelfAttention.q  shape=(2048, 2048)
+  language_model.encoder.block.1.layer.0.SelfAttention.k  shape=(2048, 2048)
+  language_model.encoder.block.1.layer.0.SelfAttention.v  shape=(2048, 2048)
+  language_model.encoder.block.1.layer.0.SelfAttention.o  shape=(2048, 2048)
+  language_model.encoder.block.1.layer.1.DenseReluDense.wi_0  shape=(5120, 2048)
+  language_model.encoder.block.1.layer.1.DenseReluDense.wi_1  shape=(5120, 2048)
+  language_model.encoder.block.1.layer.1.DenseReluDense.wo  shape=(2048, 5120)
+  language_model.decoder.block.0.layer.0.SelfAttention.q  shape=(2048, 2048)
+  language_model.decoder.block.0.layer.0.SelfAttention.k  shape=(2048, 2048)
+  language_model.decoder.block.0.layer.0.SelfAttention.v  shape=(2048, 2048)
+  language_model.decoder.block.0.layer.0.SelfAttention.o  shape=(2048, 2048)
+  language_model.decoder.block.0.layer.1.EncDecAttention.q  shape=(2048, 2048)
+  language_model.decoder.block.0.layer.1.EncDecAttention.k  shape=(2048, 2048)
+  language_model.decoder.block.0.layer.1.EncDecAttention.v  shape=(2048, 2048)
+  language_model.decoder.block.0.layer.1.EncDecAttention.o  shape=(2048, 2048)
+  language_model.decoder.block.0.layer.2.DenseReluDense.wi_0  shape=(5120, 2048)
+  language_model.decoder.block.0.layer.2.DenseReluDense.wi_1  shape=(5120, 2048)
+  language_model.decoder.block.0.layer.2.DenseReluDense.wo  shape=(2048, 5120)
+  language_model.decoder.block.1.layer.0.SelfAttention.q  shape=(2048, 2048)
+  language_model.decoder.block.1.layer.0.SelfAttention.k  shape=(2048, 2048)
+  language_model.decoder.block.1.layer.0.SelfAttention.v  shape=(2048, 2048)
+  language_model.decoder.block.1.layer.0.SelfAttention.o  shape=(2048, 2048)
+  language_model.decoder.block.1.layer.1.EncDecAttention.q  shape=(2048, 2048)
+  language_model.decoder.block.1.layer.1.EncDecAttention.k  shape=(2048, 2048)
+  language_model.decoder.block.1.layer.1.EncDecAttention.v  shape=(2048, 2048)
+  language_model.decoder.block.1.layer.1.EncDecAttention.o  shape=(2048, 2048)
+  language_model.decoder.block.1.layer.2.DenseReluDense.wi_0  shape=(5120, 2048)
+  language_model.decoder.block.1.layer.2.DenseReluDense.wi_1  shape=(5120, 2048)
+  language_model.decoder.block.1.layer.2.DenseReluDense.wo  shape=(2048, 5120)

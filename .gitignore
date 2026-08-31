@@ -1,19 +1,7 @@
-# Large data files
-data/raw/
-data/splits/
-data/training/
-data/official_splits/
-
-# Model checkpoints (too large for GitHub)
-checkpoints/
-
-# Runtime logs (terminal output, not results)
-logs/
-
-# Python cache
-*.pyc
+*.pt
+*.bin
+*.safetensors
+*.ckpt
 __pycache__/
-.ipynb_checkpoints/
-
-# HuggingFace cache
-huggingface_cache/
+checkpoints/
+data/

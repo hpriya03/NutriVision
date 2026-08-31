@@ -1,0 +1,810 @@
+/opt/pytorch/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+============================================================
+NutriVision — LoRA Fine-Tuning (v2)
+============================================================
+Target: both
+  Learning rate override: 0.0001 (default was 0.0002)
+
+Loading Salesforce/blip2-flan-t5-xl...
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 4398.85it/s]
+Loading weights:   0%|          | 0/1289 [00:00<?, ?it/s]Loading weights:   1%|          | 10/1289 [00:00<01:42, 12.49it/s]Loading weights:   1%|          | 16/1289 [00:01<01:35, 13.33it/s]Loading weights:   1%|▏         | 18/1289 [00:01<01:36, 13.21it/s]Loading weights:   2%|▏         | 21/1289 [00:01<01:50, 11.46it/s]Loading weights:   2%|▏         | 23/1289 [00:01<01:49, 11.53it/s]Loading weights:   2%|▏         | 26/1289 [00:02<03:14,  6.49it/s]Loading weights:   2%|▏         | 30/1289 [00:03<02:57,  7.08it/s]Loading weights:   3%|▎         | 35/1289 [00:03<02:39,  7.85it/s]Loading weights:   3%|▎         | 38/1289 [00:04<03:39,  5.69it/s]Loading weights:   3%|▎         | 44/1289 [00:05<02:47,  7.42it/s]Loading weights:   4%|▍         | 49/1289 [00:05<02:35,  7.95it/s]Loading weights:   4%|▍         | 51/1289 [00:06<03:47,  5.45it/s]Loading weights:   4%|▍         | 58/1289 [00:07<02:39,  7.69it/s]Loading weights:   5%|▍         | 59/1289 [00:07<02:38,  7.75it/s]Loading weights:   5%|▍         | 63/1289 [00:07<02:23,  8.57it/s]Loading weights:   5%|▍         | 64/1289 [00:07<02:27,  8.31it/s]Loading weights:   5%|▌         | 68/1289 [00:08<03:15,  6.24it/s]Loading weights:   6%|▌         | 72/1289 [00:09<02:59,  6.78it/s]Loading weights:   6%|▌         | 77/1289 [00:09<02:36,  7.74it/s]Loading weights:   6%|▌         | 79/1289 [00:10<03:54,  5.15it/s]Loading weights:   7%|▋         | 86/1289 [00:11<02:41,  7.45it/s]Loading weights:   7%|▋         | 91/1289 [00:11<02:27,  8.10it/s]Loading weights:   7%|▋         | 96/1289 [00:12<02:59,  6.66it/s]Loading weights:   8%|▊         | 100/1289 [00:13<02:46,  7.15it/s]Loading weights:   8%|▊         | 105/1289 [00:13<02:29,  7.94it/s]Loading weights:   8%|▊         | 107/1289 [00:13<02:16,  8.68it/s]Loading weights:   8%|▊         | 109/1289 [00:14<03:28,  5.66it/s]Loading weights:   9%|▉         | 114/1289 [00:15<02:51,  6.87it/s]Loading weights:   9%|▉         | 119/1289 [00:15<02:29,  7.81it/s]Loading weights:  10%|▉         | 124/1289 [00:16<02:59,  6.49it/s]Loading weights:  10%|▉         | 128/1289 [00:17<02:46,  6.99it/s]Loading weights:  10%|█         | 133/1289 [00:17<02:27,  7.85it/s]Loading weights:  10%|█         | 134/1289 [00:17<02:25,  7.96it/s]Loading weights:  11%|█         | 138/1289 [00:18<03:06,  6.19it/s]Loading weights:  11%|█         | 142/1289 [00:19<02:51,  6.71it/s]Loading weights:  11%|█▏        | 147/1289 [00:19<02:27,  7.72it/s]Loading weights:  12%|█▏        | 152/1289 [00:20<02:56,  6.44it/s]Loading weights:  12%|█▏        | 156/1289 [00:21<02:42,  6.97it/s]Loading weights:  12%|█▏        | 161/1289 [00:21<02:23,  7.86it/s]Loading weights:  13%|█▎        | 164/1289 [00:21<02:00,  9.33it/s]Loading weights:  13%|█▎        | 166/1289 [00:22<03:09,  5.91it/s]Loading weights:  13%|█▎        | 170/1289 [00:23<02:50,  6.57it/s]Loading weights:  14%|█▎        | 175/1289 [00:23<02:27,  7.54it/s]Loading weights:  14%|█▍        | 180/1289 [00:24<02:54,  6.36it/s]Loading weights:  14%|█▍        | 184/1289 [00:25<02:40,  6.88it/s]Loading weights:  15%|█▍        | 189/1289 [00:25<02:25,  7.56it/s]Loading weights:  15%|█▌        | 194/1289 [00:26<02:47,  6.53it/s]Loading weights:  15%|█▌        | 198/1289 [00:27<02:38,  6.88it/s]Loading weights:  16%|█▌        | 203/1289 [00:27<02:17,  7.88it/s]Loading weights:  16%|█▌        | 204/1289 [00:27<02:16,  7.94it/s]Loading weights:  16%|█▌        | 208/1289 [00:28<02:54,  6.19it/s]Loading weights:  16%|█▋        | 212/1289 [00:29<02:42,  6.64it/s]Loading weights:  17%|█▋        | 217/1289 [00:29<02:16,  7.84it/s]Loading weights:  17%|█▋        | 218/1289 [00:29<02:13,  8.00it/s]Loading weights:  17%|█▋        | 222/1289 [00:30<03:06,  5.71it/s]Loading weights:  18%|█▊        | 227/1289 [00:31<02:27,  7.18it/s]Loading weights:  18%|█▊        | 231/1289 [00:31<01:54,  9.22it/s]Loading weights:  18%|█▊        | 233/1289 [00:31<02:14,  7.86it/s]Loading weights:  18%|█▊        | 236/1289 [00:32<02:59,  5.86it/s]Loading weights:  19%|█▊        | 240/1289 [00:33<02:39,  6.56it/s]Loading weights:  19%|█▉        | 245/1289 [00:33<02:16,  7.67it/s]Loading weights:  19%|█▉        | 248/1289 [00:33<01:51,  9.36it/s]Loading weights:  19%|█▉        | 250/1289 [00:34<03:00,  5.74it/s]Loading weights:  20%|█▉        | 254/1289 [00:34<02:40,  6.44it/s]Loading weights:  20%|██        | 259/1289 [00:35<02:16,  7.56it/s]Loading weights:  20%|██        | 264/1289 [00:36<02:42,  6.32it/s]Loading weights:  21%|██        | 268/1289 [00:36<02:30,  6.80it/s]Loading weights:  21%|██        | 273/1289 [00:37<02:11,  7.71it/s]Loading weights:  22%|██▏       | 278/1289 [00:38<02:35,  6.49it/s]Loading weights:  22%|██▏       | 282/1289 [00:38<02:25,  6.92it/s]Loading weights:  22%|██▏       | 287/1289 [00:39<02:07,  7.84it/s]Loading weights:  22%|██▏       | 288/1289 [00:39<02:07,  7.85it/s]Loading weights:  23%|██▎       | 292/1289 [00:40<02:51,  5.81it/s]Loading weights:  23%|██▎       | 297/1289 [00:41<02:18,  7.17it/s]Loading weights:  23%|██▎       | 298/1289 [00:41<02:16,  7.28it/s]Loading weights:  23%|██▎       | 302/1289 [00:41<02:05,  7.89it/s]Loading weights:  24%|██▎       | 303/1289 [00:42<03:25,  4.80it/s]Loading weights:  24%|██▍       | 310/1289 [00:42<02:11,  7.45it/s]Loading weights:  24%|██▍       | 315/1289 [00:43<01:56,  8.35it/s]Loading weights:  25%|██▍       | 316/1289 [00:43<01:57,  8.26it/s]Loading weights:  25%|██▍       | 320/1289 [00:44<02:45,  5.85it/s]Loading weights:  25%|██▌       | 325/1289 [00:44<02:10,  7.38it/s]Loading weights:  25%|██▌       | 326/1289 [00:45<02:13,  7.24it/s]Loading weights:  26%|██▌       | 330/1289 [00:45<01:53,  8.45it/s]Loading weights:  26%|██▌       | 331/1289 [00:45<01:58,  8.06it/s]Loading weights:  26%|██▌       | 332/1289 [00:46<03:24,  4.68it/s]Loading weights:  26%|██▋       | 339/1289 [00:46<02:01,  7.83it/s]Loading weights:  26%|██▋       | 340/1289 [00:46<01:58,  8.00it/s]Loading weights:  27%|██▋       | 345/1289 [00:47<02:21,  6.69it/s]Loading weights:  27%|██▋       | 349/1289 [00:48<02:14,  7.01it/s]Loading weights:  27%|██▋       | 354/1289 [00:49<02:31,  6.16it/s]Loading weights:  28%|██▊       | 358/1289 [00:49<02:19,  6.67it/s]Loading weights:  28%|██▊       | 363/1289 [00:50<02:42,  5.69it/s]Loading weights:  29%|██▊       | 368/1289 [00:51<02:13,  6.91it/s]Loading weights:  29%|██▊       | 369/1289 [00:51<02:10,  7.03it/s]Loading weights:  29%|██▉       | 372/1289 [00:52<02:42,  5.66it/s]Loading weights:  29%|██▉       | 376/1289 [00:52<02:20,  6.51it/s]Loading weights:  30%|██▉       | 381/1289 [00:53<02:37,  5.75it/s]Loading weights:  30%|██▉       | 385/1289 [00:54<02:21,  6.38it/s]Loading weights:  30%|███       | 390/1289 [00:55<02:33,  5.86it/s]Loading weights:  31%|███       | 394/1289 [00:55<02:19,  6.40it/s]Loading weights:  31%|███       | 395/1289 [00:56<03:28,  4.29it/s]Loading weights:  31%|███▏      | 403/1289 [00:57<02:06,  7.01it/s]Loading weights:  32%|███▏      | 408/1289 [00:58<02:23,  6.14it/s]Loading weights:  32%|███▏      | 412/1289 [00:58<02:13,  6.57it/s]Loading weights:  32%|███▏      | 417/1289 [00:59<02:24,  6.05it/s]Loading weights:  33%|███▎      | 421/1289 [01:00<02:13,  6.48it/s]Loading weights:  33%|███▎      | 426/1289 [01:01<02:24,  5.98it/s]Loading weights:  33%|███▎      | 430/1289 [01:01<02:16,  6.29it/s]Loading weights:  34%|███▎      | 435/1289 [01:02<02:22,  5.97it/s]Loading weights:  34%|███▍      | 439/1289 [01:03<02:12,  6.42it/s]Loading weights:  34%|███▍      | 444/1289 [01:04<02:22,  5.93it/s]Loading weights:  35%|███▍      | 448/1289 [01:04<02:12,  6.33it/s]Loading weights:  35%|███▌      | 453/1289 [01:05<02:21,  5.92it/s]Loading weights:  35%|███▌      | 457/1289 [01:05<02:10,  6.38it/s]Loading weights:  36%|███▌      | 462/1289 [01:06<02:19,  5.92it/s]Loading weights:  36%|███▌      | 466/1289 [01:07<02:09,  6.34it/s]Loading weights:  37%|███▋      | 471/1289 [01:08<02:19,  5.87it/s]Loading weights:  37%|███▋      | 475/1289 [01:08<02:07,  6.39it/s]Loading weights:  37%|███▋      | 480/1289 [01:09<02:17,  5.88it/s]Loading weights:  38%|███▊      | 484/1289 [01:10<02:04,  6.44it/s]Loading weights:  38%|███▊      | 489/1289 [01:11<02:16,  5.86it/s]Loading weights:  38%|███▊      | 493/1289 [01:11<02:03,  6.42it/s]Loading weights:  39%|███▊      | 498/1289 [01:12<02:14,  5.90it/s]Loading weights:  39%|███▉      | 502/1289 [01:13<02:03,  6.40it/s]Loading weights:  39%|███▉      | 505/1289 [01:14<02:32,  5.13it/s]Loading weights:  40%|███▉      | 511/1289 [01:14<01:54,  6.78it/s]Loading weights:  40%|███▉      | 512/1289 [01:14<01:51,  6.96it/s]Loading weights:  40%|████      | 516/1289 [01:15<02:23,  5.40it/s]Loading weights:  40%|████      | 521/1289 [01:16<01:54,  6.68it/s]Loading weights:  41%|████      | 523/1289 [01:17<02:32,  5.03it/s]Loading weights:  41%|████      | 529/1289 [01:17<01:49,  6.91it/s]Loading weights:  41%|████      | 530/1289 [01:17<01:47,  7.07it/s]Loading weights:  41%|████      | 531/1289 [01:18<02:56,  4.29it/s]Loading weights:  42%|████▏     | 538/1289 [01:19<01:47,  6.97it/s]Loading weights:  42%|████▏     | 543/1289 [01:20<02:02,  6.08it/s]Loading weights:  42%|████▏     | 547/1289 [01:20<01:52,  6.60it/s]Loading weights:  43%|████▎     | 552/1289 [01:21<02:03,  5.97it/s]Loading weights:  43%|████▎     | 557/1289 [01:26<05:24,  2.26it/s]Loading weights:  50%|█████     | 648/1289 [01:26<00:30, 20.99it/s]Loading weights:  52%|█████▏    | 676/1289 [01:27<00:23, 26.60it/s]Loading weights:  54%|█████▍    | 698/1289 [01:27<00:18, 31.57it/s]Loading weights:  56%|█████▌    | 716/1289 [01:27<00:15, 36.32it/s]Loading weights:  57%|█████▋    | 731/1289 [01:27<00:13, 40.59it/s]Loading weights:  58%|█████▊    | 744/1289 [01:28<00:11, 45.85it/s]Loading weights:  59%|█████▊    | 756/1289 [01:28<00:10, 49.52it/s]Loading weights:  60%|█████▉    | 767/1289 [01:28<00:09, 54.30it/s]Loading weights:  60%|██████    | 777/1289 [01:28<00:08, 58.54it/s]Loading weights:  61%|██████    | 787/1289 [01:28<00:07, 64.43it/s]Loading weights:  62%|██████▏   | 797/1289 [01:28<00:07, 61.72it/s]Loading weights:  63%|██████▎   | 808/1289 [01:28<00:07, 68.44it/s]Loading weights:  63%|██████▎   | 818/1289 [01:29<00:06, 67.92it/s]Loading weights:  64%|██████▍   | 826/1289 [01:29<00:18, 25.63it/s]Loading weights:  65%|██████▍   | 837/1289 [01:30<00:15, 28.94it/s]Loading weights:  65%|██████▌   | 843/1289 [01:30<00:22, 20.20it/s]Loading weights:  66%|██████▌   | 849/1289 [01:31<00:22, 19.32it/s]Loading weights:  66%|██████▋   | 855/1289 [01:31<00:23, 18.80it/s]Loading weights:  67%|██████▋   | 861/1289 [01:32<00:25, 16.83it/s]Loading weights:  67%|██████▋   | 864/1289 [01:32<00:26, 16.29it/s]Loading weights:  68%|██████▊   | 873/1289 [01:32<00:21, 19.09it/s]Loading weights:  68%|██████▊   | 876/1289 [01:33<00:28, 14.35it/s]Loading weights:  69%|██████▊   | 885/1289 [01:33<00:25, 15.77it/s]Loading weights:  69%|██████▉   | 891/1289 [01:33<00:23, 17.25it/s]Loading weights:  70%|██████▉   | 897/1289 [01:34<00:26, 15.01it/s]Loading weights:  70%|██████▉   | 899/1289 [01:34<00:28, 13.74it/s]Loading weights:  71%|███████   | 909/1289 [01:34<00:19, 19.18it/s]Loading weights:  71%|███████   | 912/1289 [01:35<00:25, 14.57it/s]Loading weights:  71%|███████▏  | 921/1289 [01:35<00:25, 14.58it/s]Loading weights:  72%|███████▏  | 927/1289 [01:36<00:19, 18.16it/s]Loading weights:  72%|███████▏  | 933/1289 [01:36<00:24, 14.75it/s]Loading weights:  73%|███████▎  | 936/1289 [01:36<00:24, 14.28it/s]Loading weights:  73%|███████▎  | 945/1289 [01:37<00:18, 19.01it/s]Loading weights:  74%|███████▎  | 948/1289 [01:37<00:23, 14.53it/s]Loading weights:  74%|███████▍  | 951/1289 [01:37<00:21, 15.80it/s]Loading weights:  74%|███████▍  | 957/1289 [01:38<00:22, 14.65it/s]Loading weights:  75%|███████▍  | 963/1289 [01:38<00:19, 16.77it/s]Loading weights:  75%|███████▌  | 969/1289 [01:38<00:20, 15.82it/s]Loading weights:  75%|███████▌  | 971/1289 [01:39<00:24, 12.93it/s]Loading weights:  76%|███████▌  | 981/1289 [01:39<00:17, 17.47it/s]Loading weights:  76%|███████▋  | 983/1289 [01:39<00:22, 13.82it/s]Loading weights:  77%|███████▋  | 993/1289 [01:40<00:19, 15.45it/s]Loading weights:  78%|███████▊  | 999/1289 [01:40<00:16, 18.10it/s]Loading weights:  78%|███████▊  | 1005/1289 [01:41<00:18, 15.03it/s]Loading weights:  78%|███████▊  | 1007/1289 [01:41<00:21, 13.35it/s]Loading weights:  79%|███████▉  | 1017/1289 [01:41<00:16, 16.87it/s]Loading weights:  79%|███████▉  | 1019/1289 [01:42<00:20, 13.43it/s]Loading weights:  80%|███████▉  | 1029/1289 [01:42<00:15, 16.27it/s]Loading weights:  80%|███████▉  | 1031/1289 [01:42<00:16, 15.86it/s]Loading weights:  80%|████████  | 1035/1289 [01:43<00:13, 18.55it/s]Loading weights:  81%|████████  | 1041/1289 [01:43<00:16, 14.70it/s]Loading weights:  81%|████████  | 1043/1289 [01:43<00:18, 13.04it/s]Loading weights:  82%|████████▏ | 1053/1289 [01:44<00:13, 17.85it/s]Loading weights:  82%|████████▏ | 1055/1289 [01:44<00:17, 13.26it/s]Loading weights:  83%|████████▎ | 1065/1289 [01:45<00:13, 16.84it/s]Loading weights:  83%|████████▎ | 1067/1289 [01:45<00:15, 14.64it/s]Loading weights:  84%|████████▎ | 1077/1289 [01:45<00:13, 16.07it/s]Loading weights:  84%|████████▎ | 1079/1289 [01:46<00:14, 14.88it/s]Loading weights:  84%|████████▍ | 1089/1289 [01:46<00:12, 16.26it/s]Loading weights:  85%|████████▍ | 1091/1289 [01:46<00:13, 14.61it/s]Loading weights:  85%|████████▌ | 1101/1289 [01:47<00:11, 16.70it/s]Loading weights:  86%|████████▌ | 1103/1289 [01:47<00:13, 14.23it/s]Loading weights:  86%|████████▋ | 1113/1289 [01:48<00:11, 15.97it/s]Loading weights:  87%|████████▋ | 1115/1289 [01:48<00:11, 15.35it/s]Loading weights:  87%|████████▋ | 1125/1289 [01:49<00:10, 15.43it/s]Loading weights:  87%|████████▋ | 1127/1289 [01:49<00:10, 14.96it/s]Loading weights:  88%|████████▊ | 1137/1289 [01:49<00:09, 15.86it/s]Loading weights:  88%|████████▊ | 1139/1289 [01:50<00:10, 13.99it/s]Loading weights:  89%|████████▉ | 1149/1289 [01:50<00:07, 17.72it/s]Loading weights:  89%|████████▉ | 1151/1289 [01:50<00:09, 14.39it/s]Loading weights:  90%|█████████ | 1161/1289 [01:51<00:07, 16.65it/s]Loading weights:  90%|█████████ | 1163/1289 [01:51<00:07, 15.87it/s]Loading weights:  91%|█████████ | 1167/1289 [01:51<00:07, 16.35it/s]Loading weights:  91%|█████████ | 1173/1289 [01:52<00:07, 16.36it/s]Loading weights:  91%|█████████ | 1175/1289 [01:52<00:08, 13.42it/s]Loading weights:  91%|█████████▏| 1179/1289 [01:52<00:06, 15.98it/s]Loading weights:  92%|█████████▏| 1185/1289 [01:52<00:05, 18.77it/s]Loading weights:  92%|█████████▏| 1188/1289 [01:53<00:06, 15.75it/s]Loading weights:  92%|█████████▏| 1191/1289 [01:53<00:07, 12.75it/s]Loading weights:  93%|█████████▎| 1197/1289 [01:53<00:05, 15.46it/s]Loading weights:  93%|█████████▎| 1199/1289 [01:53<00:05, 15.34it/s]Loading weights:  93%|█████████▎| 1203/1289 [01:54<00:05, 15.57it/s]Loading weights:  94%|█████████▍| 1209/1289 [01:54<00:05, 13.80it/s]Loading weights:  94%|█████████▍| 1211/1289 [01:54<00:05, 13.11it/s]Loading weights:  95%|█████████▍| 1221/1289 [01:55<00:04, 16.85it/s]Loading weights:  95%|█████████▍| 1223/1289 [01:55<00:05, 12.27it/s]Loading weights:  96%|█████████▌| 1233/1289 [01:56<00:03, 14.57it/s]Loading weights:  96%|█████████▌| 1239/1289 [01:56<00:03, 16.47it/s]Loading weights:  97%|█████████▋| 1245/1289 [01:56<00:02, 16.48it/s]Loading weights:  97%|█████████▋| 1247/1289 [01:57<00:03, 12.47it/s]Loading weights:  98%|█████████▊| 1257/1289 [01:57<00:01, 17.08it/s]Loading weights:  98%|█████████▊| 1259/1289 [01:57<00:02, 14.80it/s]Loading weights:  98%|█████████▊| 1263/1289 [01:58<00:01, 16.54it/s]Loading weights:  98%|█████████▊| 1269/1289 [01:58<00:01, 14.43it/s]Loading weights:  99%|█████████▉| 1275/1289 [01:58<00:00, 16.98it/s]Loading weights:  99%|█████████▉| 1281/1289 [01:59<00:00, 16.82it/s]Loading weights: 100%|█████████▉| 1283/1289 [01:59<00:00, 16.16it/s]Loading weights: 100%|██████████| 1289/1289 [01:59<00:00, 10.81it/s]
+[transformers] The tied weights mapping and config for this model specifies to tie language_model.shared.weight to language_model.lm_head.weight, but both are present in the checkpoints with different values, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning.
+  Model loaded on cuda:0
+
+Finding LoRA target modules (target=both)...
+  Found 216 target modules
+  Q-Former layers: 72
+    Self-attention:  48  (12 layers × Q,K,V,O)
+    Cross-attention: 24  (6 layers × Q,K,V,O)
+    Sample: qformer.encoder.layer.0.attention.attention.query
+  LLM layers:      144
+    Encoder: 48  (24 blocks × q,v)
+    Decoder: 96  (24 blocks × self q,v + cross q,v)
+    Sample: language_model.encoder.block.0.layer.0.SelfAttention.q
+
+Attaching LoRA adapters...
+  r=16, alpha=32, dropout=0.05
+  Trainable parameters: 11,329,536 (0.29%)
+  Total parameters:     3,953,776,128
+
+Loading training data (v2 — sentence-level VQA)...
+  Version: v2
+  VQA answer style: sentence-level
+  44080 training examples
+
+  Epochs:             3
+  Batch size:         4
+  Gradient accum:     8
+  Effective batch:    32
+  Total steps:        33060
+  Warmup steps:       991
+  Learning rate:      0.0001
+
+============================================================
+TRAINING STARTED
+============================================================
+
+--- Epoch 1/3 ---
+/opt/pytorch/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+  Step     6 | Loss: 2.3579 | LR: 6.05e-07 | Elapsed: 0.4min | ETA: 232min
+  Step    12 | Loss: 2.3572 | LR: 1.21e-06 | Elapsed: 0.7min | ETA: 217min
+  Step    18 | Loss: 2.3709 | LR: 1.82e-06 | Elapsed: 1.0min | ETA: 212min
+  Step    25 | Loss: 2.4038 | LR: 2.52e-06 | Elapsed: 1.3min | ETA: 210min
+  Step    31 | Loss: 2.3282 | LR: 3.13e-06 | Elapsed: 1.6min | ETA: 208min
+  Step    37 | Loss: 2.3821 | LR: 3.73e-06 | Elapsed: 1.9min | ETA: 207min
+  Step    43 | Loss: 2.3658 | LR: 4.34e-06 | Elapsed: 2.2min | ETA: 206min
+  Step    50 | Loss: 2.3687 | LR: 5.05e-06 | Elapsed: 2.5min | ETA: 205min
+  Step    56 | Loss: 2.3540 | LR: 5.65e-06 | Elapsed: 2.8min | ETA: 204min
+  Step    62 | Loss: 2.3029 | LR: 6.26e-06 | Elapsed: 3.1min | ETA: 203min
+  Step    68 | Loss: 2.3394 | LR: 6.86e-06 | Elapsed: 3.4min | ETA: 203min
+  Step    75 | Loss: 2.3246 | LR: 7.57e-06 | Elapsed: 3.7min | ETA: 202min
+  Step    81 | Loss: 2.3371 | LR: 8.17e-06 | Elapsed: 4.0min | ETA: 202min
+  Step    87 | Loss: 2.2848 | LR: 8.78e-06 | Elapsed: 4.4min | ETA: 201min
+  Step    93 | Loss: 2.2933 | LR: 9.38e-06 | Elapsed: 4.7min | ETA: 201min
+  Step   100 | Loss: 2.2583 | LR: 1.01e-05 | Elapsed: 5.0min | ETA: 200min
+  Step   106 | Loss: 2.2137 | LR: 1.07e-05 | Elapsed: 5.3min | ETA: 200min
+  Step   112 | Loss: 2.1778 | LR: 1.13e-05 | Elapsed: 5.6min | ETA: 200min
+  Step   118 | Loss: 2.1441 | LR: 1.19e-05 | Elapsed: 5.9min | ETA: 199min
+  Step   125 | Loss: 2.0561 | LR: 1.26e-05 | Elapsed: 6.2min | ETA: 199min
+  Step   131 | Loss: 2.0747 | LR: 1.32e-05 | Elapsed: 6.5min | ETA: 198min
+  Step   137 | Loss: 2.0019 | LR: 1.38e-05 | Elapsed: 6.8min | ETA: 198min
+  Step   143 | Loss: 2.0030 | LR: 1.44e-05 | Elapsed: 7.1min | ETA: 198min
+  Step   150 | Loss: 1.8786 | LR: 1.51e-05 | Elapsed: 7.4min | ETA: 197min
+  Step   156 | Loss: 1.9003 | LR: 1.57e-05 | Elapsed: 7.7min | ETA: 197min
+  Step   162 | Loss: 1.9006 | LR: 1.63e-05 | Elapsed: 8.0min | ETA: 197min
+  Step   168 | Loss: 1.7897 | LR: 1.70e-05 | Elapsed: 8.4min | ETA: 196min
+  Step   175 | Loss: 1.7573 | LR: 1.77e-05 | Elapsed: 8.7min | ETA: 196min
+  Step   181 | Loss: 1.7243 | LR: 1.83e-05 | Elapsed: 9.0min | ETA: 196min
+  Step   187 | Loss: 1.6691 | LR: 1.89e-05 | Elapsed: 9.3min | ETA: 195min
+  Step   193 | Loss: 1.6427 | LR: 1.95e-05 | Elapsed: 9.6min | ETA: 195min
+  Step   200 | Loss: 1.5420 | LR: 2.02e-05 | Elapsed: 9.9min | ETA: 195min
+  Step   206 | Loss: 1.5988 | LR: 2.08e-05 | Elapsed: 10.2min | ETA: 194min
+  Step   212 | Loss: 1.5941 | LR: 2.14e-05 | Elapsed: 10.5min | ETA: 194min
+  Step   218 | Loss: 1.4479 | LR: 2.20e-05 | Elapsed: 10.8min | ETA: 194min
+  Step   225 | Loss: 1.5418 | LR: 2.27e-05 | Elapsed: 11.1min | ETA: 193min
+  Step   231 | Loss: 1.3955 | LR: 2.33e-05 | Elapsed: 11.4min | ETA: 193min
+  Step   237 | Loss: 1.3876 | LR: 2.39e-05 | Elapsed: 11.7min | ETA: 193min
+  Step   243 | Loss: 1.3527 | LR: 2.45e-05 | Elapsed: 12.1min | ETA: 192min
+  Step   250 | Loss: 1.2683 | LR: 2.52e-05 | Elapsed: 12.4min | ETA: 192min
+  Step   256 | Loss: 1.2098 | LR: 2.58e-05 | Elapsed: 12.7min | ETA: 192min
+  Step   262 | Loss: 1.2584 | LR: 2.64e-05 | Elapsed: 13.0min | ETA: 191min
+  Step   268 | Loss: 1.2367 | LR: 2.70e-05 | Elapsed: 13.3min | ETA: 191min
+  Step   275 | Loss: 1.1469 | LR: 2.77e-05 | Elapsed: 13.6min | ETA: 191min
+  Step   281 | Loss: 1.1071 | LR: 2.84e-05 | Elapsed: 13.9min | ETA: 190min
+  Step   287 | Loss: 1.1850 | LR: 2.90e-05 | Elapsed: 14.2min | ETA: 190min
+  Step   293 | Loss: 1.1899 | LR: 2.96e-05 | Elapsed: 14.5min | ETA: 190min
+  Step   300 | Loss: 1.1327 | LR: 3.03e-05 | Elapsed: 14.8min | ETA: 189min
+  Step   306 | Loss: 1.0089 | LR: 3.09e-05 | Elapsed: 15.1min | ETA: 189min
+  Step   312 | Loss: 1.0707 | LR: 3.15e-05 | Elapsed: 15.4min | ETA: 189min
+  Step   318 | Loss: 0.9966 | LR: 3.21e-05 | Elapsed: 15.8min | ETA: 188min
+  Step   325 | Loss: 0.9842 | LR: 3.28e-05 | Elapsed: 16.1min | ETA: 188min
+  Step   331 | Loss: 1.0090 | LR: 3.34e-05 | Elapsed: 16.4min | ETA: 188min
+  Step   337 | Loss: 0.9654 | LR: 3.40e-05 | Elapsed: 16.7min | ETA: 188min
+  Step   343 | Loss: 0.9104 | LR: 3.46e-05 | Elapsed: 17.0min | ETA: 187min
+  Step   350 | Loss: 0.8647 | LR: 3.53e-05 | Elapsed: 17.3min | ETA: 187min
+  Step   356 | Loss: 0.9086 | LR: 3.59e-05 | Elapsed: 17.6min | ETA: 187min
+  Step   362 | Loss: 0.8962 | LR: 3.65e-05 | Elapsed: 17.9min | ETA: 186min
+  Step   368 | Loss: 0.8634 | LR: 3.71e-05 | Elapsed: 18.2min | ETA: 186min
+  Step   375 | Loss: 0.8005 | LR: 3.78e-05 | Elapsed: 18.5min | ETA: 186min
+  Step   381 | Loss: 0.8411 | LR: 3.84e-05 | Elapsed: 18.8min | ETA: 185min
+  Step   387 | Loss: 0.8282 | LR: 3.91e-05 | Elapsed: 19.1min | ETA: 185min
+  Step   393 | Loss: 0.8167 | LR: 3.97e-05 | Elapsed: 19.4min | ETA: 185min
+  Step   400 | Loss: 0.7977 | LR: 4.04e-05 | Elapsed: 19.8min | ETA: 184min
+  Step   406 | Loss: 0.7764 | LR: 4.10e-05 | Elapsed: 20.1min | ETA: 184min
+  Step   412 | Loss: 0.7698 | LR: 4.16e-05 | Elapsed: 20.4min | ETA: 184min
+  Step   418 | Loss: 0.7163 | LR: 4.22e-05 | Elapsed: 20.7min | ETA: 183min
+  Step   425 | Loss: 0.7686 | LR: 4.29e-05 | Elapsed: 21.0min | ETA: 183min
+  Step   431 | Loss: 0.7583 | LR: 4.35e-05 | Elapsed: 21.3min | ETA: 183min
+  Step   437 | Loss: 0.7514 | LR: 4.41e-05 | Elapsed: 21.6min | ETA: 182min
+  Step   443 | Loss: 0.7539 | LR: 4.47e-05 | Elapsed: 21.9min | ETA: 182min
+  Step   450 | Loss: 0.7611 | LR: 4.54e-05 | Elapsed: 22.2min | ETA: 182min
+  Step   456 | Loss: 0.7190 | LR: 4.60e-05 | Elapsed: 22.5min | ETA: 182min
+  Step   462 | Loss: 0.7442 | LR: 4.66e-05 | Elapsed: 22.8min | ETA: 181min
+  Step   468 | Loss: 0.6975 | LR: 4.72e-05 | Elapsed: 23.2min | ETA: 181min
+  Step   475 | Loss: 0.7065 | LR: 4.79e-05 | Elapsed: 23.5min | ETA: 181min
+  Step   481 | Loss: 0.7455 | LR: 4.85e-05 | Elapsed: 23.8min | ETA: 180min
+  Step   487 | Loss: 0.7134 | LR: 4.91e-05 | Elapsed: 24.1min | ETA: 180min
+  Step   493 | Loss: 0.8067 | LR: 4.97e-05 | Elapsed: 24.4min | ETA: 180min
+  Step   500 | Loss: 0.6867 | LR: 5.05e-05 | Elapsed: 24.7min | ETA: 179min
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-500
+  Step   506 | Loss: 0.7596 | LR: 5.11e-05 | Elapsed: 25.0min | ETA: 179min
+  Step   512 | Loss: 0.7742 | LR: 5.17e-05 | Elapsed: 25.3min | ETA: 179min
+  Step   518 | Loss: 0.6787 | LR: 5.23e-05 | Elapsed: 25.7min | ETA: 179min
+  Step   525 | Loss: 0.7202 | LR: 5.30e-05 | Elapsed: 26.0min | ETA: 178min
+  Step   531 | Loss: 0.6340 | LR: 5.36e-05 | Elapsed: 26.3min | ETA: 178min
+  Step   537 | Loss: 0.6545 | LR: 5.42e-05 | Elapsed: 26.6min | ETA: 178min
+  Step   543 | Loss: 0.6309 | LR: 5.48e-05 | Elapsed: 26.9min | ETA: 177min
+  Step   550 | Loss: 0.7186 | LR: 5.55e-05 | Elapsed: 27.2min | ETA: 177min
+  Step   556 | Loss: 0.6630 | LR: 5.61e-05 | Elapsed: 27.5min | ETA: 177min
+  Step   562 | Loss: 0.6810 | LR: 5.67e-05 | Elapsed: 27.8min | ETA: 177min
+  Step   568 | Loss: 0.6162 | LR: 5.73e-05 | Elapsed: 28.1min | ETA: 176min
+  Step   575 | Loss: 0.6578 | LR: 5.80e-05 | Elapsed: 28.4min | ETA: 176min
+  Step   581 | Loss: 0.6447 | LR: 5.86e-05 | Elapsed: 28.7min | ETA: 176min
+  Step   587 | Loss: 0.6758 | LR: 5.92e-05 | Elapsed: 29.0min | ETA: 175min
+  Step   593 | Loss: 0.6377 | LR: 5.98e-05 | Elapsed: 29.4min | ETA: 175min
+  Step   600 | Loss: 0.6782 | LR: 6.05e-05 | Elapsed: 29.7min | ETA: 175min
+  Step   606 | Loss: 0.6687 | LR: 6.12e-05 | Elapsed: 30.0min | ETA: 174min
+  Step   612 | Loss: 0.6654 | LR: 6.18e-05 | Elapsed: 30.3min | ETA: 174min
+  Step   618 | Loss: 0.6861 | LR: 6.24e-05 | Elapsed: 30.6min | ETA: 174min
+  Step   625 | Loss: 0.6670 | LR: 6.31e-05 | Elapsed: 30.9min | ETA: 173min
+  Step   631 | Loss: 0.6201 | LR: 6.37e-05 | Elapsed: 31.2min | ETA: 173min
+  Step   637 | Loss: 0.6637 | LR: 6.43e-05 | Elapsed: 31.5min | ETA: 173min
+  Step   643 | Loss: 0.6239 | LR: 6.49e-05 | Elapsed: 31.8min | ETA: 172min
+  Step   650 | Loss: 0.6633 | LR: 6.56e-05 | Elapsed: 32.1min | ETA: 172min
+  Step   656 | Loss: 0.6106 | LR: 6.62e-05 | Elapsed: 32.4min | ETA: 172min
+  Step   662 | Loss: 0.6484 | LR: 6.68e-05 | Elapsed: 32.7min | ETA: 172min
+  Step   668 | Loss: 0.6604 | LR: 6.74e-05 | Elapsed: 33.1min | ETA: 171min
+  Step   675 | Loss: 0.6641 | LR: 6.81e-05 | Elapsed: 33.4min | ETA: 171min
+  Step   681 | Loss: 0.6221 | LR: 6.87e-05 | Elapsed: 33.7min | ETA: 171min
+  Step   687 | Loss: 0.5702 | LR: 6.93e-05 | Elapsed: 34.0min | ETA: 170min
+  Step   693 | Loss: 0.6560 | LR: 6.99e-05 | Elapsed: 34.3min | ETA: 170min
+  Step   700 | Loss: 0.6490 | LR: 7.06e-05 | Elapsed: 34.6min | ETA: 170min
+  Step   706 | Loss: 0.6171 | LR: 7.12e-05 | Elapsed: 34.9min | ETA: 169min
+  Step   712 | Loss: 0.6067 | LR: 7.18e-05 | Elapsed: 35.2min | ETA: 169min
+  Step   718 | Loss: 0.6419 | LR: 7.25e-05 | Elapsed: 35.5min | ETA: 169min
+  Step   725 | Loss: 0.5932 | LR: 7.32e-05 | Elapsed: 35.8min | ETA: 168min
+  Step   731 | Loss: 0.6303 | LR: 7.38e-05 | Elapsed: 36.1min | ETA: 168min
+  Step   737 | Loss: 0.6288 | LR: 7.44e-05 | Elapsed: 36.5min | ETA: 168min
+  Step   743 | Loss: 0.6321 | LR: 7.50e-05 | Elapsed: 36.8min | ETA: 167min
+  Step   750 | Loss: 0.6559 | LR: 7.57e-05 | Elapsed: 37.1min | ETA: 167min
+  Step   756 | Loss: 0.6711 | LR: 7.63e-05 | Elapsed: 37.4min | ETA: 167min
+  Step   762 | Loss: 0.6242 | LR: 7.69e-05 | Elapsed: 37.7min | ETA: 167min
+  Step   768 | Loss: 0.5487 | LR: 7.75e-05 | Elapsed: 38.0min | ETA: 166min
+  Step   775 | Loss: 0.6022 | LR: 7.82e-05 | Elapsed: 38.3min | ETA: 166min
+  Step   781 | Loss: 0.6466 | LR: 7.88e-05 | Elapsed: 38.6min | ETA: 166min
+  Step   787 | Loss: 0.6247 | LR: 7.94e-05 | Elapsed: 38.9min | ETA: 165min
+  Step   793 | Loss: 0.6318 | LR: 8.00e-05 | Elapsed: 39.2min | ETA: 165min
+  Step   800 | Loss: 0.6705 | LR: 8.07e-05 | Elapsed: 39.5min | ETA: 165min
+  Step   806 | Loss: 0.6462 | LR: 8.13e-05 | Elapsed: 39.8min | ETA: 164min
+  Step   812 | Loss: 0.6197 | LR: 8.19e-05 | Elapsed: 40.1min | ETA: 164min
+  Step   818 | Loss: 0.6608 | LR: 8.25e-05 | Elapsed: 40.5min | ETA: 164min
+  Step   825 | Loss: 0.5845 | LR: 8.32e-05 | Elapsed: 40.8min | ETA: 163min
+  Step   831 | Loss: 0.6569 | LR: 8.39e-05 | Elapsed: 41.1min | ETA: 163min
+  Step   837 | Loss: 0.6191 | LR: 8.45e-05 | Elapsed: 41.4min | ETA: 163min
+  Step   843 | Loss: 0.6235 | LR: 8.51e-05 | Elapsed: 41.7min | ETA: 163min
+  Step   850 | Loss: 0.5823 | LR: 8.58e-05 | Elapsed: 42.0min | ETA: 162min
+  Step   856 | Loss: 0.6451 | LR: 8.64e-05 | Elapsed: 42.3min | ETA: 162min
+  Step   862 | Loss: 0.6850 | LR: 8.70e-05 | Elapsed: 42.6min | ETA: 162min
+  Step   868 | Loss: 0.6587 | LR: 8.76e-05 | Elapsed: 42.9min | ETA: 161min
+  Step   875 | Loss: 0.6713 | LR: 8.83e-05 | Elapsed: 43.2min | ETA: 161min
+  Step   881 | Loss: 0.6248 | LR: 8.89e-05 | Elapsed: 43.5min | ETA: 161min
+  Step   887 | Loss: 0.5562 | LR: 8.95e-05 | Elapsed: 43.9min | ETA: 160min
+  Step   893 | Loss: 0.6177 | LR: 9.01e-05 | Elapsed: 44.2min | ETA: 160min
+  Step   900 | Loss: 0.6630 | LR: 9.08e-05 | Elapsed: 44.5min | ETA: 160min
+  Step   906 | Loss: 0.5979 | LR: 9.14e-05 | Elapsed: 44.8min | ETA: 159min
+  Step   912 | Loss: 0.5860 | LR: 9.20e-05 | Elapsed: 45.1min | ETA: 159min
+  Step   918 | Loss: 0.6390 | LR: 9.26e-05 | Elapsed: 45.4min | ETA: 159min
+  Step   925 | Loss: 0.7152 | LR: 9.33e-05 | Elapsed: 45.7min | ETA: 158min
+  Step   931 | Loss: 0.6098 | LR: 9.39e-05 | Elapsed: 46.0min | ETA: 158min
+  Step   937 | Loss: 0.6423 | LR: 9.46e-05 | Elapsed: 46.3min | ETA: 158min
+  Step   943 | Loss: 0.6407 | LR: 9.52e-05 | Elapsed: 46.6min | ETA: 158min
+  Step   950 | Loss: 0.6406 | LR: 9.59e-05 | Elapsed: 46.9min | ETA: 157min
+  Step   956 | Loss: 0.5915 | LR: 9.65e-05 | Elapsed: 47.2min | ETA: 157min
+  Step   962 | Loss: 0.6505 | LR: 9.71e-05 | Elapsed: 47.6min | ETA: 157min
+  Step   968 | Loss: 0.6629 | LR: 9.77e-05 | Elapsed: 47.9min | ETA: 156min
+  Step   975 | Loss: 0.6427 | LR: 9.84e-05 | Elapsed: 48.2min | ETA: 156min
+  Step   981 | Loss: 0.6878 | LR: 9.90e-05 | Elapsed: 48.5min | ETA: 156min
+  Step   987 | Loss: 0.6935 | LR: 9.96e-05 | Elapsed: 48.8min | ETA: 155min
+  Step   993 | Loss: 0.6408 | LR: 1.00e-04 | Elapsed: 49.1min | ETA: 155min
+  Step  1000 | Loss: 0.6213 | LR: 1.00e-04 | Elapsed: 49.4min | ETA: 155min
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1000
+  Step  1006 | Loss: 0.6672 | LR: 1.00e-04 | Elapsed: 49.7min | ETA: 155min
+  Step  1012 | Loss: 0.5988 | LR: 9.99e-05 | Elapsed: 50.1min | ETA: 154min
+  Step  1018 | Loss: 0.6367 | LR: 9.99e-05 | Elapsed: 50.4min | ETA: 154min
+  Step  1025 | Loss: 0.6548 | LR: 9.99e-05 | Elapsed: 50.7min | ETA: 154min
+  Step  1031 | Loss: 0.6221 | LR: 9.99e-05 | Elapsed: 51.0min | ETA: 153min
+  Step  1037 | Loss: 0.6592 | LR: 9.99e-05 | Elapsed: 51.3min | ETA: 153min
+  Step  1043 | Loss: 0.6645 | LR: 9.98e-05 | Elapsed: 51.6min | ETA: 153min
+  Step  1050 | Loss: 0.6511 | LR: 9.98e-05 | Elapsed: 51.9min | ETA: 152min
+  Step  1056 | Loss: 0.7397 | LR: 9.98e-05 | Elapsed: 52.2min | ETA: 152min
+  Step  1062 | Loss: 0.6744 | LR: 9.98e-05 | Elapsed: 52.5min | ETA: 152min
+  Step  1068 | Loss: 0.6691 | LR: 9.98e-05 | Elapsed: 52.8min | ETA: 151min
+  Step  1075 | Loss: 0.6101 | LR: 9.97e-05 | Elapsed: 53.1min | ETA: 151min
+  Step  1081 | Loss: 0.5738 | LR: 9.97e-05 | Elapsed: 53.4min | ETA: 151min
+  Step  1087 | Loss: 0.6626 | LR: 9.97e-05 | Elapsed: 53.8min | ETA: 151min
+  Step  1093 | Loss: 0.6139 | LR: 9.97e-05 | Elapsed: 54.1min | ETA: 150min
+  Step  1100 | Loss: 0.6242 | LR: 9.97e-05 | Elapsed: 54.4min | ETA: 150min
+  Step  1106 | Loss: 0.6426 | LR: 9.96e-05 | Elapsed: 54.7min | ETA: 150min
+  Step  1112 | Loss: 0.7143 | LR: 9.96e-05 | Elapsed: 55.0min | ETA: 149min
+  Step  1118 | Loss: 0.5658 | LR: 9.96e-05 | Elapsed: 55.3min | ETA: 149min
+  Step  1125 | Loss: 0.6705 | LR: 9.96e-05 | Elapsed: 55.6min | ETA: 149min
+  Step  1131 | Loss: 0.5856 | LR: 9.96e-05 | Elapsed: 55.9min | ETA: 148min
+  Step  1137 | Loss: 0.6084 | LR: 9.95e-05 | Elapsed: 56.2min | ETA: 148min
+  Step  1143 | Loss: 0.6295 | LR: 9.95e-05 | Elapsed: 56.5min | ETA: 148min
+  Step  1150 | Loss: 0.6686 | LR: 9.95e-05 | Elapsed: 56.8min | ETA: 147min
+  Step  1156 | Loss: 0.6581 | LR: 9.95e-05 | Elapsed: 57.1min | ETA: 147min
+  Step  1162 | Loss: 0.6454 | LR: 9.95e-05 | Elapsed: 57.5min | ETA: 147min
+  Step  1168 | Loss: 0.6047 | LR: 9.94e-05 | Elapsed: 57.8min | ETA: 146min
+  Step  1175 | Loss: 0.6851 | LR: 9.94e-05 | Elapsed: 58.1min | ETA: 146min
+  Step  1181 | Loss: 0.6715 | LR: 9.94e-05 | Elapsed: 58.4min | ETA: 146min
+  Step  1187 | Loss: 0.6616 | LR: 9.94e-05 | Elapsed: 58.7min | ETA: 146min
+  Step  1193 | Loss: 0.6589 | LR: 9.94e-05 | Elapsed: 59.0min | ETA: 145min
+  Step  1200 | Loss: 0.7067 | LR: 9.93e-05 | Elapsed: 59.3min | ETA: 145min
+  Step  1206 | Loss: 0.6888 | LR: 9.93e-05 | Elapsed: 59.6min | ETA: 145min
+  Step  1212 | Loss: 0.6222 | LR: 9.93e-05 | Elapsed: 59.9min | ETA: 144min
+  Step  1218 | Loss: 0.6337 | LR: 9.93e-05 | Elapsed: 60.2min | ETA: 144min
+  Step  1225 | Loss: 0.6770 | LR: 9.93e-05 | Elapsed: 60.5min | ETA: 144min
+  Step  1231 | Loss: 0.6819 | LR: 9.93e-05 | Elapsed: 60.8min | ETA: 143min
+  Step  1237 | Loss: 0.7061 | LR: 9.92e-05 | Elapsed: 61.2min | ETA: 143min
+  Step  1243 | Loss: 0.6840 | LR: 9.92e-05 | Elapsed: 61.5min | ETA: 143min
+  Step  1250 | Loss: 0.6905 | LR: 9.92e-05 | Elapsed: 61.8min | ETA: 142min
+  Step  1256 | Loss: 0.6209 | LR: 9.92e-05 | Elapsed: 62.1min | ETA: 142min
+  Step  1262 | Loss: 0.6239 | LR: 9.92e-05 | Elapsed: 62.4min | ETA: 142min
+  Step  1268 | Loss: 0.6853 | LR: 9.91e-05 | Elapsed: 62.7min | ETA: 142min
+  Step  1275 | Loss: 0.6651 | LR: 9.91e-05 | Elapsed: 63.0min | ETA: 141min
+  Step  1281 | Loss: 0.6619 | LR: 9.91e-05 | Elapsed: 63.3min | ETA: 141min
+  Step  1287 | Loss: 0.6656 | LR: 9.91e-05 | Elapsed: 63.6min | ETA: 141min
+  Step  1293 | Loss: 0.6176 | LR: 9.91e-05 | Elapsed: 63.9min | ETA: 140min
+  Step  1300 | Loss: 0.6113 | LR: 9.90e-05 | Elapsed: 64.2min | ETA: 140min
+  Step  1306 | Loss: 0.6922 | LR: 9.90e-05 | Elapsed: 64.5min | ETA: 140min
+  Step  1312 | Loss: 0.6446 | LR: 9.90e-05 | Elapsed: 64.9min | ETA: 139min
+  Step  1318 | Loss: 0.6397 | LR: 9.90e-05 | Elapsed: 65.2min | ETA: 139min
+  Step  1325 | Loss: 0.6455 | LR: 9.90e-05 | Elapsed: 65.5min | ETA: 139min
+  Step  1331 | Loss: 0.6919 | LR: 9.89e-05 | Elapsed: 65.8min | ETA: 138min
+  Step  1337 | Loss: 0.5892 | LR: 9.89e-05 | Elapsed: 66.1min | ETA: 138min
+  Step  1343 | Loss: 0.6511 | LR: 9.89e-05 | Elapsed: 66.4min | ETA: 138min
+  Step  1350 | Loss: 0.6457 | LR: 9.89e-05 | Elapsed: 66.7min | ETA: 137min
+  Step  1356 | Loss: 0.6868 | LR: 9.89e-05 | Elapsed: 67.0min | ETA: 137min
+  Step  1362 | Loss: 0.6179 | LR: 9.88e-05 | Elapsed: 67.3min | ETA: 137min
+  Step  1368 | Loss: 0.6699 | LR: 9.88e-05 | Elapsed: 67.6min | ETA: 137min
+  Step  1375 | Loss: 0.6374 | LR: 9.88e-05 | Elapsed: 67.9min | ETA: 136min
+
+  Epoch 1 complete — Avg loss: 0.9360 — Time: 68.1min
+  Epoch checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/epoch-1
+  New best model saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/best (loss: 0.9360)
+
+--- Epoch 2/3 ---
+  Step  1381 | Loss: 0.6489 | LR: 9.88e-05 | Elapsed: 68.3min | ETA: 136min
+  Step  1388 | Loss: 0.6306 | LR: 9.88e-05 | Elapsed: 68.6min | ETA: 136min
+  Step  1394 | Loss: 0.6868 | LR: 9.87e-05 | Elapsed: 68.9min | ETA: 135min
+  Step  1400 | Loss: 0.6141 | LR: 9.87e-05 | Elapsed: 69.2min | ETA: 135min
+  Step  1406 | Loss: 0.6538 | LR: 9.87e-05 | Elapsed: 69.5min | ETA: 135min
+  Step  1413 | Loss: 0.5931 | LR: 9.87e-05 | Elapsed: 69.8min | ETA: 134min
+  Step  1419 | Loss: 0.5939 | LR: 9.87e-05 | Elapsed: 70.1min | ETA: 134min
+  Step  1425 | Loss: 0.6577 | LR: 9.86e-05 | Elapsed: 70.4min | ETA: 134min
+  Step  1431 | Loss: 0.6196 | LR: 9.86e-05 | Elapsed: 70.7min | ETA: 134min
+  Step  1438 | Loss: 0.6555 | LR: 9.86e-05 | Elapsed: 71.0min | ETA: 133min
+  Step  1444 | Loss: 0.6598 | LR: 9.86e-05 | Elapsed: 71.4min | ETA: 133min
+  Step  1450 | Loss: 0.6032 | LR: 9.86e-05 | Elapsed: 71.7min | ETA: 133min
+  Step  1456 | Loss: 0.6077 | LR: 9.86e-05 | Elapsed: 72.0min | ETA: 132min
+  Step  1463 | Loss: 0.5796 | LR: 9.85e-05 | Elapsed: 72.3min | ETA: 132min
+  Step  1469 | Loss: 0.6560 | LR: 9.85e-05 | Elapsed: 72.6min | ETA: 132min
+  Step  1475 | Loss: 0.5729 | LR: 9.85e-05 | Elapsed: 72.9min | ETA: 131min
+  Step  1481 | Loss: 0.6178 | LR: 9.85e-05 | Elapsed: 73.2min | ETA: 131min
+  Step  1488 | Loss: 0.6721 | LR: 9.85e-05 | Elapsed: 73.5min | ETA: 131min
+  Step  1494 | Loss: 0.6143 | LR: 9.84e-05 | Elapsed: 73.8min | ETA: 130min
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1500
+  Step  1500 | Loss: 0.6438 | LR: 9.84e-05 | Elapsed: 74.1min | ETA: 130min
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-1500
+  Step  1506 | Loss: 0.5753 | LR: 9.84e-05 | Elapsed: 74.5min | ETA: 130min
+  Step  1513 | Loss: 0.6506 | LR: 9.84e-05 | Elapsed: 74.8min | ETA: 130min
+  Step  1519 | Loss: 0.6301 | LR: 9.84e-05 | Elapsed: 75.1min | ETA: 129min
+  Step  1525 | Loss: 0.6757 | LR: 9.83e-05 | Elapsed: 75.4min | ETA: 129min
+  Step  1531 | Loss: 0.7482 | LR: 9.83e-05 | Elapsed: 75.7min | ETA: 129min
+  Step  1538 | Loss: 0.6104 | LR: 9.83e-05 | Elapsed: 76.0min | ETA: 128min
+  Step  1544 | Loss: 0.6896 | LR: 9.83e-05 | Elapsed: 76.3min | ETA: 128min
+  Step  1550 | Loss: 0.5986 | LR: 9.83e-05 | Elapsed: 76.6min | ETA: 128min
+  Step  1556 | Loss: 0.6296 | LR: 9.82e-05 | Elapsed: 76.9min | ETA: 127min
+  Step  1563 | Loss: 0.7292 | LR: 9.82e-05 | Elapsed: 77.3min | ETA: 127min
+  Step  1569 | Loss: 0.6966 | LR: 9.82e-05 | Elapsed: 77.6min | ETA: 127min
+  Step  1575 | Loss: 0.6211 | LR: 9.82e-05 | Elapsed: 77.9min | ETA: 126min
+  Step  1581 | Loss: 0.7278 | LR: 9.82e-05 | Elapsed: 78.2min | ETA: 126min
+  Step  1588 | Loss: 0.6425 | LR: 9.81e-05 | Elapsed: 78.5min | ETA: 126min
+  Step  1594 | Loss: 0.5570 | LR: 9.81e-05 | Elapsed: 78.8min | ETA: 126min
+  Step  1600 | Loss: 0.6676 | LR: 9.81e-05 | Elapsed: 79.1min | ETA: 125min
+  Step  1606 | Loss: 0.6789 | LR: 9.81e-05 | Elapsed: 79.4min | ETA: 125min
+  Step  1613 | Loss: 0.6284 | LR: 9.81e-05 | Elapsed: 79.7min | ETA: 125min
+  Step  1619 | Loss: 0.6267 | LR: 9.80e-05 | Elapsed: 80.0min | ETA: 124min
+  Step  1625 | Loss: 0.6263 | LR: 9.80e-05 | Elapsed: 80.3min | ETA: 124min
+  Step  1631 | Loss: 0.6712 | LR: 9.80e-05 | Elapsed: 80.7min | ETA: 124min
+  Step  1638 | Loss: 0.6491 | LR: 9.80e-05 | Elapsed: 81.0min | ETA: 123min
+  Step  1644 | Loss: 0.6588 | LR: 9.80e-05 | Elapsed: 81.3min | ETA: 123min
+  Step  1650 | Loss: 0.6823 | LR: 9.79e-05 | Elapsed: 81.6min | ETA: 123min
+  Step  1656 | Loss: 0.6650 | LR: 9.79e-05 | Elapsed: 81.9min | ETA: 122min
+  Step  1663 | Loss: 0.6330 | LR: 9.79e-05 | Elapsed: 82.2min | ETA: 122min
+  Step  1669 | Loss: 0.6747 | LR: 9.79e-05 | Elapsed: 82.5min | ETA: 122min
+  Step  1675 | Loss: 0.6554 | LR: 9.79e-05 | Elapsed: 82.8min | ETA: 122min
+  Step  1681 | Loss: 0.6498 | LR: 9.78e-05 | Elapsed: 83.1min | ETA: 121min
+  Step  1688 | Loss: 0.6487 | LR: 9.78e-05 | Elapsed: 83.4min | ETA: 121min
+  Step  1694 | Loss: 0.7109 | LR: 9.78e-05 | Elapsed: 83.7min | ETA: 121min
+  Step  1700 | Loss: 0.6040 | LR: 9.78e-05 | Elapsed: 84.1min | ETA: 120min
+  Step  1706 | Loss: 0.6208 | LR: 9.78e-05 | Elapsed: 84.4min | ETA: 120min
+  Step  1713 | Loss: 0.6119 | LR: 9.77e-05 | Elapsed: 84.7min | ETA: 120min
+  Step  1719 | Loss: 0.7217 | LR: 9.77e-05 | Elapsed: 85.0min | ETA: 119min
+  Step  1725 | Loss: 0.6086 | LR: 9.77e-05 | Elapsed: 85.3min | ETA: 119min
+  Step  1731 | Loss: 0.6287 | LR: 9.77e-05 | Elapsed: 85.6min | ETA: 119min
+  Step  1738 | Loss: 0.7206 | LR: 9.77e-05 | Elapsed: 85.9min | ETA: 118min
+  Step  1744 | Loss: 0.6727 | LR: 9.77e-05 | Elapsed: 86.2min | ETA: 118min
+  Step  1750 | Loss: 0.6772 | LR: 9.76e-05 | Elapsed: 86.5min | ETA: 118min
+  Step  1756 | Loss: 0.6534 | LR: 9.76e-05 | Elapsed: 86.8min | ETA: 117min
+  Step  1763 | Loss: 0.6447 | LR: 9.76e-05 | Elapsed: 87.1min | ETA: 117min
+  Step  1769 | Loss: 0.7482 | LR: 9.76e-05 | Elapsed: 87.4min | ETA: 117min
+  Step  1775 | Loss: 0.6165 | LR: 9.76e-05 | Elapsed: 87.8min | ETA: 117min
+  Step  1781 | Loss: 0.6695 | LR: 9.75e-05 | Elapsed: 88.1min | ETA: 116min
+  Step  1788 | Loss: 0.7121 | LR: 9.75e-05 | Elapsed: 88.4min | ETA: 116min
+  Step  1794 | Loss: 0.5794 | LR: 9.75e-05 | Elapsed: 88.7min | ETA: 116min
+  Step  1800 | Loss: 0.6681 | LR: 9.75e-05 | Elapsed: 89.0min | ETA: 115min
+  Step  1806 | Loss: 0.6234 | LR: 9.75e-05 | Elapsed: 89.3min | ETA: 115min
+  Step  1813 | Loss: 0.6479 | LR: 9.74e-05 | Elapsed: 89.6min | ETA: 115min
+  Step  1819 | Loss: 0.6601 | LR: 9.74e-05 | Elapsed: 89.9min | ETA: 114min
+  Step  1825 | Loss: 0.6277 | LR: 9.74e-05 | Elapsed: 90.2min | ETA: 114min
+  Step  1831 | Loss: 0.6049 | LR: 9.74e-05 | Elapsed: 90.5min | ETA: 114min
+  Step  1838 | Loss: 0.6565 | LR: 9.74e-05 | Elapsed: 90.8min | ETA: 113min
+  Step  1844 | Loss: 0.6717 | LR: 9.73e-05 | Elapsed: 91.2min | ETA: 113min
+  Step  1850 | Loss: 0.6984 | LR: 9.73e-05 | Elapsed: 91.5min | ETA: 113min
+  Step  1856 | Loss: 0.6556 | LR: 9.73e-05 | Elapsed: 91.8min | ETA: 113min
+  Step  1863 | Loss: 0.6813 | LR: 9.73e-05 | Elapsed: 92.1min | ETA: 112min
+  Step  1869 | Loss: 0.6611 | LR: 9.73e-05 | Elapsed: 92.4min | ETA: 112min
+  Step  1875 | Loss: 0.7304 | LR: 9.72e-05 | Elapsed: 92.7min | ETA: 112min
+  Step  1881 | Loss: 0.6402 | LR: 9.72e-05 | Elapsed: 93.0min | ETA: 111min
+  Step  1888 | Loss: 0.6505 | LR: 9.72e-05 | Elapsed: 93.3min | ETA: 111min
+  Step  1894 | Loss: 0.7164 | LR: 9.72e-05 | Elapsed: 93.6min | ETA: 111min
+  Step  1900 | Loss: 0.6821 | LR: 9.72e-05 | Elapsed: 93.9min | ETA: 110min
+  Step  1906 | Loss: 0.6922 | LR: 9.71e-05 | Elapsed: 94.2min | ETA: 110min
+  Step  1913 | Loss: 0.7618 | LR: 9.71e-05 | Elapsed: 94.5min | ETA: 110min
+  Step  1919 | Loss: 0.6904 | LR: 9.71e-05 | Elapsed: 94.9min | ETA: 109min
+  Step  1925 | Loss: 0.6469 | LR: 9.71e-05 | Elapsed: 95.2min | ETA: 109min
+  Step  1931 | Loss: 0.6274 | LR: 9.71e-05 | Elapsed: 95.5min | ETA: 109min
+  Step  1938 | Loss: 0.7701 | LR: 9.70e-05 | Elapsed: 95.8min | ETA: 109min
+  Step  1944 | Loss: 0.7020 | LR: 9.70e-05 | Elapsed: 96.1min | ETA: 108min
+  Step  1950 | Loss: 0.6676 | LR: 9.70e-05 | Elapsed: 96.4min | ETA: 108min
+  Step  1956 | Loss: 0.7225 | LR: 9.70e-05 | Elapsed: 96.7min | ETA: 108min
+  Step  1963 | Loss: 0.6555 | LR: 9.70e-05 | Elapsed: 97.0min | ETA: 107min
+  Step  1969 | Loss: 0.7362 | LR: 9.70e-05 | Elapsed: 97.3min | ETA: 107min
+  Step  1975 | Loss: 0.6578 | LR: 9.69e-05 | Elapsed: 97.6min | ETA: 107min
+  Step  1981 | Loss: 0.7240 | LR: 9.69e-05 | Elapsed: 97.9min | ETA: 106min
+  Step  1988 | Loss: 0.7184 | LR: 9.69e-05 | Elapsed: 98.3min | ETA: 106min
+  Step  1994 | Loss: 0.6739 | LR: 9.69e-05 | Elapsed: 98.6min | ETA: 106min
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2000
+  Step  2000 | Loss: 0.7818 | LR: 9.69e-05 | Elapsed: 98.9min | ETA: 105min
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2000
+  Step  2006 | Loss: 0.6948 | LR: 9.68e-05 | Elapsed: 99.2min | ETA: 105min
+  Step  2013 | Loss: 0.6869 | LR: 9.68e-05 | Elapsed: 99.5min | ETA: 105min
+  Step  2019 | Loss: 0.7238 | LR: 9.68e-05 | Elapsed: 99.8min | ETA: 105min
+  Step  2025 | Loss: 0.7971 | LR: 9.68e-05 | Elapsed: 100.1min | ETA: 104min
+  Step  2031 | Loss: 0.7073 | LR: 9.68e-05 | Elapsed: 100.5min | ETA: 104min
+  Step  2038 | Loss: 0.7087 | LR: 9.67e-05 | Elapsed: 100.8min | ETA: 104min
+  Step  2044 | Loss: 0.6951 | LR: 9.67e-05 | Elapsed: 101.1min | ETA: 103min
+  Step  2050 | Loss: 0.7035 | LR: 9.67e-05 | Elapsed: 101.4min | ETA: 103min
+  Step  2056 | Loss: 0.6936 | LR: 9.67e-05 | Elapsed: 101.7min | ETA: 103min
+  Step  2063 | Loss: 0.6787 | LR: 9.67e-05 | Elapsed: 102.0min | ETA: 102min
+  Step  2069 | Loss: 0.7236 | LR: 9.66e-05 | Elapsed: 102.3min | ETA: 102min
+  Step  2075 | Loss: 0.7025 | LR: 9.66e-05 | Elapsed: 102.6min | ETA: 102min
+  Step  2081 | Loss: 0.6554 | LR: 9.66e-05 | Elapsed: 102.9min | ETA: 101min
+  Step  2088 | Loss: 0.7448 | LR: 9.66e-05 | Elapsed: 103.2min | ETA: 101min
+  Step  2094 | Loss: 0.6882 | LR: 9.66e-05 | Elapsed: 103.5min | ETA: 101min
+  Step  2100 | Loss: 0.7627 | LR: 9.65e-05 | Elapsed: 103.8min | ETA: 101min
+  Step  2106 | Loss: 0.7723 | LR: 9.65e-05 | Elapsed: 104.2min | ETA: 100min
+  Step  2113 | Loss: 0.7204 | LR: 9.65e-05 | Elapsed: 104.5min | ETA: 100min
+  Step  2119 | Loss: 0.7522 | LR: 9.65e-05 | Elapsed: 104.8min | ETA: 100min
+  Step  2125 | Loss: 0.7548 | LR: 9.65e-05 | Elapsed: 105.1min | ETA: 99min
+  Step  2131 | Loss: 0.7452 | LR: 9.64e-05 | Elapsed: 105.4min | ETA: 99min
+  Step  2138 | Loss: 0.7678 | LR: 9.64e-05 | Elapsed: 105.7min | ETA: 99min
+  Step  2144 | Loss: 0.7665 | LR: 9.64e-05 | Elapsed: 106.0min | ETA: 98min
+  Step  2150 | Loss: 0.7287 | LR: 9.64e-05 | Elapsed: 106.3min | ETA: 98min
+  Step  2156 | Loss: 0.7382 | LR: 9.64e-05 | Elapsed: 106.6min | ETA: 98min
+  Step  2163 | Loss: 0.7141 | LR: 9.63e-05 | Elapsed: 106.9min | ETA: 97min
+  Step  2169 | Loss: 0.6978 | LR: 9.63e-05 | Elapsed: 107.2min | ETA: 97min
+  Step  2175 | Loss: 0.7415 | LR: 9.63e-05 | Elapsed: 107.6min | ETA: 97min
+  Step  2181 | Loss: 0.6811 | LR: 9.63e-05 | Elapsed: 107.9min | ETA: 96min
+  Step  2188 | Loss: 0.7112 | LR: 9.63e-05 | Elapsed: 108.2min | ETA: 96min
+  Step  2194 | Loss: 0.7653 | LR: 9.62e-05 | Elapsed: 108.5min | ETA: 96min
+  Step  2200 | Loss: 0.8287 | LR: 9.62e-05 | Elapsed: 108.8min | ETA: 96min
+  Step  2206 | Loss: 0.7698 | LR: 9.62e-05 | Elapsed: 109.1min | ETA: 95min
+  Step  2213 | Loss: 0.8044 | LR: 9.62e-05 | Elapsed: 109.4min | ETA: 95min
+  Step  2219 | Loss: 0.8140 | LR: 9.62e-05 | Elapsed: 109.7min | ETA: 95min
+  Step  2225 | Loss: 0.7544 | LR: 9.62e-05 | Elapsed: 110.0min | ETA: 94min
+  Step  2231 | Loss: 0.7369 | LR: 9.61e-05 | Elapsed: 110.3min | ETA: 94min
+  Step  2238 | Loss: 0.6947 | LR: 9.61e-05 | Elapsed: 110.6min | ETA: 94min
+  Step  2244 | Loss: 0.7335 | LR: 9.61e-05 | Elapsed: 111.0min | ETA: 93min
+  Step  2250 | Loss: 0.7110 | LR: 9.61e-05 | Elapsed: 111.3min | ETA: 93min
+  Step  2256 | Loss: 0.7196 | LR: 9.61e-05 | Elapsed: 111.6min | ETA: 93min
+  Step  2263 | Loss: 0.7691 | LR: 9.60e-05 | Elapsed: 111.9min | ETA: 92min
+  Step  2269 | Loss: 0.7835 | LR: 9.60e-05 | Elapsed: 112.2min | ETA: 92min
+  Step  2275 | Loss: 0.7566 | LR: 9.60e-05 | Elapsed: 112.5min | ETA: 92min
+  Step  2281 | Loss: 0.8098 | LR: 9.60e-05 | Elapsed: 112.8min | ETA: 92min
+  Step  2288 | Loss: 0.7750 | LR: 9.60e-05 | Elapsed: 113.1min | ETA: 91min
+  Step  2294 | Loss: 0.7929 | LR: 9.59e-05 | Elapsed: 113.4min | ETA: 91min
+  Step  2300 | Loss: 0.8526 | LR: 9.59e-05 | Elapsed: 113.7min | ETA: 91min
+  Step  2306 | Loss: 0.7376 | LR: 9.59e-05 | Elapsed: 114.0min | ETA: 90min
+  Step  2313 | Loss: 0.7246 | LR: 9.59e-05 | Elapsed: 114.3min | ETA: 90min
+  Step  2319 | Loss: 0.7359 | LR: 9.59e-05 | Elapsed: 114.7min | ETA: 90min
+  Step  2325 | Loss: 0.7460 | LR: 9.58e-05 | Elapsed: 115.0min | ETA: 89min
+  Step  2331 | Loss: 0.7819 | LR: 9.58e-05 | Elapsed: 115.3min | ETA: 89min
+  Step  2338 | Loss: 0.8391 | LR: 9.58e-05 | Elapsed: 115.6min | ETA: 89min
+  Step  2344 | Loss: 0.7274 | LR: 9.58e-05 | Elapsed: 115.9min | ETA: 88min
+  Step  2350 | Loss: 0.7939 | LR: 9.58e-05 | Elapsed: 116.2min | ETA: 88min
+  Step  2356 | Loss: 0.6955 | LR: 9.57e-05 | Elapsed: 116.5min | ETA: 88min
+  Step  2363 | Loss: 0.7992 | LR: 9.57e-05 | Elapsed: 116.8min | ETA: 88min
+  Step  2369 | Loss: 0.8063 | LR: 9.57e-05 | Elapsed: 117.1min | ETA: 87min
+  Step  2375 | Loss: 0.7781 | LR: 9.57e-05 | Elapsed: 117.4min | ETA: 87min
+  Step  2381 | Loss: 0.7599 | LR: 9.57e-05 | Elapsed: 117.7min | ETA: 87min
+  Step  2388 | Loss: 0.8239 | LR: 9.56e-05 | Elapsed: 118.1min | ETA: 86min
+  Step  2394 | Loss: 0.7547 | LR: 9.56e-05 | Elapsed: 118.4min | ETA: 86min
+  Step  2400 | Loss: 0.7788 | LR: 9.56e-05 | Elapsed: 118.7min | ETA: 86min
+  Step  2406 | Loss: 0.8277 | LR: 9.56e-05 | Elapsed: 119.0min | ETA: 85min
+  Step  2413 | Loss: 0.7806 | LR: 9.56e-05 | Elapsed: 119.3min | ETA: 85min
+  Step  2419 | Loss: 0.7875 | LR: 9.55e-05 | Elapsed: 119.6min | ETA: 85min
+  Step  2425 | Loss: 0.8147 | LR: 9.55e-05 | Elapsed: 119.9min | ETA: 84min
+  Step  2431 | Loss: 0.8200 | LR: 9.55e-05 | Elapsed: 120.2min | ETA: 84min
+  Step  2438 | Loss: 0.8232 | LR: 9.55e-05 | Elapsed: 120.5min | ETA: 84min
+  Step  2444 | Loss: 0.7347 | LR: 9.55e-05 | Elapsed: 120.8min | ETA: 84min
+  Step  2450 | Loss: 0.7987 | LR: 9.55e-05 | Elapsed: 121.1min | ETA: 83min
+  Step  2456 | Loss: 0.7999 | LR: 9.54e-05 | Elapsed: 121.5min | ETA: 83min
+  Step  2463 | Loss: 0.7657 | LR: 9.54e-05 | Elapsed: 121.8min | ETA: 83min
+  Step  2469 | Loss: 0.7720 | LR: 9.54e-05 | Elapsed: 122.1min | ETA: 82min
+  Step  2475 | Loss: 0.8738 | LR: 9.54e-05 | Elapsed: 122.4min | ETA: 82min
+  Step  2481 | Loss: 0.7506 | LR: 9.54e-05 | Elapsed: 122.7min | ETA: 82min
+  Step  2488 | Loss: 0.8433 | LR: 9.53e-05 | Elapsed: 123.0min | ETA: 81min
+  Step  2494 | Loss: 0.7545 | LR: 9.53e-05 | Elapsed: 123.3min | ETA: 81min
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2500
+  Step  2500 | Loss: 0.7668 | LR: 9.53e-05 | Elapsed: 123.6min | ETA: 81min
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-2500
+  Step  2506 | Loss: 0.8578 | LR: 9.53e-05 | Elapsed: 124.0min | ETA: 80min
+  Step  2513 | Loss: 0.8493 | LR: 9.53e-05 | Elapsed: 124.3min | ETA: 80min
+  Step  2519 | Loss: 0.8120 | LR: 9.52e-05 | Elapsed: 124.6min | ETA: 80min
+  Step  2525 | Loss: 0.8433 | LR: 9.52e-05 | Elapsed: 124.9min | ETA: 80min
+  Step  2531 | Loss: 0.8478 | LR: 9.52e-05 | Elapsed: 125.2min | ETA: 79min
+  Step  2538 | Loss: 0.7682 | LR: 9.52e-05 | Elapsed: 125.5min | ETA: 79min
+  Step  2544 | Loss: 0.8363 | LR: 9.52e-05 | Elapsed: 125.8min | ETA: 79min
+  Step  2550 | Loss: 0.7324 | LR: 9.51e-05 | Elapsed: 126.1min | ETA: 78min
+  Step  2556 | Loss: 0.9124 | LR: 9.51e-05 | Elapsed: 126.4min | ETA: 78min
+  Step  2563 | Loss: 0.8932 | LR: 9.51e-05 | Elapsed: 126.7min | ETA: 78min
+  Step  2569 | Loss: 0.7768 | LR: 9.51e-05 | Elapsed: 127.1min | ETA: 77min
+  Step  2575 | Loss: 0.7701 | LR: 9.51e-05 | Elapsed: 127.4min | ETA: 77min
+  Step  2581 | Loss: 0.8442 | LR: 9.50e-05 | Elapsed: 127.7min | ETA: 77min
+  Step  2588 | Loss: 0.7974 | LR: 9.50e-05 | Elapsed: 128.0min | ETA: 76min
+  Step  2594 | Loss: 0.8320 | LR: 9.50e-05 | Elapsed: 128.3min | ETA: 76min
+  Step  2600 | Loss: 0.8214 | LR: 9.50e-05 | Elapsed: 128.6min | ETA: 76min
+  Step  2606 | Loss: 0.7623 | LR: 9.50e-05 | Elapsed: 128.9min | ETA: 75min
+  Step  2613 | Loss: 0.8601 | LR: 9.49e-05 | Elapsed: 129.2min | ETA: 75min
+  Step  2619 | Loss: 0.9383 | LR: 9.49e-05 | Elapsed: 129.5min | ETA: 75min
+  Step  2625 | Loss: 0.8048 | LR: 9.49e-05 | Elapsed: 129.8min | ETA: 75min
+  Step  2631 | Loss: 0.8898 | LR: 9.49e-05 | Elapsed: 130.1min | ETA: 74min
+  Step  2638 | Loss: 0.8998 | LR: 9.49e-05 | Elapsed: 130.4min | ETA: 74min
+  Step  2644 | Loss: 0.8422 | LR: 9.48e-05 | Elapsed: 130.8min | ETA: 74min
+  Step  2650 | Loss: 0.8376 | LR: 9.48e-05 | Elapsed: 131.1min | ETA: 73min
+  Step  2656 | Loss: 0.7827 | LR: 9.48e-05 | Elapsed: 131.4min | ETA: 73min
+  Step  2663 | Loss: 0.8566 | LR: 9.48e-05 | Elapsed: 131.7min | ETA: 73min
+  Step  2669 | Loss: 0.9449 | LR: 9.48e-05 | Elapsed: 132.0min | ETA: 72min
+  Step  2675 | Loss: 0.8134 | LR: 9.47e-05 | Elapsed: 132.3min | ETA: 72min
+  Step  2681 | Loss: 0.8779 | LR: 9.47e-05 | Elapsed: 132.6min | ETA: 72min
+  Step  2688 | Loss: 0.8470 | LR: 9.47e-05 | Elapsed: 132.9min | ETA: 71min
+  Step  2694 | Loss: 0.8421 | LR: 9.47e-05 | Elapsed: 133.2min | ETA: 71min
+  Step  2700 | Loss: 0.7860 | LR: 9.47e-05 | Elapsed: 133.5min | ETA: 71min
+  Step  2706 | Loss: 0.8572 | LR: 9.47e-05 | Elapsed: 133.8min | ETA: 71min
+  Step  2713 | Loss: 0.8447 | LR: 9.46e-05 | Elapsed: 134.2min | ETA: 70min
+  Step  2719 | Loss: 0.9445 | LR: 9.46e-05 | Elapsed: 134.5min | ETA: 70min
+  Step  2725 | Loss: 0.8853 | LR: 9.46e-05 | Elapsed: 134.8min | ETA: 70min
+  Step  2731 | Loss: 0.8716 | LR: 9.46e-05 | Elapsed: 135.1min | ETA: 69min
+  Step  2738 | Loss: 0.9090 | LR: 9.46e-05 | Elapsed: 135.4min | ETA: 69min
+  Step  2744 | Loss: 0.8697 | LR: 9.45e-05 | Elapsed: 135.7min | ETA: 69min
+  Step  2750 | Loss: 0.8929 | LR: 9.45e-05 | Elapsed: 136.0min | ETA: 68min
+
+  Epoch 2 complete — Avg loss: 0.7291 — Time: 68.2min
+  Epoch checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/epoch-2
+  New best model saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/best (loss: 0.7291)
+
+--- Epoch 3/3 ---
+  Step  2757 | Loss: 0.8591 | LR: 9.45e-05 | Elapsed: 136.3min | ETA: 68min
+  Step  2763 | Loss: 0.8507 | LR: 9.45e-05 | Elapsed: 136.6min | ETA: 68min
+  Step  2769 | Loss: 0.9107 | LR: 9.45e-05 | Elapsed: 136.9min | ETA: 67min
+  Step  2776 | Loss: 0.9097 | LR: 9.44e-05 | Elapsed: 137.3min | ETA: 67min
+  Step  2782 | Loss: 0.9179 | LR: 9.44e-05 | Elapsed: 137.6min | ETA: 67min
+  Step  2788 | Loss: 0.9341 | LR: 9.44e-05 | Elapsed: 137.9min | ETA: 67min
+  Step  2794 | Loss: 0.8381 | LR: 9.44e-05 | Elapsed: 138.2min | ETA: 66min
+  Step  2801 | Loss: 0.8853 | LR: 9.44e-05 | Elapsed: 138.5min | ETA: 66min
+  Step  2807 | Loss: 0.9098 | LR: 9.43e-05 | Elapsed: 138.8min | ETA: 66min
+  Step  2813 | Loss: 0.9148 | LR: 9.43e-05 | Elapsed: 139.1min | ETA: 65min
+  Step  2819 | Loss: nan | LR: 9.43e-05 | Elapsed: 139.4min | ETA: 65min
+  Step  2826 | Loss: nan | LR: 9.43e-05 | Elapsed: 139.7min | ETA: 65min
+  Step  2832 | Loss: nan | LR: 9.43e-05 | Elapsed: 140.0min | ETA: 64min
+  Step  2838 | Loss: nan | LR: 9.42e-05 | Elapsed: 140.3min | ETA: 64min
+  Step  2844 | Loss: nan | LR: 9.42e-05 | Elapsed: 140.7min | ETA: 64min
+  Step  2851 | Loss: nan | LR: 9.42e-05 | Elapsed: 141.0min | ETA: 63min
+  Step  2857 | Loss: nan | LR: 9.42e-05 | Elapsed: 141.3min | ETA: 63min
+  Step  2863 | Loss: nan | LR: 9.42e-05 | Elapsed: 141.6min | ETA: 63min
+  Step  2869 | Loss: nan | LR: 9.41e-05 | Elapsed: 141.9min | ETA: 63min
+  Step  2876 | Loss: nan | LR: 9.41e-05 | Elapsed: 142.2min | ETA: 62min
+  Step  2882 | Loss: nan | LR: 9.41e-05 | Elapsed: 142.5min | ETA: 62min
+  Step  2888 | Loss: nan | LR: 9.41e-05 | Elapsed: 142.8min | ETA: 62min
+  Step  2894 | Loss: nan | LR: 9.41e-05 | Elapsed: 143.1min | ETA: 61min
+  Step  2901 | Loss: nan | LR: 9.40e-05 | Elapsed: 143.4min | ETA: 61min
+  Step  2907 | Loss: nan | LR: 9.40e-05 | Elapsed: 143.7min | ETA: 61min
+  Step  2913 | Loss: nan | LR: 9.40e-05 | Elapsed: 144.0min | ETA: 60min
+  Step  2919 | Loss: nan | LR: 9.40e-05 | Elapsed: 144.4min | ETA: 60min
+  Step  2926 | Loss: nan | LR: 9.40e-05 | Elapsed: 144.7min | ETA: 60min
+  Step  2932 | Loss: nan | LR: 9.39e-05 | Elapsed: 145.0min | ETA: 59min
+  Step  2938 | Loss: nan | LR: 9.39e-05 | Elapsed: 145.3min | ETA: 59min
+  Step  2944 | Loss: nan | LR: 9.39e-05 | Elapsed: 145.6min | ETA: 59min
+  Step  2951 | Loss: nan | LR: 9.39e-05 | Elapsed: 145.9min | ETA: 58min
+  Step  2957 | Loss: nan | LR: 9.39e-05 | Elapsed: 146.2min | ETA: 58min
+  Step  2963 | Loss: nan | LR: 9.39e-05 | Elapsed: 146.5min | ETA: 58min
+  Step  2969 | Loss: nan | LR: 9.38e-05 | Elapsed: 146.8min | ETA: 58min
+  Step  2976 | Loss: nan | LR: 9.38e-05 | Elapsed: 147.1min | ETA: 57min
+  Step  2982 | Loss: nan | LR: 9.38e-05 | Elapsed: 147.4min | ETA: 57min
+  Step  2988 | Loss: nan | LR: 9.38e-05 | Elapsed: 147.8min | ETA: 57min
+  Step  2994 | Loss: nan | LR: 9.38e-05 | Elapsed: 148.1min | ETA: 56min
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3000
+  Step  3001 | Loss: nan | LR: 9.37e-05 | Elapsed: 148.4min | ETA: 56min
+  Step  3007 | Loss: nan | LR: 9.37e-05 | Elapsed: 148.7min | ETA: 56min
+  Step  3013 | Loss: nan | LR: 9.37e-05 | Elapsed: 149.0min | ETA: 55min
+  Step  3019 | Loss: nan | LR: 9.37e-05 | Elapsed: 149.3min | ETA: 55min
+  Step  3026 | Loss: nan | LR: 9.37e-05 | Elapsed: 149.6min | ETA: 55min
+  Step  3032 | Loss: nan | LR: 9.36e-05 | Elapsed: 150.0min | ETA: 54min
+  Step  3038 | Loss: nan | LR: 9.36e-05 | Elapsed: 150.3min | ETA: 54min
+  Step  3044 | Loss: nan | LR: 9.36e-05 | Elapsed: 150.6min | ETA: 54min
+  Step  3051 | Loss: nan | LR: 9.36e-05 | Elapsed: 150.9min | ETA: 54min
+  Step  3057 | Loss: nan | LR: 9.36e-05 | Elapsed: 151.2min | ETA: 53min
+  Step  3063 | Loss: nan | LR: 9.35e-05 | Elapsed: 151.5min | ETA: 53min
+  Step  3069 | Loss: nan | LR: 9.35e-05 | Elapsed: 151.8min | ETA: 53min
+  Step  3076 | Loss: nan | LR: 9.35e-05 | Elapsed: 152.1min | ETA: 52min
+  Step  3082 | Loss: nan | LR: 9.35e-05 | Elapsed: 152.4min | ETA: 52min
+  Step  3088 | Loss: nan | LR: 9.35e-05 | Elapsed: 152.7min | ETA: 52min
+  Step  3094 | Loss: nan | LR: 9.34e-05 | Elapsed: 153.0min | ETA: 51min
+  Step  3101 | Loss: nan | LR: 9.34e-05 | Elapsed: 153.4min | ETA: 51min
+  Step  3107 | Loss: nan | LR: 9.34e-05 | Elapsed: 153.7min | ETA: 51min
+  Step  3113 | Loss: nan | LR: 9.34e-05 | Elapsed: 154.0min | ETA: 50min
+  Step  3119 | Loss: nan | LR: 9.34e-05 | Elapsed: 154.3min | ETA: 50min
+  Step  3126 | Loss: nan | LR: 9.33e-05 | Elapsed: 154.6min | ETA: 50min
+  Step  3132 | Loss: nan | LR: 9.33e-05 | Elapsed: 154.9min | ETA: 50min
+  Step  3138 | Loss: nan | LR: 9.33e-05 | Elapsed: 155.2min | ETA: 49min
+  Step  3144 | Loss: nan | LR: 9.33e-05 | Elapsed: 155.5min | ETA: 49min
+  Step  3151 | Loss: nan | LR: 9.33e-05 | Elapsed: 155.8min | ETA: 49min
+  Step  3157 | Loss: nan | LR: 9.32e-05 | Elapsed: 156.1min | ETA: 48min
+  Step  3163 | Loss: nan | LR: 9.32e-05 | Elapsed: 156.4min | ETA: 48min
+  Step  3169 | Loss: nan | LR: 9.32e-05 | Elapsed: 156.7min | ETA: 48min
+  Step  3176 | Loss: nan | LR: 9.32e-05 | Elapsed: 157.1min | ETA: 47min
+  Step  3182 | Loss: nan | LR: 9.32e-05 | Elapsed: 157.4min | ETA: 47min
+  Step  3188 | Loss: nan | LR: 9.31e-05 | Elapsed: 157.7min | ETA: 47min
+  Step  3194 | Loss: nan | LR: 9.31e-05 | Elapsed: 158.0min | ETA: 46min
+  Step  3201 | Loss: nan | LR: 9.31e-05 | Elapsed: 158.3min | ETA: 46min
+  Step  3207 | Loss: nan | LR: 9.31e-05 | Elapsed: 158.6min | ETA: 46min
+  Step  3213 | Loss: nan | LR: 9.31e-05 | Elapsed: 158.9min | ETA: 46min
+  Step  3219 | Loss: nan | LR: 9.31e-05 | Elapsed: 159.2min | ETA: 45min
+  Step  3226 | Loss: nan | LR: 9.30e-05 | Elapsed: 159.5min | ETA: 45min
+  Step  3232 | Loss: nan | LR: 9.30e-05 | Elapsed: 159.8min | ETA: 45min
+  Step  3238 | Loss: nan | LR: 9.30e-05 | Elapsed: 160.1min | ETA: 44min
+  Step  3244 | Loss: nan | LR: 9.30e-05 | Elapsed: 160.5min | ETA: 44min
+  Step  3251 | Loss: nan | LR: 9.30e-05 | Elapsed: 160.8min | ETA: 44min
+  Step  3257 | Loss: nan | LR: 9.29e-05 | Elapsed: 161.1min | ETA: 43min
+  Step  3263 | Loss: nan | LR: 9.29e-05 | Elapsed: 161.4min | ETA: 43min
+  Step  3269 | Loss: nan | LR: 9.29e-05 | Elapsed: 161.7min | ETA: 43min
+  Step  3276 | Loss: nan | LR: 9.29e-05 | Elapsed: 162.0min | ETA: 42min
+  Step  3282 | Loss: nan | LR: 9.29e-05 | Elapsed: 162.3min | ETA: 42min
+  Step  3288 | Loss: nan | LR: 9.28e-05 | Elapsed: 162.6min | ETA: 42min
+  Step  3294 | Loss: nan | LR: 9.28e-05 | Elapsed: 162.9min | ETA: 41min
+  Step  3301 | Loss: nan | LR: 9.28e-05 | Elapsed: 163.2min | ETA: 41min
+  Step  3307 | Loss: nan | LR: 9.28e-05 | Elapsed: 163.5min | ETA: 41min
+  Step  3313 | Loss: nan | LR: 9.28e-05 | Elapsed: 163.8min | ETA: 41min
+  Step  3319 | Loss: nan | LR: 9.27e-05 | Elapsed: 164.2min | ETA: 40min
+  Step  3326 | Loss: nan | LR: 9.27e-05 | Elapsed: 164.5min | ETA: 40min
+  Step  3332 | Loss: nan | LR: 9.27e-05 | Elapsed: 164.8min | ETA: 40min
+  Step  3338 | Loss: nan | LR: 9.27e-05 | Elapsed: 165.1min | ETA: 39min
+  Step  3344 | Loss: nan | LR: 9.27e-05 | Elapsed: 165.4min | ETA: 39min
+  Step  3351 | Loss: nan | LR: 9.26e-05 | Elapsed: 165.7min | ETA: 39min
+  Step  3357 | Loss: nan | LR: 9.26e-05 | Elapsed: 166.0min | ETA: 38min
+  Step  3363 | Loss: nan | LR: 9.26e-05 | Elapsed: 166.3min | ETA: 38min
+  Step  3369 | Loss: nan | LR: 9.26e-05 | Elapsed: 166.6min | ETA: 38min
+  Step  3376 | Loss: nan | LR: 9.26e-05 | Elapsed: 166.9min | ETA: 37min
+  Step  3382 | Loss: nan | LR: 9.25e-05 | Elapsed: 167.2min | ETA: 37min
+  Step  3388 | Loss: nan | LR: 9.25e-05 | Elapsed: 167.5min | ETA: 37min
+  Step  3394 | Loss: nan | LR: 9.25e-05 | Elapsed: 167.9min | ETA: 37min
+  Step  3401 | Loss: nan | LR: 9.25e-05 | Elapsed: 168.2min | ETA: 36min
+  Step  3407 | Loss: nan | LR: 9.25e-05 | Elapsed: 168.5min | ETA: 36min
+  Step  3413 | Loss: nan | LR: 9.24e-05 | Elapsed: 168.8min | ETA: 36min
+  Step  3419 | Loss: nan | LR: 9.24e-05 | Elapsed: 169.1min | ETA: 35min
+  Step  3426 | Loss: nan | LR: 9.24e-05 | Elapsed: 169.4min | ETA: 35min
+  Step  3432 | Loss: nan | LR: 9.24e-05 | Elapsed: 169.7min | ETA: 35min
+  Step  3438 | Loss: nan | LR: 9.24e-05 | Elapsed: 170.0min | ETA: 34min
+  Step  3444 | Loss: nan | LR: 9.24e-05 | Elapsed: 170.3min | ETA: 34min
+  Step  3451 | Loss: nan | LR: 9.23e-05 | Elapsed: 170.6min | ETA: 34min
+  Step  3457 | Loss: nan | LR: 9.23e-05 | Elapsed: 170.9min | ETA: 33min
+  Step  3463 | Loss: nan | LR: 9.23e-05 | Elapsed: 171.3min | ETA: 33min
+  Step  3469 | Loss: nan | LR: 9.23e-05 | Elapsed: 171.6min | ETA: 33min
+  Step  3476 | Loss: nan | LR: 9.23e-05 | Elapsed: 171.9min | ETA: 33min
+  Step  3482 | Loss: nan | LR: 9.22e-05 | Elapsed: 172.2min | ETA: 32min
+  Step  3488 | Loss: nan | LR: 9.22e-05 | Elapsed: 172.5min | ETA: 32min
+  Step  3494 | Loss: nan | LR: 9.22e-05 | Elapsed: 172.8min | ETA: 32min
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3500
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-3500
+  Step  3501 | Loss: nan | LR: 9.22e-05 | Elapsed: 173.1min | ETA: 31min
+  Step  3507 | Loss: nan | LR: 9.22e-05 | Elapsed: 173.5min | ETA: 31min
+  Step  3513 | Loss: nan | LR: 9.21e-05 | Elapsed: 173.8min | ETA: 31min
+  Step  3519 | Loss: nan | LR: 9.21e-05 | Elapsed: 174.1min | ETA: 30min
+  Step  3526 | Loss: nan | LR: 9.21e-05 | Elapsed: 174.4min | ETA: 30min
+  Step  3532 | Loss: nan | LR: 9.21e-05 | Elapsed: 174.7min | ETA: 30min
+  Step  3538 | Loss: nan | LR: 9.21e-05 | Elapsed: 175.0min | ETA: 29min
+  Step  3544 | Loss: nan | LR: 9.20e-05 | Elapsed: 175.3min | ETA: 29min
+  Step  3551 | Loss: nan | LR: 9.20e-05 | Elapsed: 175.6min | ETA: 29min
+  Step  3557 | Loss: nan | LR: 9.20e-05 | Elapsed: 175.9min | ETA: 29min
+  Step  3563 | Loss: nan | LR: 9.20e-05 | Elapsed: 176.2min | ETA: 28min
+  Step  3569 | Loss: nan | LR: 9.20e-05 | Elapsed: 176.5min | ETA: 28min
+  Step  3576 | Loss: nan | LR: 9.19e-05 | Elapsed: 176.9min | ETA: 28min
+  Step  3582 | Loss: nan | LR: 9.19e-05 | Elapsed: 177.2min | ETA: 27min
+  Step  3588 | Loss: nan | LR: 9.19e-05 | Elapsed: 177.5min | ETA: 27min
+  Step  3594 | Loss: nan | LR: 9.19e-05 | Elapsed: 177.8min | ETA: 27min
+  Step  3601 | Loss: nan | LR: 9.19e-05 | Elapsed: 178.1min | ETA: 26min
+  Step  3607 | Loss: nan | LR: 9.18e-05 | Elapsed: 178.4min | ETA: 26min
+  Step  3613 | Loss: nan | LR: 9.18e-05 | Elapsed: 178.7min | ETA: 26min
+  Step  3619 | Loss: nan | LR: 9.18e-05 | Elapsed: 179.0min | ETA: 25min
+  Step  3626 | Loss: nan | LR: 9.18e-05 | Elapsed: 179.3min | ETA: 25min
+  Step  3632 | Loss: nan | LR: 9.18e-05 | Elapsed: 179.6min | ETA: 25min
+  Step  3638 | Loss: nan | LR: 9.17e-05 | Elapsed: 179.9min | ETA: 24min
+  Step  3644 | Loss: nan | LR: 9.17e-05 | Elapsed: 180.2min | ETA: 24min
+  Step  3651 | Loss: nan | LR: 9.17e-05 | Elapsed: 180.6min | ETA: 24min
+  Step  3657 | Loss: nan | LR: 9.17e-05 | Elapsed: 180.9min | ETA: 24min
+  Step  3663 | Loss: nan | LR: 9.17e-05 | Elapsed: 181.2min | ETA: 23min
+  Step  3669 | Loss: nan | LR: 9.16e-05 | Elapsed: 181.5min | ETA: 23min
+  Step  3676 | Loss: nan | LR: 9.16e-05 | Elapsed: 181.8min | ETA: 23min
+  Step  3682 | Loss: nan | LR: 9.16e-05 | Elapsed: 182.1min | ETA: 22min
+  Step  3688 | Loss: nan | LR: 9.16e-05 | Elapsed: 182.4min | ETA: 22min
+  Step  3694 | Loss: nan | LR: 9.16e-05 | Elapsed: 182.7min | ETA: 22min
+  Step  3701 | Loss: nan | LR: 9.15e-05 | Elapsed: 183.0min | ETA: 21min
+  Step  3707 | Loss: nan | LR: 9.15e-05 | Elapsed: 183.3min | ETA: 21min
+  Step  3713 | Loss: nan | LR: 9.15e-05 | Elapsed: 183.6min | ETA: 21min
+  Step  3719 | Loss: nan | LR: 9.15e-05 | Elapsed: 184.0min | ETA: 20min
+  Step  3726 | Loss: nan | LR: 9.15e-05 | Elapsed: 184.3min | ETA: 20min
+  Step  3732 | Loss: nan | LR: 9.15e-05 | Elapsed: 184.6min | ETA: 20min
+  Step  3738 | Loss: nan | LR: 9.14e-05 | Elapsed: 184.9min | ETA: 20min
+  Step  3744 | Loss: nan | LR: 9.14e-05 | Elapsed: 185.2min | ETA: 19min
+  Step  3751 | Loss: nan | LR: 9.14e-05 | Elapsed: 185.5min | ETA: 19min
+  Step  3757 | Loss: nan | LR: 9.14e-05 | Elapsed: 185.8min | ETA: 19min
+  Step  3763 | Loss: nan | LR: 9.14e-05 | Elapsed: 186.1min | ETA: 18min
+  Step  3769 | Loss: nan | LR: 9.13e-05 | Elapsed: 186.4min | ETA: 18min
+  Step  3776 | Loss: nan | LR: 9.13e-05 | Elapsed: 186.7min | ETA: 18min
+  Step  3782 | Loss: nan | LR: 9.13e-05 | Elapsed: 187.1min | ETA: 17min
+  Step  3788 | Loss: nan | LR: 9.13e-05 | Elapsed: 187.4min | ETA: 17min
+  Step  3794 | Loss: nan | LR: 9.13e-05 | Elapsed: 187.7min | ETA: 17min
+  Step  3801 | Loss: nan | LR: 9.12e-05 | Elapsed: 188.0min | ETA: 16min
+  Step  3807 | Loss: nan | LR: 9.12e-05 | Elapsed: 188.3min | ETA: 16min
+  Step  3813 | Loss: nan | LR: 9.12e-05 | Elapsed: 188.6min | ETA: 16min
+  Step  3819 | Loss: nan | LR: 9.12e-05 | Elapsed: 188.9min | ETA: 16min
+  Step  3826 | Loss: nan | LR: 9.12e-05 | Elapsed: 189.2min | ETA: 15min
+  Step  3832 | Loss: nan | LR: 9.11e-05 | Elapsed: 189.5min | ETA: 15min
+  Step  3838 | Loss: nan | LR: 9.11e-05 | Elapsed: 189.8min | ETA: 15min
+  Step  3844 | Loss: nan | LR: 9.11e-05 | Elapsed: 190.1min | ETA: 14min
+  Step  3851 | Loss: nan | LR: 9.11e-05 | Elapsed: 190.5min | ETA: 14min
+  Step  3857 | Loss: nan | LR: 9.11e-05 | Elapsed: 190.8min | ETA: 14min
+  Step  3863 | Loss: nan | LR: 9.10e-05 | Elapsed: 191.1min | ETA: 13min
+  Step  3869 | Loss: nan | LR: 9.10e-05 | Elapsed: 191.4min | ETA: 13min
+  Step  3876 | Loss: nan | LR: 9.10e-05 | Elapsed: 191.7min | ETA: 13min
+  Step  3882 | Loss: nan | LR: 9.10e-05 | Elapsed: 192.0min | ETA: 12min
+  Step  3888 | Loss: nan | LR: 9.10e-05 | Elapsed: 192.3min | ETA: 12min
+  Step  3894 | Loss: nan | LR: 9.09e-05 | Elapsed: 192.6min | ETA: 12min
+  Step  3901 | Loss: nan | LR: 9.09e-05 | Elapsed: 192.9min | ETA: 12min
+  Step  3907 | Loss: nan | LR: 9.09e-05 | Elapsed: 193.2min | ETA: 11min
+  Step  3913 | Loss: nan | LR: 9.09e-05 | Elapsed: 193.5min | ETA: 11min
+  Step  3919 | Loss: nan | LR: 9.09e-05 | Elapsed: 193.8min | ETA: 11min
+  Step  3926 | Loss: nan | LR: 9.08e-05 | Elapsed: 194.2min | ETA: 10min
+  Step  3932 | Loss: nan | LR: 9.08e-05 | Elapsed: 194.5min | ETA: 10min
+  Step  3938 | Loss: nan | LR: 9.08e-05 | Elapsed: 194.8min | ETA: 10min
+  Step  3944 | Loss: nan | LR: 9.08e-05 | Elapsed: 195.1min | ETA: 9min
+  Step  3951 | Loss: nan | LR: 9.08e-05 | Elapsed: 195.4min | ETA: 9min
+  Step  3957 | Loss: nan | LR: 9.08e-05 | Elapsed: 195.7min | ETA: 9min
+  Step  3963 | Loss: nan | LR: 9.07e-05 | Elapsed: 196.0min | ETA: 8min
+  Step  3969 | Loss: nan | LR: 9.07e-05 | Elapsed: 196.3min | ETA: 8min
+  Step  3976 | Loss: nan | LR: 9.07e-05 | Elapsed: 196.6min | ETA: 8min
+  Step  3982 | Loss: nan | LR: 9.07e-05 | Elapsed: 196.9min | ETA: 7min
+  Step  3988 | Loss: nan | LR: 9.07e-05 | Elapsed: 197.2min | ETA: 7min
+  Step  3994 | Loss: nan | LR: 9.06e-05 | Elapsed: 197.6min | ETA: 7min
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-4000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-4000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-4000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-4000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-4000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-4000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-4000
+  Checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/checkpoint-4000
+  Step  4001 | Loss: nan | LR: 9.06e-05 | Elapsed: 197.9min | ETA: 7min
+  Step  4007 | Loss: nan | LR: 9.06e-05 | Elapsed: 198.2min | ETA: 6min
+  Step  4013 | Loss: nan | LR: 9.06e-05 | Elapsed: 198.5min | ETA: 6min
+  Step  4019 | Loss: nan | LR: 9.06e-05 | Elapsed: 198.8min | ETA: 6min
+  Step  4026 | Loss: nan | LR: 9.05e-05 | Elapsed: 199.1min | ETA: 5min
+  Step  4032 | Loss: nan | LR: 9.05e-05 | Elapsed: 199.4min | ETA: 5min
+  Step  4038 | Loss: nan | LR: 9.05e-05 | Elapsed: 199.7min | ETA: 5min
+  Step  4044 | Loss: nan | LR: 9.05e-05 | Elapsed: 200.1min | ETA: 4min
+  Step  4051 | Loss: nan | LR: 9.05e-05 | Elapsed: 200.4min | ETA: 4min
+  Step  4057 | Loss: nan | LR: 9.04e-05 | Elapsed: 200.7min | ETA: 4min
+  Step  4063 | Loss: nan | LR: 9.04e-05 | Elapsed: 201.0min | ETA: 3min
+  Step  4069 | Loss: nan | LR: 9.04e-05 | Elapsed: 201.3min | ETA: 3min
+  Step  4076 | Loss: nan | LR: 9.04e-05 | Elapsed: 201.6min | ETA: 3min
+  Step  4082 | Loss: nan | LR: 9.04e-05 | Elapsed: 201.9min | ETA: 3min
+  Step  4088 | Loss: nan | LR: 9.03e-05 | Elapsed: 202.2min | ETA: 2min
+  Step  4094 | Loss: nan | LR: 9.03e-05 | Elapsed: 202.5min | ETA: 2min
+  Step  4101 | Loss: nan | LR: 9.03e-05 | Elapsed: 202.8min | ETA: 2min
+  Step  4107 | Loss: nan | LR: 9.03e-05 | Elapsed: 203.1min | ETA: 1min
+  Step  4113 | Loss: nan | LR: 9.03e-05 | Elapsed: 203.5min | ETA: 1min
+  Step  4119 | Loss: nan | LR: 9.02e-05 | Elapsed: 203.8min | ETA: 1min
+  Step  4126 | Loss: nan | LR: 9.02e-05 | Elapsed: 204.1min | ETA: 0min
+  Step  4132 | Loss: nan | LR: 9.02e-05 | Elapsed: 204.4min | ETA: 0min
+
+  Epoch 3 complete — Avg loss: nan — Time: 68.2min
+  Epoch checkpoint saved: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/epoch-3
+
+============================================================
+TRAINING COMPLETE
+============================================================
+  Total time:      204.4 minutes
+  Best loss:       0.7291
+  Final checkpoint: /home/ubuntu/nutrivision/checkpoints/v2_lora_flan-t5-xl_both/best
+  Adapter size:    43.3 MB
+  Training log saved: /home/ubuntu/nutrivision/logs/v2_training_log_both.json
+
+============================================================
+NEXT STEPS:
+  1. Visualize training:
+     python -m src.train.plot_training --runs both
+  2. Run inference with the fine-tuned model:
+     python -m src.eval.finetuned_inference --target both --test-run
+  3. Evaluate:
+     python -m src.eval.evaluate --results-dir results/v2_finetuned_both
+============================================================

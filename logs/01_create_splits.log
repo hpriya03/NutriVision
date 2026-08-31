@@ -1,0 +1,28 @@
+=======================================================
+NutriVision — Creating Train/Test Splits
+  Using official Nutrition5K splits + overhead filter
+=======================================================
+
+Dishes with overhead rgb.png:  3490
+Dishes with metadata:          5006
+Dishes with BOTH (usable):     3490
+
+Official RGB train IDs:        4059
+Official RGB test IDs:         709
+
+After filtering to overhead:
+  Train (from official):       2755
+  Test (from official):        507
+  Not in any official split:   228
+  Excluded (not in official splits): 228
+
+Final split:
+  Train: 2755 dishes (84.5%)
+  Test:  507 dishes (15.5%)
+  Total: 3262
+
+Saved to:
+  /home/ubuntu/nutrivision/data/splits/train_ids.json
+  /home/ubuntu/nutrivision/data/splits/test_ids.json
+
+Done!

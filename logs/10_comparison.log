@@ -1,0 +1,161 @@
+========================================================================
+NutriVision — Zero-Shot Model Comparison
+BLIP-2 + OPT-2.7B  vs  BLIP-2 + FlanT5-XL
+========================================================================
+Loaded OPT results:    /home/ubuntu/nutrivision/results/zero_shot_opt/evaluation_results.json
+Loaded FlanT5 results: /home/ubuntu/nutrivision/results/zero_shot_flan-t5-xl/evaluation_results.json
+
+────────────────────────────────────────────────────────────────────────
+  Captioning
+────────────────────────────────────────────────────────────────────────
+  BLEU-1                   
+    OPT:    0.2537 [0.2397 – 0.2684]
+    FlanT5: 0.2802 [0.2658 – 0.2953]
+    Winner: FlanT5 (CIs overlapping)
+  BLEU-2                   
+    OPT:    0.1668 [0.1563 – 0.1780]
+    FlanT5: 0.1763 [0.1646 – 0.1886]
+    Winner: FlanT5 (CIs overlapping)
+  BLEU-4                   
+    OPT:    0.0588 [0.0540 – 0.0644]
+    FlanT5: 0.0716 [0.0648 – 0.0793]
+    Winner: FlanT5 (CIs non-overlapping)
+  ROUGE-1                  
+    OPT:    0.3785 [0.3643 – 0.3922]
+    FlanT5: 0.4268 [0.4123 – 0.4419]
+    Winner: FlanT5 (CIs non-overlapping)
+  ROUGE-L                  
+    OPT:    0.3575 [0.3446 – 0.3702]
+    FlanT5: 0.3733 [0.3607 – 0.3875]
+    Winner: FlanT5 (CIs overlapping)
+  METEOR                   
+    OPT:    0.2968 [0.2809 – 0.3142]
+    FlanT5: 0.3094 [0.2917 – 0.3280]
+    Winner: FlanT5 (CIs overlapping)
+
+────────────────────────────────────────────────────────────────────────
+  Ingredients
+────────────────────────────────────────────────────────────────────────
+  Precision                
+    OPT:    0.4863 [0.4535 – 0.5173]
+    FlanT5: 0.3046 [0.2778 – 0.3325]
+    Winner: OPT (CIs non-overlapping)
+  Recall                   
+    OPT:    0.4144 [0.3782 – 0.4495]
+    FlanT5: 0.4438 [0.4092 – 0.4762]
+    Winner: FlanT5 (CIs overlapping)
+  F1                       
+    OPT:    0.3841 [0.3524 – 0.4139]
+    FlanT5: 0.2904 [0.2648 – 0.3162]
+    Winner: OPT (CIs non-overlapping)
+  Hallucination Rate       
+    OPT:    0.7688 [0.7351 – 0.8044]
+    FlanT5: 0.9091 [0.8834 – 0.9328]
+    Winner: OPT (CIs non-overlapping)
+
+────────────────────────────────────────────────────────────────────────
+  Calories
+────────────────────────────────────────────────────────────────────────
+  MAE (cal)                
+    OPT:    244.75 [226.66 – 263.09]
+    FlanT5: 152.84 [137.54 – 170.92]
+    Winner: FlanT5 (CIs non-overlapping)
+  MAPE (%)                 
+    OPT:    98.90 [97.72 – 100.54]
+    FlanT5: 67.30 [59.51 – 77.20]
+    Winner: FlanT5 (CIs non-overlapping)
+  Hallucination Rate       
+    OPT:    0.0042 [0.0000 – 0.0105]
+    FlanT5: 0.0871 [0.0590 – 0.1152]
+    Winner: OPT (CIs non-overlapping)
+
+────────────────────────────────────────────────────────────────────────
+  Macros
+────────────────────────────────────────────────────────────────────────
+  Protein MAE (g)          
+    OPT:    14.17 [12.43 – 15.95]
+    FlanT5: 17.72 [16.11 – 19.51]
+    Winner: OPT (CIs non-overlapping)
+  Protein MAPE (%)         
+    OPT:    95.79 [85.77 – 109.54]
+    FlanT5: 100.00 [100.00 – 100.00]
+    Winner: OPT (CIs overlapping)
+  Fat MAE (g)              
+    OPT:    10.48 [9.24 – 11.72]
+    FlanT5: 13.38 [12.02 – 14.75]
+    Winner: OPT (CIs non-overlapping)
+  Fat MAPE (%)             
+    OPT:    287.74 [221.12 – 371.88]
+    FlanT5: 100.00 [100.00 – 100.00]
+    Winner: FlanT5 (CIs non-overlapping)
+  Carb MAE (g)             
+    OPT:    16.42 [14.79 – 17.92]
+    FlanT5: 20.69 [19.14 – 22.22]
+    Winner: OPT (CIs non-overlapping)
+  Carb MAPE (%)            
+    OPT:    108.48 [92.14 – 130.12]
+    FlanT5: 100.00 [100.00 – 100.00]
+    Winner: FlanT5 (CIs overlapping)
+
+────────────────────────────────────────────────────────────────────────
+  VQA
+────────────────────────────────────────────────────────────────────────
+  Yes/No Accuracy (%)      
+    OPT:    56.51 [53.45 – 59.67]
+    FlanT5: 58.29 [55.05 – 61.54]
+    Winner: FlanT5 (CIs overlapping)
+  Numeric MAE              
+    OPT:    33.74 [25.25 – 43.22]
+    FlanT5: 74.92 [62.66 – 87.69]
+    Winner: OPT (CIs non-overlapping)
+  Hallucination Rate       
+    OPT:    0.0184 [0.0037 – 0.0368]
+    FlanT5: 0.1270 [0.0970 – 0.1594]
+    Winner: OPT (CIs non-overlapping)
+
+========================================================================
+SUMMARY
+========================================================================
+  OPT wins:    10 metrics
+  FlanT5 wins: 12 metrics
+  Ties:        0
+
+  Per-task breakdown:
+    Captioning     : OPT 0 — FlanT5 6
+    Ingredients    : OPT 3 — FlanT5 1
+    Calories       : OPT 1 — FlanT5 2
+    Macros         : OPT 4 — FlanT5 2
+    VQA            : OPT 2 — FlanT5 1
+
+────────────────────────────────────────────────────────────────────────
+  RECOMMENDATION FOR FINE-TUNING
+────────────────────────────────────────────────────────────────────────
+
+  Based on 22 metrics compared:
+  FlanT5-XL wins on more metrics overall.
+
+  Key considerations:
+    - FlanT5 is instruction-tuned → understands prompts better
+    - FlanT5 has severe repetition/hallucination in ingredients (7k+ hallucinated)
+    - OPT has many unparseable outputs (not instruction-tuned)
+    - FlanT5 is better at captioning and calorie estimation
+    - OPT is better at ingredient precision and macro estimation
+    - Both are near-random on VQA (~57% accuracy)
+
+  Fine-tuning can fix:
+    - FlanT5's repetition loops (LoRA teaches it when to stop)
+    - Numeric accuracy for both (LoRA on Nutrition5K data)
+    - VQA accuracy (LoRA on task-specific QA pairs)
+
+  Fine-tuning CANNOT easily fix:
+    - OPT's fundamental lack of instruction understanding
+    - OPT's high unparseable rate (needs prompt engineering, not just LoRA)
+
+  Suggested model for LoRA fine-tuning: FlanT5-XL
+    Rationale: Its instruction-following ability gives LoRA a better
+    starting point. The repetition problem is exactly the kind of issue
+    LoRA fine-tuning on Nutrition5K can fix. OPT's issues are more
+    fundamental — it doesn't understand what we're asking it to do.
+
+  Comparison saved to: /home/ubuntu/nutrivision/results/model_comparison.csv
+  Comparison JSON saved to: /home/ubuntu/nutrivision/results/model_comparison.json

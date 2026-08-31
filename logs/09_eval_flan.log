@@ -1,0 +1,49 @@
+============================================================
+NutriVision — Evaluation: flan-t5-xl
+============================================================
+Loaded 507 model outputs
+Loaded 507 ground truth dishes
+
+============================================================
+RESULTS: flan-t5-xl
+============================================================
+
+--- Task 1: Captioning (What's On Your Plate) ---
+  bleu1     : 0.2802 [0.2658 – 0.2953]
+  bleu2     : 0.1763 [0.1646 – 0.1886]
+  bleu4     : 0.0716 [0.0648 – 0.0793]
+  rouge1    : 0.4268 [0.4123 – 0.4419]
+  rougeL    : 0.3733 [0.3607 – 0.3875]
+  meteor    : 0.3094 [0.2917 – 0.3280]
+
+--- Task 2: Ingredients (Ingredients Detected) ---
+  precision : 0.3046 [0.2778 – 0.3325]
+  recall    : 0.4438 [0.4092 – 0.4762]
+  f1        : 0.2904 [0.2648 – 0.3162]
+  halluc_rate: 0.9091 [0.8834 – 0.9328]
+  Total hallucinated ingredients: 7279
+
+--- Task 3: Calories (Estimated Calories) ---
+  MAE       : 152.84 [137.54 – 170.92] cal
+  MAPE      : 67.30 [59.51 – 77.20]%
+  halluc_rate: 0.0871 [0.0590 – 0.1152]
+  Unparseable calorie outputs: 150
+
+--- Task 4: Macros (Nutrition Breakdown) ---
+  protein MAE    : 17.72 [16.11 – 19.51]g
+  protein MAPE   : 100.00 [100.00 – 100.00]%
+  fat MAE        : 13.38 [12.02 – 14.75]g
+  fat MAPE       : 100.00 [100.00 – 100.00]%
+  carb MAE       : 20.69 [19.14 – 22.22]g
+  carb MAPE      : 100.00 [100.00 – 100.00]%
+  Unparseable macro outputs: 42
+
+--- Task 5: VQA (Dietary Insights) ---
+  Accuracy  : 58.29 [55.05 – 61.54]% (485/832 correct)
+  Numeric MAE: 74.92 [62.66 – 87.69]
+  halluc_rate: 0.1270 [0.0970 – 0.1594]
+  Unparseable VQA answers: 763
+
+Full results saved to: /home/ubuntu/nutrivision/results/zero_shot_flan-t5-xl/evaluation_results.json
+Summary CSV saved to: /home/ubuntu/nutrivision/results/zero_shot_flan-t5-xl/summary_metrics.csv
+Per-dish scores saved to: /home/ubuntu/nutrivision/results/zero_shot_flan-t5-xl/per_dish_scores.csv

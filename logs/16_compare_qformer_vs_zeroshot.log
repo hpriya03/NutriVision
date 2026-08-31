@@ -1,0 +1,135 @@
+========================================================================
+NutriVision — Ablation Comparison
+========================================================================
+  Loaded: Zero-Shot FlanT5     ← results/zero_shot_flan-t5-xl
+  Loaded: Q-Former LoRA        ← results/finetuned_qformer
+
+────────────────────────────────────────────────────────────────────────
+  Captioning
+────────────────────────────────────────────────────────────────────────
+  BLEU-1                
+    Zero-Shot FlanT5: 0.2802 [0.2658 – 0.2953]
+    Q-Former LoRA   : 0.6671 [0.6426 – 0.6903]
+    ▲ Δ = +0.3869  (+138.1%)  [improved (significant)]
+  BLEU-2                
+    Zero-Shot FlanT5: 0.1763 [0.1646 – 0.1886]
+    Q-Former LoRA   : 0.5820 [0.5546 – 0.6102]
+    ▲ Δ = +0.4057  (+230.1%)  [improved (significant)]
+  BLEU-4                
+    Zero-Shot FlanT5: 0.0716 [0.0648 – 0.0793]
+    Q-Former LoRA   : 0.4415 [0.4082 – 0.4775]
+    ▲ Δ = +0.3700  (+516.9%)  [improved (significant)]
+  ROUGE-1               
+    Zero-Shot FlanT5: 0.4268 [0.4123 – 0.4419]
+    Q-Former LoRA   : 0.7732 [0.7538 – 0.7917]
+    ▲ Δ = +0.3464  (+81.2%)  [improved (significant)]
+  ROUGE-L               
+    Zero-Shot FlanT5: 0.3733 [0.3607 – 0.3875]
+    Q-Former LoRA   : 0.7329 [0.7135 – 0.7523]
+    ▲ Δ = +0.3596  (+96.3%)  [improved (significant)]
+  METEOR                
+    Zero-Shot FlanT5: 0.3094 [0.2917 – 0.3280]
+    Q-Former LoRA   : 0.6861 [0.6632 – 0.7075]
+    ▲ Δ = +0.3767  (+121.8%)  [improved (significant)]
+
+────────────────────────────────────────────────────────────────────────
+  Ingredients
+────────────────────────────────────────────────────────────────────────
+  Precision             
+    Zero-Shot FlanT5: 0.3046 [0.2778 – 0.3325]
+    Q-Former LoRA   : 0.7366 [0.7100 – 0.7610]
+    ▲ Δ = +0.4320  (+141.8%)  [improved (significant)]
+  Recall                
+    Zero-Shot FlanT5: 0.4438 [0.4092 – 0.4762]
+    Q-Former LoRA   : 0.6753 [0.6462 – 0.7010]
+    ▲ Δ = +0.2315  (+52.2%)  [improved (significant)]
+  F1                    
+    Zero-Shot FlanT5: 0.2904 [0.2648 – 0.3162]
+    Q-Former LoRA   : 0.6852 [0.6589 – 0.7089]
+    ▲ Δ = +0.3949  (+136.0%)  [improved (significant)]
+  Hallucination Rate    
+    Zero-Shot FlanT5: 0.9091 [0.8834 – 0.9328]
+    Q-Former LoRA   : 0.5494 [0.5079 – 0.5929]
+    ▼ Δ = -0.3597  (-39.6%)  [improved (significant)]
+
+────────────────────────────────────────────────────────────────────────
+  Calories
+────────────────────────────────────────────────────────────────────────
+  MAE                   
+    Zero-Shot FlanT5: 152.84 [137.54 – 170.92] cal
+    Q-Former LoRA   : 85.23 [75.53 – 95.00] cal
+    ▼ Δ = -67.61 cal  (-44.2%)  [improved (significant)]
+  MAPE                  
+    Zero-Shot FlanT5: 67.30 [59.51 – 77.20]%
+    Q-Former LoRA   : 47.35 [40.16 – 57.47]%
+    ▼ Δ = -19.96%  (-29.7%)  [improved (significant)]
+  Hallucination Rate    
+    Zero-Shot FlanT5: 0.0871 [0.0590 – 0.1152]
+    Q-Former LoRA   : 0.0830 [0.0593 – 0.1067]
+    ▼ Δ = -0.0041  (-4.7%)  [improved (overlapping)]
+
+────────────────────────────────────────────────────────────────────────
+  Macros
+────────────────────────────────────────────────────────────────────────
+  Protein MAE           
+    Zero-Shot FlanT5: 17.72 [16.11 – 19.51]g
+    Q-Former LoRA   : 9.97 [8.72 – 11.13]g
+    ▼ Δ = -7.75g  (-43.7%)  [improved (significant)]
+  Protein MAPE          
+    Zero-Shot FlanT5: 100.00 [100.00 – 100.00]%
+    Q-Former LoRA   : 66.83 [60.74 – 73.58]%
+    ▼ Δ = -33.17%  (-33.2%)  [improved (significant)]
+  Fat MAE               
+    Zero-Shot FlanT5: 13.38 [12.02 – 14.75]g
+    Q-Former LoRA   : 7.11 [6.31 – 7.89]g
+    ▼ Δ = -6.27g  (-46.9%)  [improved (significant)]
+  Fat MAPE              
+    Zero-Shot FlanT5: 100.00 [100.00 – 100.00]%
+    Q-Former LoRA   : 79.71 [70.11 – 91.57]%
+    ▼ Δ = -20.29%  (-20.3%)  [improved (significant)]
+  Carb MAE              
+    Zero-Shot FlanT5: 20.69 [19.14 – 22.22]g
+    Q-Former LoRA   : 13.16 [12.11 – 14.40]g
+    ▼ Δ = -7.53g  (-36.4%)  [improved (significant)]
+  Carb MAPE             
+    Zero-Shot FlanT5: 100.00 [100.00 – 100.00]%
+    Q-Former LoRA   : 72.02 [68.75 – 75.57]%
+    ▼ Δ = -27.98%  (-28.0%)  [improved (significant)]
+
+────────────────────────────────────────────────────────────────────────
+  VQA
+────────────────────────────────────────────────────────────────────────
+  Accuracy              
+    Zero-Shot FlanT5: 58.29 [55.05 – 61.54]%
+    Q-Former LoRA   : 85.41 [83.22 – 87.42]%
+    ▲ Δ = +27.12%  (+46.5%)  [improved (significant)]
+  Numeric MAE           
+    Zero-Shot FlanT5: 74.92 [62.66 – 87.69]
+    Q-Former LoRA   : 39.33 [32.57 – 46.50]
+    ▼ Δ = -35.58  (-47.5%)  [improved (significant)]
+  Hallucination Rate    
+    Zero-Shot FlanT5: 0.1270 [0.0970 – 0.1594]
+    Q-Former LoRA   : 0.0761 [0.0590 – 0.0978]
+    ▼ Δ = -0.0509  (-40.1%)  [improved (overlapping)]
+
+========================================================================
+  SUMMARY
+========================================================================
+  Zero-Shot FlanT5 vs Q-Former LoRA
+  Improved:  22 metrics
+  Degraded:  0 metrics
+
+  Per-task breakdown:
+    Captioning     : 6/6 improved
+    Ingredients    : 4/4 improved
+    Calories       : 3/3 improved
+    Macros         : 6/6 improved
+    VQA            : 3/3 improved
+
+  Statistically significant (non-overlapping CIs):
+    Improved:  20
+    Degraded:  0
+
+  CSV saved to: /home/ubuntu/nutrivision/results/ablation_comparison.csv
+  JSON saved to: /home/ubuntu/nutrivision/results/ablation_comparison.json
+========================================================================

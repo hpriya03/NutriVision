@@ -1,0 +1,90 @@
+============================================================
+NutriVision — Training Data Preparation
+============================================================
+Loaded metadata for 5006 dishes
+Training set: 2755 dishes
+
+Task prompts (FlanT5-XL format):
+  captioning: "Describe this food plate in detail."
+  ingredients: "List all the ingredients visible in this dish."
+  calories: "Estimate the total calories in this dish."
+  macros: "What is the macronutrient breakdown of this dish? Include protein, fat, and carbohydrates in grams."
+VQA questions: 12 templates (all used in training)
+  Processed 500/2755 dishes...
+  Processed 1000/2755 dishes...
+  Processed 1500/2755 dishes...
+  Processed 2000/2755 dishes...
+  Processed 2500/2755 dishes...
+
+============================================================
+TRAINING DATA SUMMARY
+============================================================
+  Total examples:       44080
+  Dishes used:          2755
+  Skipped (no metadata): 0
+  Skipped (no image):    0
+  Plate-only dishes:     1
+
+  Per-task breakdown:
+    captioning     : 2,755 examples
+    ingredients    : 2,755 examples
+    calories       : 2,755 examples
+    macros         : 2,755 examples
+    vqa            : 33,060 examples
+
+============================================================
+SAMPLE TRAINING EXAMPLES
+============================================================
+
+Dish: dish_1556572657
+
+  [CAPTIONING]
+    Prompt: "Describe this food plate in detail."
+    Answer: "a plate of olives"
+    Image:  data/raw/realsense_overhead/dish_1556572657/rgb.png
+
+  [INGREDIENTS]
+    Prompt: "List all the ingredients visible in this dish."
+    Answer: "olives"
+    Image:  data/raw/realsense_overhead/dish_1556572657/rgb.png
+
+  [CALORIES]
+    Prompt: "Estimate the total calories in this dish."
+    Answer: "41 calories"
+    Image:  data/raw/realsense_overhead/dish_1556572657/rgb.png
+
+  [MACROS]
+    Prompt: "What is the macronutrient breakdown of this dish? Include protein, fat, and carbohydrates in grams."
+    Answer: "0.3g protein, 3.9g fat, 2.3g carbohydrates"
+    Image:  data/raw/realsense_overhead/dish_1556572657/rgb.png
+
+  [VQA] (showing 3 of 12)
+    Q: "How many calories does this dish have?"
+    A: "41.4"
+    Q: "Is this dish high in protein?"
+    A: "no"
+    Q: "What are the main ingredients in this dish?"
+    A: "olives"
+
+============================================================
+ANSWER DISTRIBUTION CHECK
+============================================================
+
+  VQA answer distribution:
+    yes:   10,857 (32.8%)
+    no:    5,673 (17.2%)
+    other: 16,530 (numeric/ingredient answers)
+
+  Calorie answer distribution:
+    min:    0
+    max:    3943
+    mean:   254.9
+    median: 208.0
+
+Saved to: /home/ubuntu/nutrivision/data/training/train_examples.json
+File size: 12.8 MB
+
+============================================================
+NEXT STEP: Run LoRA fine-tuning
+  python -m src.train.lora_finetune 2>&1 | tee logs/12_lora_train.log
+============================================================

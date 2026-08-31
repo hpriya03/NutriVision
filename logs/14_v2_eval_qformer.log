@@ -1,0 +1,60 @@
+============================================================
+NutriVision — Evaluation: v2_finetuned_qformer
+============================================================
+Loaded 507 model outputs from results/v2_finetuned_qformer/raw_outputs.json
+Loaded 507 ground truth dishes from /home/ubuntu/nutrivision/results/v2_ground_truth.json
+Ground truth version: v2
+
+============================================================
+RESULTS: v2_finetuned_qformer
+============================================================
+
+--- Task 1: Captioning (What's On Your Plate) ---
+  bleu1     : 0.6297 [0.6044 – 0.6547]
+  bleu2     : 0.5448 [0.5166 – 0.5732]
+  bleu4     : 0.4074 [0.3720 – 0.4410]
+  rouge1    : 0.7394 [0.7198 – 0.7590]
+  rougeL    : 0.6929 [0.6717 – 0.7143]
+  meteor    : 0.6565 [0.6340 – 0.6795]
+
+--- Task 2: Ingredients (Ingredients Detected) ---
+  precision : 0.7194 [0.6932 – 0.7451]
+  recall    : 0.6512 [0.6237 – 0.6775]
+  f1        : 0.6551 [0.6291 – 0.6793]
+  halluc_rate: 0.5830 [0.5415 – 0.6265]
+  Total hallucinated ingredients: 1497
+
+--- Task 3: Calories (Estimated Calories) ---
+  MAE       : 92.55 [82.61 – 102.39] cal
+  MAPE      : 66.90 [54.00 – 83.15]%
+  halluc_rate: 0.1245 [0.0968 – 0.1542]
+  Unparseable calorie outputs: 0
+
+--- Task 4: Macros (Nutrition Breakdown) ---
+  protein MAE    : 18.61 [16.68 – 20.44]g
+  protein MAPE   : 224.47 [184.17 – 268.18]%
+  fat MAE        : 7.14 [6.36 – 8.01]g
+  fat MAPE       : 110.85 [92.13 – 134.60]%
+  carb MAE       : 12.59 [11.60 – 13.67]g
+  carb MAPE      : 93.07 [79.50 – 110.08]%
+  Unparseable macro outputs: 0
+
+--- Task 5: VQA — SEEN ---
+  Accuracy  : 74.68 [73.17 – 76.09]% (2271/3041 correct)
+  Numeric MAE: 29.74 [27.15 – 32.39]
+  halluc_rate: 0.2108 [0.1924 – 0.2282]
+  Unparseable: 1032
+
+--- Task 5: VQA — UNSEEN ---
+  Accuracy  : 58.58 [57.00 – 60.13]% (2376/4056 correct)
+  Unparseable: 0
+
+--- Task 5: VQA — OVERALL ---
+  Accuracy  : 65.48 [64.35 – 66.52]% (4647/7097 correct)
+  Numeric MAE: 29.74 [27.15 – 32.39]
+  halluc_rate: 0.2108 [0.1924 – 0.2282]
+  Unparseable: 1032
+
+Full results saved to: results/v2_finetuned_qformer/evaluation_results.json
+Summary CSV saved to: results/v2_finetuned_qformer/summary_metrics.csv
+Per-dish scores saved to: results/v2_finetuned_qformer/per_dish_scores.csv
