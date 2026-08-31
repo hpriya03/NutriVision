@@ -1,0 +1,252 @@
+
+============================================================
+DISH: dish_1556575327
+============================================================
+
+--- What's On Your Plate ---
+Prompt: Describe this food plate in detail.
+Output: a plate of brussels sprouts, olives and olive oil
+
+--- Ingredients Detected ---
+Prompt: List all the ingredients visible in this dish.
+Output: brussels sprouts, olives
+
+--- Estimated Calories ---
+Prompt: Estimate the total calories in this dish.
+Output: 116 calories
+
+--- Nutrition Breakdown ---
+Prompt: What is the macronutrient breakdown of this dish? Include protein, fat, and carbohydrates in grams.
+Output: 0.1g protein, 0.1g fat, 0.2g carbohydrates
+
+--- Dietary Insights (SEEN questions) ---
+Q: How many calories does this dish have?
+A: This dish contains approximately 63 calories.
+
+Q: Is this dish high in protein?
+A: No, this dish is not particularly high in protein, containing 0.8 grams.
+
+Q: What are the main ingredients in this dish?
+A: The main ingredients in this dish are brussels sprouts, olives and olive oil.
+
+Q: Would this be considered a balanced meal?
+A: No, this would not be considered a balanced meal as the macronutrient proportions are not evenly distributed.
+
+Q: Is this dish suitable for a low-carb diet?
+A: Yes, this dish is suitable for a low-carb diet with only 4.2 grams of carbohydrates.
+
+Q: How much fat does this dish contain?
+A: This dish contains 0.1 grams of fat.
+
+Q: Is this a healthy meal option?
+A: Yes, this dish can be considered a healthy option with 369 calories and 0.2 grams of fat.
+
+Q: What food groups are represented in this dish?
+A: The food groups represented in this dish include brussels sprouts, olives and olive oil.
+
+Q: Is this dish suitable for someone watching their calorie intake?
+A: Yes, at 63 calories, this dish is suitable for someone watching their calorie intake.
+
+Q: How much protein does this dish provide?
+A: This dish provides 0.2 grams of protein.
+
+Q: What is the approximate carbohydrate content?
+A: The approximate carbohydrate content of this dish is 4.2 grams.
+
+Q: Would this dish be appropriate for a diabetic diet?
+A: Yes, with 4.5 grams of carbohydrates, this dish falls within the recommended range for a diabetic diet.
+
+
+--- Dietary Insights (UNSEEN questions) ---
+Q: Is this dish low in fat?
+A: Yes, this dish is low in fat with 0.8 grams of fat.
+
+Q: Does this dish have more than 500 calories?
+A: No, this dish contains approximately 58 calories.
+
+Q: Is this a light meal?
+A: Yes, this dish is a light meal with only 58 calories.
+
+Q: Does this dish have more fat than protein?
+A: No, this dish contains 0.2 grams of protein.
+
+Q: Is this dish high in carbohydrates?
+A: No, this dish is not particularly high in carbohydrates, containing 4.2 grams.
+
+Q: Would this be suitable for a weight loss diet?
+A: Yes, with 4.5 grams of carbohydrates, this dish falls within the recommended range for a weight loss diet.
+
+Q: Is this a vegetarian dish?
+A: Yes, this dish is a vegetarian dish with 5.3 grams of carbohydrates.
+
+Q: Would this be a good post-workout meal?
+A: Yes, this would be a good post-workout meal with 319 calories and 3.1 grams of fat.
+
+
+============================================================
+DISH: dish_1557861216
+============================================================
+
+--- What's On Your Plate ---
+Prompt: Describe this food plate in detail.
+Output: a plate of roasted potatoes
+
+--- Ingredients Detected ---
+Prompt: List all the ingredients visible in this dish.
+Output: arugula, basil, garlic, lemon juice, olive oil, onions, salt, spinach (raw), vinegar
+
+--- Estimated Calories ---
+Prompt: Estimate the total calories in this dish.
+Output: 63 calories
+
+--- Nutrition Breakdown ---
+Prompt: What is the macronutrient breakdown of this dish? Include protein, fat, and carbohydrates in grams.
+Output: 0.8g protein, 0.2g fat, 2.1g carbohydrates
+
+--- Dietary Insights (SEEN questions) ---
+Q: How many calories does this dish have?
+A: This dish contains approximately 116 calories.
+
+Q: Is this dish high in protein?
+A: No, this dish is not particularly high in protein, containing 4.2 grams.
+
+Q: What are the main ingredients in this dish?
+A: The main ingredients in this dish are arugula, basil, garlic, lemon juice, olive oil, onions, parsley, salt, shallots, spinach (cooked), spinach (raw), vinegar and wheat berry.
+
+Q: Would this be considered a balanced meal?
+A: No, this would not be considered a balanced meal as the macronutrient proportions are not evenly distributed.
+
+Q: Is this dish suitable for a low-carb diet?
+A: Yes, this dish is suitable for a low-carb diet with only 4.2 grams of carbohydrates.
+
+Q: How much fat does this dish contain?
+A: This dish contains 0.2 grams of fat.
+
+Q: Is this a healthy meal option?
+A: Yes, this dish can be considered a healthy option with 58 calories and 0.2 grams of fat.
+
+Q: What food groups are represented in this dish?
+A: The food groups represented in this dish include arugula, bok choy, garlic, lemon juice, olive oil, onions, parsley, salt, spinach (raw), vinegar and wheat berry.
+
+Q: Is this dish suitable for someone watching their calorie intake?
+A: Yes, at 116 calories, this dish is suitable for someone watching their calorie intake.
+
+Q: How much protein does this dish provide?
+A: This dish provides 0.8 grams of protein.
+
+Q: What is the approximate carbohydrate content?
+A: The approximate carbohydrate content of this dish is 4.2 grams.
+
+Q: Would this dish be appropriate for a diabetic diet?
+A: Yes, with 4.5 grams of carbohydrates, this dish falls within the recommended range for a diabetic diet.
+
+
+--- Dietary Insights (UNSEEN questions) ---
+Q: Is this dish low in fat?
+A: Yes, this dish is low in fat with only 0.2 grams of fat.
+
+Q: Does this dish have more than 500 calories?
+A: Yes, this dish contains approximately 500 calories.
+
+Q: Is this a light meal?
+A: Yes, this dish is a light meal with only 58 calories.
+
+Q: Does this dish have more fat than protein?
+A: Yes, this dish contains 9.5 grams of fat.
+
+Q: Is this dish high in carbohydrates?
+A: No, this dish is not particularly high in carbohydrates, containing 4.2 grams.
+
+Q: Would this be suitable for a weight loss diet?
+A: Yes, with 4.5 grams of carbohydrates, this dish falls within the recommended range for a weight loss diet.
+
+Q: Is this a vegetarian dish?
+A: Yes, this dish is a vegetarian dish with 1.8 grams of carbohydrates.
+
+Q: Would this be a good post-workout meal?
+A: Yes, this would be a good post-workout meal as it contains 35.6 grams of carbohydrates.
+
+
+============================================================
+DISH: dish_1557862345
+============================================================
+
+--- What's On Your Plate ---
+Prompt: Describe this food plate in detail.
+Output: a plate of chicken
+
+--- Ingredients Detected ---
+Prompt: List all the ingredients visible in this dish.
+Output: chicken
+
+--- Estimated Calories ---
+Prompt: Estimate the total calories in this dish.
+Output: 420 calories
+
+--- Nutrition Breakdown ---
+Prompt: What is the macronutrient breakdown of this dish? Include protein, fat, and carbohydrates in grams.
+Output: 4.5g protein, 0.5g fat, 0.2g carbohydrates
+
+--- Dietary Insights (SEEN questions) ---
+Q: How many calories does this dish have?
+A: This dish contains approximately 116 calories.
+
+Q: Is this dish high in protein?
+A: Yes, this dish is high in protein with 24.2 grams, which exceeds the 25 gram per meal threshold.
+
+Q: What are the main ingredients in this dish?
+A: The main ingredients in this dish are chicken.
+
+Q: Would this be considered a balanced meal?
+A: No, this would not be considered a balanced meal as the macronutrient proportions are not evenly distributed.
+
+Q: Is this dish suitable for a low-carb diet?
+A: Yes, this dish is suitable for a low-carb diet with only 4.2 grams of carbohydrates.
+
+Q: How much fat does this dish contain?
+A: This dish contains 3.1 grams of fat.
+
+Q: Is this a healthy meal option?
+A: Yes, this dish can be considered a healthy option with 369 calories and 0.2 grams of fat.
+
+Q: What food groups are represented in this dish?
+A: The food groups represented in this dish include chicken.
+
+Q: Is this dish suitable for someone watching their calorie intake?
+A: Yes, at 212 calories, this dish is suitable for someone watching their calorie intake.
+
+Q: How much protein does this dish provide?
+A: This dish provides 4.2 grams of protein.
+
+Q: What is the approximate carbohydrate content?
+A: The approximate carbohydrate content of this dish is 0.2 grams.
+
+Q: Would this dish be appropriate for a diabetic diet?
+A: Yes, with 4.5 grams of carbohydrates, this dish falls within the recommended range for a diabetic diet.
+
+
+--- Dietary Insights (UNSEEN questions) ---
+Q: Is this dish low in fat?
+A: Yes, this dish is low in fat with only 4.2 grams of fat.
+
+Q: Does this dish have more than 500 calories?
+A: Yes, this dish contains approximately 500 calories.
+
+Q: Is this a light meal?
+A: Yes, this dish is a light meal with only 58 calories.
+
+Q: Does this dish have more fat than protein?
+A: No, this dish contains more fat than protein, containing 4.2 grams.
+
+Q: Is this dish high in carbohydrates?
+A: No, this dish is not particularly high in carbohydrates, containing 4.2 grams.
+
+Q: Would this be suitable for a weight loss diet?
+A: Yes, with 4.5 grams of carbohydrates, this dish falls within the recommended range for a weight loss diet.
+
+Q: Is this a vegetarian dish?
+A: No, this dish is not a vegetarian dish as it contains 1.8 grams of carbohydrates.
+
+Q: Would this be a good post-workout meal?
+A: Yes, this would be a good post-workout meal as it contains 34.2 grams of carbohydrates and 0.2 grams of fat.
+

@@ -1,0 +1,259 @@
+{
+  "models": [
+    "opt",
+    "flan-t5-xl"
+  ],
+  "opt_wins": 10,
+  "flan_wins": 12,
+  "ties": 0,
+  "task_breakdown": {
+    "Captioning": {
+      "OPT": 0,
+      "FlanT5": 6,
+      "Tie": 0
+    },
+    "Ingredients": {
+      "OPT": 3,
+      "FlanT5": 1,
+      "Tie": 0
+    },
+    "Calories": {
+      "OPT": 1,
+      "FlanT5": 2,
+      "Tie": 0
+    },
+    "Macros": {
+      "OPT": 4,
+      "FlanT5": 2,
+      "Tie": 0
+    },
+    "VQA": {
+      "OPT": 2,
+      "FlanT5": 1,
+      "Tie": 0
+    }
+  },
+  "metrics": [
+    {
+      "task": "Captioning",
+      "metric": "BLEU-1",
+      "opt_mean": "0.2537",
+      "opt_ci": "[0.2397 \u2013 0.2684]",
+      "flan_mean": "0.2802",
+      "flan_ci": "[0.2658 \u2013 0.2953]",
+      "winner": "FlanT5",
+      "ci_overlap": "overlapping"
+    },
+    {
+      "task": "Captioning",
+      "metric": "BLEU-2",
+      "opt_mean": "0.1668",
+      "opt_ci": "[0.1563 \u2013 0.1780]",
+      "flan_mean": "0.1763",
+      "flan_ci": "[0.1646 \u2013 0.1886]",
+      "winner": "FlanT5",
+      "ci_overlap": "overlapping"
+    },
+    {
+      "task": "Captioning",
+      "metric": "BLEU-4",
+      "opt_mean": "0.0588",
+      "opt_ci": "[0.0540 \u2013 0.0644]",
+      "flan_mean": "0.0716",
+      "flan_ci": "[0.0648 \u2013 0.0793]",
+      "winner": "FlanT5",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "Captioning",
+      "metric": "ROUGE-1",
+      "opt_mean": "0.3785",
+      "opt_ci": "[0.3643 \u2013 0.3922]",
+      "flan_mean": "0.4268",
+      "flan_ci": "[0.4123 \u2013 0.4419]",
+      "winner": "FlanT5",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "Captioning",
+      "metric": "ROUGE-L",
+      "opt_mean": "0.3575",
+      "opt_ci": "[0.3446 \u2013 0.3702]",
+      "flan_mean": "0.3733",
+      "flan_ci": "[0.3607 \u2013 0.3875]",
+      "winner": "FlanT5",
+      "ci_overlap": "overlapping"
+    },
+    {
+      "task": "Captioning",
+      "metric": "METEOR",
+      "opt_mean": "0.2968",
+      "opt_ci": "[0.2809 \u2013 0.3142]",
+      "flan_mean": "0.3094",
+      "flan_ci": "[0.2917 \u2013 0.3280]",
+      "winner": "FlanT5",
+      "ci_overlap": "overlapping"
+    },
+    {
+      "task": "Ingredients",
+      "metric": "Precision",
+      "opt_mean": "0.4863",
+      "opt_ci": "[0.4535 \u2013 0.5173]",
+      "flan_mean": "0.3046",
+      "flan_ci": "[0.2778 \u2013 0.3325]",
+      "winner": "OPT",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "Ingredients",
+      "metric": "Recall",
+      "opt_mean": "0.4144",
+      "opt_ci": "[0.3782 \u2013 0.4495]",
+      "flan_mean": "0.4438",
+      "flan_ci": "[0.4092 \u2013 0.4762]",
+      "winner": "FlanT5",
+      "ci_overlap": "overlapping"
+    },
+    {
+      "task": "Ingredients",
+      "metric": "F1",
+      "opt_mean": "0.3841",
+      "opt_ci": "[0.3524 \u2013 0.4139]",
+      "flan_mean": "0.2904",
+      "flan_ci": "[0.2648 \u2013 0.3162]",
+      "winner": "OPT",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "Ingredients",
+      "metric": "Hallucination Rate",
+      "opt_mean": "0.7688",
+      "opt_ci": "[0.7351 \u2013 0.8044]",
+      "flan_mean": "0.9091",
+      "flan_ci": "[0.8834 \u2013 0.9328]",
+      "winner": "OPT",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "Calories",
+      "metric": "MAE (cal)",
+      "opt_mean": "244.7465",
+      "opt_ci": "[226.6628 \u2013 263.0947]",
+      "flan_mean": "152.8434",
+      "flan_ci": "[137.5358 \u2013 170.9171]",
+      "winner": "FlanT5",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "Calories",
+      "metric": "MAPE (%)",
+      "opt_mean": "98.8982",
+      "opt_ci": "[97.7158 \u2013 100.5427]",
+      "flan_mean": "67.3048",
+      "flan_ci": "[59.5100 \u2013 77.1994]",
+      "winner": "FlanT5",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "Calories",
+      "metric": "Hallucination Rate",
+      "opt_mean": "0.0042",
+      "opt_ci": "[0.0000 \u2013 0.0105]",
+      "flan_mean": "0.0871",
+      "flan_ci": "[0.0590 \u2013 0.1152]",
+      "winner": "OPT",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "Macros",
+      "metric": "Protein MAE (g)",
+      "opt_mean": "14.1702",
+      "opt_ci": "[12.4258 \u2013 15.9544]",
+      "flan_mean": "17.7203",
+      "flan_ci": "[16.1069 \u2013 19.5149]",
+      "winner": "OPT",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "Macros",
+      "metric": "Protein MAPE (%)",
+      "opt_mean": "95.7894",
+      "opt_ci": "[85.7705 \u2013 109.5441]",
+      "flan_mean": "100.0000",
+      "flan_ci": "[100.0000 \u2013 100.0000]",
+      "winner": "OPT",
+      "ci_overlap": "overlapping"
+    },
+    {
+      "task": "Macros",
+      "metric": "Fat MAE (g)",
+      "opt_mean": "10.4804",
+      "opt_ci": "[9.2401 \u2013 11.7248]",
+      "flan_mean": "13.3796",
+      "flan_ci": "[12.0166 \u2013 14.7547]",
+      "winner": "OPT",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "Macros",
+      "metric": "Fat MAPE (%)",
+      "opt_mean": "287.7429",
+      "opt_ci": "[221.1199 \u2013 371.8806]",
+      "flan_mean": "100.0000",
+      "flan_ci": "[100.0000 \u2013 100.0000]",
+      "winner": "FlanT5",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "Macros",
+      "metric": "Carb MAE (g)",
+      "opt_mean": "16.4175",
+      "opt_ci": "[14.7932 \u2013 17.9192]",
+      "flan_mean": "20.6891",
+      "flan_ci": "[19.1354 \u2013 22.2207]",
+      "winner": "OPT",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "Macros",
+      "metric": "Carb MAPE (%)",
+      "opt_mean": "108.4763",
+      "opt_ci": "[92.1433 \u2013 130.1154]",
+      "flan_mean": "100.0000",
+      "flan_ci": "[100.0000 \u2013 100.0000]",
+      "winner": "FlanT5",
+      "ci_overlap": "overlapping"
+    },
+    {
+      "task": "VQA",
+      "metric": "Yes/No Accuracy (%)",
+      "opt_mean": "56.5134",
+      "opt_ci": "[53.4483 \u2013 59.6743]",
+      "flan_mean": "58.2933",
+      "flan_ci": "[55.0481 \u2013 61.5385]",
+      "winner": "FlanT5",
+      "ci_overlap": "overlapping"
+    },
+    {
+      "task": "VQA",
+      "metric": "Numeric MAE",
+      "opt_mean": "33.7393",
+      "opt_ci": "[25.2450 \u2013 43.2180]",
+      "flan_mean": "74.9152",
+      "flan_ci": "[62.6598 \u2013 87.6865]",
+      "winner": "OPT",
+      "ci_overlap": "non-overlapping"
+    },
+    {
+      "task": "VQA",
+      "metric": "Hallucination Rate",
+      "opt_mean": "0.0184",
+      "opt_ci": "[0.0037 \u2013 0.0368]",
+      "flan_mean": "0.1270",
+      "flan_ci": "[0.0970 \u2013 0.1594]",
+      "winner": "OPT",
+      "ci_overlap": "non-overlapping"
+    }
+  ],
+  "recommendation": "flan-t5-xl"
+}

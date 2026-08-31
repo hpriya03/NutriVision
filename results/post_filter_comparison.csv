@@ -1,0 +1,77 @@
+config,metric,raw,post_filtered,delta
+Zero-Shot,VQA Accuracy (%),58.2933,76.5625,18.2692
+Zero-Shot,BLEU-1,0.2802,0.2802,0.0000
+Zero-Shot,ROUGE-1,0.4268,0.4268,0.0000
+Zero-Shot,METEOR,0.3094,0.3094,0.0000
+Zero-Shot,Ingredient F1,0.2904,0.2907,0.0003
+Zero-Shot,Calorie MAE,152.8434,152.8434,0.0000
+Zero-Shot,Calorie MAPE (%),67.3048,67.3048,0.0000
+Zero-Shot,Protein MAE (g),17.7203,17.7203,0.0000
+Zero-Shot,Fat MAE (g),13.3796,13.3796,0.0000
+Zero-Shot,Carb MAE (g),20.6891,20.6891,0.0000
+Q-Former LoRA,VQA Seen Acc (%),74.6794,71.2923,-3.3870
+Q-Former LoRA,VQA Unseen Acc (%),58.5799,77.0710,18.4911
+Q-Former LoRA,VQA Overall Acc (%),65.4784,74.5949,9.1165
+Q-Former LoRA,BLEU-1,0.6297,0.6297,0.0000
+Q-Former LoRA,ROUGE-1,0.7394,0.7394,0.0000
+Q-Former LoRA,METEOR,0.6565,0.6565,0.0000
+Q-Former LoRA,Ingredient F1,0.6551,0.6551,0.0000
+Q-Former LoRA,Calorie MAE,92.5489,92.5489,0.0000
+Q-Former LoRA,Calorie MAPE (%),66.8988,66.8988,0.0000
+Q-Former LoRA,Protein MAE (g),18.6137,18.6137,0.0000
+Q-Former LoRA,Fat MAE (g),7.1378,7.1378,0.0000
+Q-Former LoRA,Carb MAE (g),12.5942,12.5942,0.0000
+LLM LoRA,VQA Seen Acc (%),80.7424,80.3934,-0.3490
+LLM LoRA,VQA Unseen Acc (%),64.7929,81.0404,16.2475
+LLM LoRA,VQA Overall Acc (%),71.7675,80.7575,8.9900
+LLM LoRA,BLEU-1,0.5847,0.5847,0.0000
+LLM LoRA,ROUGE-1,0.7025,0.7025,0.0000
+LLM LoRA,METEOR,0.6291,0.6291,0.0000
+LLM LoRA,Ingredient F1,0.5601,0.5601,0.0000
+LLM LoRA,Calorie MAE,111.1311,111.1311,0.0000
+LLM LoRA,Calorie MAPE (%),101.6736,101.6736,0.0000
+LLM LoRA,Protein MAE (g),13.6236,13.6236,0.0000
+LLM LoRA,Fat MAE (g),11.0883,11.0883,0.0000
+LLM LoRA,Carb MAE (g),16.3363,16.3363,0.0000
+Both LoRA,VQA Seen Acc (%),83.7110,83.6125,-0.0985
+Both LoRA,VQA Unseen Acc (%),60.7002,80.3008,19.6006
+Both LoRA,VQA Overall Acc (%),70.5675,81.7209,11.1534
+Both LoRA,BLEU-1,0.5903,0.5903,0.0000
+Both LoRA,ROUGE-1,0.6897,0.6897,0.0000
+Both LoRA,METEOR,0.6258,0.6258,0.0000
+Both LoRA,Ingredient F1,0.5774,0.5774,0.0000
+Both LoRA,Calorie MAE,99.4115,99.4115,0.0000
+Both LoRA,Calorie MAPE (%),77.4404,77.4404,0.0000
+Both LoRA,Protein MAE (g),11.4779,11.4779,0.0000
+Both LoRA,Fat MAE (g),9.2420,9.2420,0.0000
+Both LoRA,Carb MAE (g),15.9071,15.9071,0.0000
+
+config,statistic,value,,
+Zero-Shot,dishes_processed,507,,
+Zero-Shot,ingredients_removed,71,,
+Zero-Shot,vqa_corrections_total,352,,
+Zero-Shot,vqa_corrections_seen,0,,
+Zero-Shot,vqa_corrections_unseen,0,,
+Zero-Shot,atwater_inconsistent,273,,
+Zero-Shot,cross_task_inconsistencies,36,,
+Q-Former LoRA,dishes_processed,507,,
+Q-Former LoRA,ingredients_removed,2,,
+Q-Former LoRA,vqa_corrections_total,2149,,
+Q-Former LoRA,vqa_corrections_seen,891,,
+Q-Former LoRA,vqa_corrections_unseen,1258,,
+Q-Former LoRA,atwater_inconsistent,305,,
+Q-Former LoRA,cross_task_inconsistencies,995,,
+LLM LoRA,dishes_processed,507,,
+LLM LoRA,ingredients_removed,0,,
+LLM LoRA,vqa_corrections_total,1166,,
+LLM LoRA,vqa_corrections_seen,107,,
+LLM LoRA,vqa_corrections_unseen,1059,,
+LLM LoRA,atwater_inconsistent,467,,
+LLM LoRA,cross_task_inconsistencies,811,,
+Both LoRA,dishes_processed,507,,
+Both LoRA,ingredients_removed,0,,
+Both LoRA,vqa_corrections_total,1506,,
+Both LoRA,vqa_corrections_seen,55,,
+Both LoRA,vqa_corrections_unseen,1451,,
+Both LoRA,atwater_inconsistent,392,,
+Both LoRA,cross_task_inconsistencies,1268,,

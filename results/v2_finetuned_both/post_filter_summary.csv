@@ -1,0 +1,12 @@
+metric,value
+dishes_processed,507
+ingredients_removed,0
+ingredients_flagged,0
+calories_out_of_range,0
+macros_out_of_range,0
+atwater_inconsistent,392
+atwater_avg_discrepancy_pct,96.2
+vqa_corrections_total,1506
+vqa_corrections_seen,55
+vqa_corrections_unseen,1451
+cross_task_inconsistencies,1268

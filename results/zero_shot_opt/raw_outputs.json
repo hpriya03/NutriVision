@@ -1,0 +1,217 @@
+{
+  "dish_1556575327": {
+    "dish_id": "dish_1556575327",
+    "tasks": {
+      "captioning": {
+        "prompt": "Question: Describe this food plate. Answer:",
+        "output": "Vegetables"
+      },
+      "ingredients": {
+        "prompt": "Question: What are the ingredients in this dish? Answer:",
+        "output": "Brussel sprouts, green peppers, and olives"
+      },
+      "calories": {
+        "prompt": "Question: How many total calories are in this dish? Answer:",
+        "output": "4"
+      },
+      "macros": {
+        "prompt": "Question: What are the protein, fat, and carbohydrate amounts in grams for this dish? Answer:",
+        "output": "1.5g protein, 1g fat, and 1g carbohydrate"
+      }
+    },
+    "vqa": [
+      {
+        "question": "What is the approximate carbohydrate content?",
+        "prompt_sent": "Question: What is the approximate carbohydrate content? Answer:",
+        "output": "The approximate carbohydrate content of this food is:"
+      },
+      {
+        "question": "Is this dish high in protein?",
+        "prompt_sent": "Question: Is this dish high in protein? Answer:",
+        "output": "Yes, it is"
+      },
+      {
+        "question": "How many calories does this dish have?",
+        "prompt_sent": "Question: How many calories does this dish have? Answer:",
+        "output": "It depends on how many vegetables you eat"
+      },
+      {
+        "question": "Is this dish suitable for a low-carb diet?",
+        "prompt_sent": "Question: Is this dish suitable for a low-carb diet? Answer:",
+        "output": "Yes, but it's not a good idea to eat it every day"
+      }
+    ]
+  },
+  "dish_1557861216": {
+    "dish_id": "dish_1557861216",
+    "tasks": {
+      "captioning": {
+        "prompt": "Question: Describe this food plate. Answer:",
+        "output": "it is a plate with a white surface and a black border"
+      },
+      "ingredients": {
+        "prompt": "Question: What are the ingredients in this dish? Answer:",
+        "output": "it's a plate"
+      },
+      "calories": {
+        "prompt": "Question: How many total calories are in this dish? Answer:",
+        "output": "0"
+      },
+      "macros": {
+        "prompt": "Question: What are the protein, fat, and carbohydrate amounts in grams for this dish? Answer:",
+        "output": ""
+      }
+    },
+    "vqa": [
+      {
+        "question": "Would this be considered a balanced meal?",
+        "prompt_sent": "Question: Would this be considered a balanced meal? Answer:",
+        "output": "yes"
+      },
+      {
+        "question": "Would this dish be appropriate for a diabetic diet?",
+        "prompt_sent": "Question: Would this dish be appropriate for a diabetic diet? Answer:",
+        "output": "yes"
+      },
+      {
+        "question": "What are the main ingredients in this dish?",
+        "prompt_sent": "Question: What are the main ingredients in this dish? Answer:",
+        "output": "paper, water, and qr code"
+      },
+      {
+        "question": "Is this dish high in protein?",
+        "prompt_sent": "Question: Is this dish high in protein? Answer:",
+        "output": "yes"
+      }
+    ]
+  },
+  "dish_1557862345": {
+    "dish_id": "dish_1557862345",
+    "tasks": {
+      "captioning": {
+        "prompt": "Question: Describe this food plate. Answer:",
+        "output": "chicken"
+      },
+      "ingredients": {
+        "prompt": "Question: What are the ingredients in this dish? Answer:",
+        "output": "chicken, rice, and a qr code"
+      },
+      "calories": {
+        "prompt": "Question: How many total calories are in this dish? Answer:",
+        "output": "0"
+      },
+      "macros": {
+        "prompt": "Question: What are the protein, fat, and carbohydrate amounts in grams for this dish? Answer:",
+        "output": "1, 2, and 3"
+      }
+    },
+    "vqa": [
+      {
+        "question": "What is the approximate carbohydrate content?",
+        "prompt_sent": "Question: What is the approximate carbohydrate content? Answer:",
+        "output": "1g"
+      },
+      {
+        "question": "Is this dish suitable for someone watching their calorie intake?",
+        "prompt_sent": "Question: Is this dish suitable for someone watching their calorie intake? Answer:",
+        "output": "yes"
+      },
+      {
+        "question": "Is this dish high in protein?",
+        "prompt_sent": "Question: Is this dish high in protein? Answer:",
+        "output": "yes"
+      },
+      {
+        "question": "Is this a healthy meal option?",
+        "prompt_sent": "Question: Is this a healthy meal option? Answer:",
+        "output": "yes"
+      }
+    ]
+  },
+  "dish_1557862696": {
+    "dish_id": "dish_1557862696",
+    "tasks": {
+      "captioning": {
+        "prompt": "Question: Describe this food plate. Answer:",
+        "output": "potato chips"
+      },
+      "ingredients": {
+        "prompt": "Question: What are the ingredients in this dish? Answer:",
+        "output": "potato, onion, garlic, and salt"
+      },
+      "calories": {
+        "prompt": "Question: How many total calories are in this dish? Answer:",
+        "output": "0"
+      },
+      "macros": {
+        "prompt": "Question: What are the protein, fat, and carbohydrate amounts in grams for this dish? Answer:",
+        "output": "1, 2, and 3"
+      }
+    },
+    "vqa": [
+      {
+        "question": "How many calories does this dish have?",
+        "prompt_sent": "Question: How many calories does this dish have? Answer:",
+        "output": "0"
+      },
+      {
+        "question": "Would this dish be appropriate for a diabetic diet?",
+        "prompt_sent": "Question: Would this dish be appropriate for a diabetic diet? Answer:",
+        "output": "yes"
+      },
+      {
+        "question": "Is this dish high in protein?",
+        "prompt_sent": "Question: Is this dish high in protein? Answer:",
+        "output": "yes"
+      },
+      {
+        "question": "Would this be considered a balanced meal?",
+        "prompt_sent": "Question: Would this be considered a balanced meal? Answer:",
+        "output": "yes"
+      }
+    ]
+  },
+  "dish_1557862738": {
+    "dish_id": "dish_1557862738",
+    "tasks": {
+      "captioning": {
+        "prompt": "Question: Describe this food plate. Answer:",
+        "output": "steak"
+      },
+      "ingredients": {
+        "prompt": "Question: What are the ingredients in this dish? Answer:",
+        "output": "beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef, beef,"
+      },
+      "calories": {
+        "prompt": "Question: How many total calories are in this dish? Answer:",
+        "output": "1,000"
+      },
+      "macros": {
+        "prompt": "Question: What are the protein, fat, and carbohydrate amounts in grams for this dish? Answer:",
+        "output": "1, 1, and 1"
+      }
+    },
+    "vqa": [
+      {
+        "question": "Would this be considered a balanced meal?",
+        "prompt_sent": "Question: Would this be considered a balanced meal? Answer:",
+        "output": "yes"
+      },
+      {
+        "question": "Is this dish suitable for someone watching their calorie intake?",
+        "prompt_sent": "Question: Is this dish suitable for someone watching their calorie intake? Answer:",
+        "output": "yes"
+      },
+      {
+        "question": "How much protein does this dish provide?",
+        "prompt_sent": "Question: How much protein does this dish provide? Answer:",
+        "output": "0"
+      },
+      {
+        "question": "How many calories does this dish have?",
+        "prompt_sent": "Question: How many calories does this dish have? Answer:",
+        "output": "0"
+      }
+    ]
+  }
+}

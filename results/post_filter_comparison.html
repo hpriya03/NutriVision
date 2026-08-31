@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NutriVision — Post-Filter Comparison</title>
+<style>
+  :root {
+    --c1: #2a78d6;  --c2: #eb6834;  --c3: #1baf7a;  --c4: #eda100;
+    --surface: #ffffff;  --surface-alt: #f7f8fa;
+    --text-primary: #1a1a1a;  --text-secondary: #555;  --text-muted: #888;
+    --grid: #e8e8e8;  --gap-color: #ffffff;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+         Helvetica, Arial, sans-serif;
+         background: var(--surface-alt); color: var(--text-primary);
+         padding: 24px; line-height: 1.5; }
+  h1 { font-size: 22px; font-weight: 600; margin-bottom: 4px; }
+  .subtitle { color: var(--text-secondary); font-size: 14px; margin-bottom: 24px; }
+
+  /* ── stat tiles ── */
+  .stat-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+  .stat-tile {
+    background: var(--surface); border-radius: 8px; padding: 16px 20px;
+    flex: 1; min-width: 180px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .stat-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase;
+                 letter-spacing: 0.5px; margin-bottom: 4px; }
+  .stat-value { font-size: 28px; font-weight: 600; }
+  .stat-detail { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+
+  /* ── chart cards ── */
+  .chart-card {
+    background: var(--surface); border-radius: 8px; padding: 24px;
+    margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .chart-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .chart-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 16px; }
+  .chart-area { position: relative; }
+
+  /* ── toggle ── */
+  .toggle-row { display: flex; justify-content: flex-end; margin-bottom: 8px; }
+  .toggle-btn {
+    font-size: 11px; padding: 4px 10px; border: 1px solid var(--grid);
+    background: var(--surface); border-radius: 4px; cursor: pointer;
+    color: var(--text-secondary);
+  }
+  .toggle-btn:hover { background: var(--surface-alt); }
+
+  /* ── bar groups ── */
+  .bar-group { margin-bottom: 14px; }
+  .bar-group-label { font-size: 13px; color: var(--text-primary);
+                      margin-bottom: 4px; font-weight: 500; }
+  .bar-pair { display: flex; align-items: center; margin-bottom: 3px; height: 26px; }
+  .bar-tag { font-size: 10px; color: var(--text-muted); width: 24px;
+              text-align: right; margin-right: 8px; flex-shrink: 0; }
+  .bar-track { flex: 1; height: 20px; position: relative; background: var(--surface-alt);
+                border-radius: 4px; overflow: visible; }
+  .bar-fill { height: 100%; border-radius: 4px 0 0 4px; position: relative; }
+  .bar-fill-end { border-radius: 0 4px 4px 0; }
+  .bar-val { position: absolute; right: -56px; top: 0; font-size: 12px;
+              color: var(--text-primary); line-height: 20px; width: 52px;
+              text-align: left; font-variant-numeric: tabular-nums; }
+  .bar-delta { font-size: 11px; margin-left: 64px; flex-shrink: 0;
+                font-variant-numeric: tabular-nums; }
+  .delta-pos { color: #1a8a5a; }
+  .delta-neg { color: #c44; }
+
+  /* ── legend ── */
+  .legend { display: flex; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px;
+                  color: var(--text-secondary); }
+  .legend-swatch { width: 14px; height: 3px; border-radius: 1px; }
+
+  /* ── table view ── */
+  .table-view { display: none; }
+  .table-view.active { display: block; }
+  .chart-view.hidden { display: none; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--grid);
+       color: var(--text-secondary); font-weight: 500; }
+  td { padding: 6px 10px; border-bottom: 1px solid var(--grid); }
+  tr:hover td { background: var(--surface-alt); }
+
+  /* ── tooltip ── */
+  .tooltip {
+    display: none; position: absolute; background: var(--text-primary);
+    color: #fff; padding: 6px 10px; border-radius: 4px; font-size: 12px;
+    white-space: nowrap; pointer-events: none; z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  /* ── responsive ── */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    .stat-tile { min-width: 140px; }
+    .bar-val { right: -48px; width: 44px; font-size: 11px; }
+    .bar-delta { margin-left: 52px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Post-Filter Comparison</h1>
+<p class="subtitle">Raw vs post-filtered evaluation across all model configurations</p>
+
+<div id="dashboard"></div>
+
+<script>
+// ═══════════════════════════════════════════════════
+// DATA (injected by compare_post_filter.py)
+// ═══════════════════════════════════════════════════
+const DATA = [
+  {
+    "key": "zero_shot",
+    "label": "Zero-Shot",
+    "has_splits": false,
+    "raw": {
+      "vqa_accuracy": 58.29326923076923,
+      "caption_bleu1": 0.28018119585458373,
+      "caption_rouge1": 0.4267836540477368,
+      "caption_meteor": 0.3093502313983182,
+      "ingr_f1": 0.29035759891339596,
+      "cal_mae": 152.84339756460673,
+      "cal_mape": 67.30479776456143,
+      "macro_protein_mae": 17.720306942477876,
+      "macro_fat_mae": 13.379584816192558,
+      "macro_carb_mae": 20.689055107758616
+    },
+    "pf": {
+      "vqa_accuracy": 76.5625,
+      "caption_bleu1": 0.28018119585458373,
+      "caption_rouge1": 0.4267836540477368,
+      "caption_meteor": 0.3093502313983182,
+      "ingr_f1": 0.2906869796775593,
+      "cal_mae": 152.84339756460673,
+      "cal_mape": 67.30479776456143,
+      "macro_protein_mae": 17.720306942477876,
+      "macro_fat_mae": 13.379584816192558,
+      "macro_carb_mae": 20.689055107758616,
+      "vqa_seen_accuracy": 76.5625
+    },
+    "stats": {
+      "dishes_processed": "507",
+      "ingredients_removed": "71",
+      "ingredients_flagged": "0",
+      "calories_out_of_range": "0",
+      "macros_out_of_range": "0",
+      "atwater_inconsistent": "273",
+      "atwater_avg_discrepancy_pct": "100.0",
+      "vqa_corrections_total": "352",
+      "vqa_corrections_seen": "0",
+      "vqa_corrections_unseen": "0",
+      "cross_task_inconsistencies": "36"
+    }
+  },
+  {
+    "key": "qformer",
+    "label": "Q-Former LoRA",
+    "has_splits": true,
+    "raw": {
+      "vqa_seen_accuracy": 74.67938178230845,
+      "vqa_unseen_accuracy": 58.57988165680474,
+      "vqa_overall_accuracy": 65.47837114273636,
+      "caption_bleu1": 0.6296524471942249,
+      "caption_rouge1": 0.7393825454288587,
+      "caption_meteor": 0.6565007721222575,
+      "ingr_f1": 0.6550526846519354,
+      "cal_mae": 92.548919256917,
+      "cal_mape": 66.89875956028588,
+      "macro_protein_mae": 18.613711561264825,
+      "macro_fat_mae": 7.1377777964426885,
+      "macro_carb_mae": 12.59419412055336
+    },
+    "pf": {
+      "vqa_seen_accuracy": 71.29233804669516,
+      "vqa_unseen_accuracy": 77.07100591715977,
+      "vqa_overall_accuracy": 74.59489925320558,
+      "caption_bleu1": 0.6296524471942249,
+      "caption_rouge1": 0.7393825454288587,
+      "caption_meteor": 0.6565007721222575,
+      "ingr_f1": 0.6550526846519354,
+      "cal_mae": 92.548919256917,
+      "cal_mape": 66.89875956028588,
+      "macro_protein_mae": 18.613711561264825,
+      "macro_fat_mae": 7.1377777964426885,
+      "macro_carb_mae": 12.59419412055336
+    },
+    "stats": {
+      "dishes_processed": "507",
+      "ingredients_removed": "2",
+      "ingredients_flagged": "0",
+      "calories_out_of_range": "0",
+      "macros_out_of_range": "0",
+      "atwater_inconsistent": "305",
+      "atwater_avg_discrepancy_pct": "64.4",
+      "vqa_corrections_total": "2149",
+      "vqa_corrections_seen": "891",
+      "vqa_corrections_unseen": "1258",
+      "cross_task_inconsistencies": "995"
+    }
+  },
+  {
+    "key": "llm",
+    "label": "LLM LoRA",
+    "has_splits": true,
+    "raw": {
+      "vqa_seen_accuracy": 80.74238578680203,
+      "vqa_unseen_accuracy": 64.79289940828403,
+      "vqa_overall_accuracy": 71.76748057713651,
+      "caption_bleu1": 0.5847404841219653,
+      "caption_rouge1": 0.702543506429116,
+      "caption_meteor": 0.6290697176680802,
+      "ingr_f1": 0.5600616820200469,
+      "cal_mae": 111.13112070355731,
+      "cal_mape": 101.67359149047059,
+      "macro_protein_mae": 13.623610355731225,
+      "macro_fat_mae": 11.08828269367589,
+      "macro_carb_mae": 16.336310602766797
+    },
+    "pf": {
+      "vqa_seen_accuracy": 80.39340101522842,
+      "vqa_unseen_accuracy": 81.04043392504931,
+      "vqa_overall_accuracy": 80.75749167591565,
+      "caption_bleu1": 0.5847404841219653,
+      "caption_rouge1": 0.702543506429116,
+      "caption_meteor": 0.6290697176680802,
+      "ingr_f1": 0.5600616820200469,
+      "cal_mae": 111.13112070355731,
+      "cal_mape": 101.67359149047059,
+      "macro_protein_mae": 13.623610355731225,
+      "macro_fat_mae": 11.08828269367589,
+      "macro_carb_mae": 16.336310602766797
+    },
+    "stats": {
+      "dishes_processed": "507",
+      "ingredients_removed": "0",
+      "ingredients_flagged": "0",
+      "calories_out_of_range": "0",
+      "macros_out_of_range": "0",
+      "atwater_inconsistent": "467",
+      "atwater_avg_discrepancy_pct": "84.7",
+      "vqa_corrections_total": "1166",
+      "vqa_corrections_seen": "107",
+      "vqa_corrections_unseen": "1059",
+      "cross_task_inconsistencies": "811"
+    }
+  },
+  {
+    "key": "both",
+    "label": "Both LoRA",
+    "has_splits": true,
+    "raw": {
+      "vqa_seen_accuracy": 83.71100164203612,
+      "vqa_unseen_accuracy": 60.700197238658774,
+      "vqa_overall_accuracy": 70.56752570060554,
+      "caption_bleu1": 0.5903113328912177,
+      "caption_rouge1": 0.689686280500477,
+      "caption_meteor": 0.6257963254744002,
+      "ingr_f1": 0.5773811842102826,
+      "cal_mae": 99.41145447035572,
+      "cal_mape": 77.44038633654283,
+      "macro_protein_mae": 11.477932252964425,
+      "macro_fat_mae": 9.242002788537551,
+      "macro_carb_mae": 15.907148958498025
+    },
+    "pf": {
+      "vqa_seen_accuracy": 83.61247947454844,
+      "vqa_unseen_accuracy": 80.30078895463511,
+      "vqa_overall_accuracy": 81.72088438248134,
+      "caption_bleu1": 0.5903113328912177,
+      "caption_rouge1": 0.689686280500477,
+      "caption_meteor": 0.6257963254744002,
+      "ingr_f1": 0.5773811842102826,
+      "cal_mae": 99.41145447035572,
+      "cal_mape": 77.44038633654283,
+      "macro_protein_mae": 11.477932252964425,
+      "macro_fat_mae": 9.242002788537551,
+      "macro_carb_mae": 15.907148958498025
+    },
+    "stats": {
+      "dishes_processed": "507",
+      "ingredients_removed": "0",
+      "ingredients_flagged": "0",
+      "calories_out_of_range": "0",
+      "macros_out_of_range": "0",
+      "atwater_inconsistent": "392",
+      "atwater_avg_discrepancy_pct": "96.2",
+      "vqa_corrections_total": "1506",
+      "vqa_corrections_seen": "55",
+      "vqa_corrections_unseen": "1451",
+      "cross_task_inconsistencies": "1268"
+    }
+  }
+];
+
+const COLORS = ['#2a78d6', '#eb6834', '#1baf7a', '#eda100'];
+const RAW_OPACITY = '0.35';
+
+// ═══════════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════════
+
+function fmt(v, dec) {
+  if (v == null) return 'N/A';
+  return v.toFixed(dec !== undefined ? dec : 2);
+}
+
+function delta(raw, pf, dec) {
+  if (raw == null || pf == null) return '';
+  const d = pf - raw;
+  const sign = d >= 0 ? '+' : '';
+  return sign + d.toFixed(dec !== undefined ? dec : 2);
+}
+
+function deltaClass(raw, pf, higherBetter) {
+  if (raw == null || pf == null) return '';
+  const d = pf - raw;
+  if (higherBetter) return d >= 0 ? 'delta-pos' : 'delta-neg';
+  return d <= 0 ? 'delta-pos' : 'delta-neg';
+}
+
+function esc(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+// ═══════════════════════════════════════════════════
+// STAT TILES
+// ═══════════════════════════════════════════════════
+
+function renderStatTiles() {
+  // Best overall accuracy
+  let bestAcc = 0, bestLabel = '';
+  DATA.forEach(c => {
+    const acc = c.has_splits
+      ? (c.pf.vqa_overall_accuracy || 0)
+      : (c.pf.vqa_accuracy || 0);
+    if (acc > bestAcc) { bestAcc = acc; bestLabel = c.label; }
+  });
+
+  // Largest unseen improvement
+  let bestDelta = 0, bestDeltaLabel = '';
+  DATA.forEach(c => {
+    if (c.has_splits) {
+      const d = (c.pf.vqa_unseen_accuracy || 0) - (c.raw.vqa_unseen_accuracy || 0);
+      if (d > bestDelta) { bestDelta = d; bestDeltaLabel = c.label; }
+    }
+  });
+
+  // Total corrections across all configs
+  let totalCorr = 0;
+  DATA.forEach(c => {
+    totalCorr += parseInt(c.stats.vqa_corrections_total || '0');
+  });
+
+  // Fewest seen corrections (among finetuned)
+  let fewestSeen = Infinity, fewestLabel = '';
+  DATA.forEach(c => {
+    if (c.has_splits) {
+      const s = parseInt(c.stats.vqa_corrections_seen || '999999');
+      if (s < fewestSeen) { fewestSeen = s; fewestLabel = c.label; }
+    }
+  });
+
+  return `
+    <div class="stat-row">
+      <div class="stat-tile">
+        <div class="stat-label">Best Overall Accuracy</div>
+        <div class="stat-value">${fmt(bestAcc, 1)}%</div>
+        <div class="stat-detail">${esc(bestLabel)} + Post-Filter</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">Largest Unseen Gain</div>
+        <div class="stat-value">+${fmt(bestDelta, 1)} pp</div>
+        <div class="stat-detail">${esc(bestDeltaLabel)}</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">Total VQA Corrections</div>
+        <div class="stat-value">${totalCorr.toLocaleString()}</div>
+        <div class="stat-detail">Across all configs</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">Fewest Seen Corrections</div>
+        <div class="stat-value">${fewestSeen === Infinity ? 'N/A' : fewestSeen}</div>
+        <div class="stat-detail">${esc(fewestLabel)} (best fine-tuned)</div>
+      </div>
+    </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+// CHART 1: VQA Overall Accuracy (Raw vs PF)
+// ═══════════════════════════════════════════════════
+
+function renderAccuracyChart() {
+  // For each config: raw overall vs PF overall
+  let maxVal = 0;
+  const rows = DATA.map((c, i) => {
+    const rawKey = c.has_splits ? 'vqa_overall_accuracy' : 'vqa_accuracy';
+    const raw = c.raw[rawKey] || 0;
+    const pf = c.pf[rawKey] || 0;
+    maxVal = Math.max(maxVal, raw, pf);
+    return { label: c.label, raw, pf, color: COLORS[i] };
+  });
+  const scale = maxVal > 0 ? 100 / (maxVal * 1.15) : 1;
+
+  let barsHtml = rows.map(r => `
+    <div class="bar-group">
+      <div class="bar-group-label">${esc(r.label)}</div>
+      <div class="bar-pair">
+        <span class="bar-tag">Raw</span>
+        <div class="bar-track" style="margin-right:60px">
+          <div class="bar-fill bar-fill-end" style="width:${r.raw * scale}%;
+               background:${r.color}; opacity:${RAW_OPACITY}">
+            <span class="bar-val">${fmt(r.raw, 2)}%</span>
+          </div>
+        </div>
+      </div>
+      <div class="bar-pair">
+        <span class="bar-tag">PF</span>
+        <div class="bar-track" style="margin-right:60px">
+          <div class="bar-fill bar-fill-end" style="width:${r.pf * scale}%;
+               background:${r.color}">
+            <span class="bar-val">${fmt(r.pf, 2)}%</span>
+          </div>
+        </div>
+        <span class="bar-delta ${deltaClass(r.raw, r.pf, true)}">${delta(r.raw, r.pf)}</span>
+      </div>
+    </div>
+  `).join('');
+
+  // Table view
+  let tableHtml = `<table>
+    <tr><th>Config</th><th>Raw (%)</th><th>Post-Filtered (%)</th><th>Delta (pp)</th></tr>
+    ${rows.map(r => `<tr>
+      <td>${esc(r.label)}</td><td>${fmt(r.raw, 2)}</td>
+      <td>${fmt(r.pf, 2)}</td>
+      <td class="${deltaClass(r.raw, r.pf, true)}">${delta(r.raw, r.pf)}</td>
+    </tr>`).join('')}
+  </table>`;
+
+  return chartCard('VQA Overall Accuracy', 'Raw vs post-filtered, all configurations',
+                   barsHtml, tableHtml, 'acc');
+}
+
+// ═══════════════════════════════════════════════════
+// CHART 2: Seen vs Unseen Impact (finetuned only)
+// ═══════════════════════════════════════════════════
+
+function renderSeenUnseenChart() {
+  const finetuned = DATA.filter(c => c.has_splits);
+  let maxVal = 0;
+  const rows = finetuned.map((c, i) => {
+    const rawSeen = c.raw.vqa_seen_accuracy || 0;
+    const pfSeen = c.pf.vqa_seen_accuracy || 0;
+    const rawUnseen = c.raw.vqa_unseen_accuracy || 0;
+    const pfUnseen = c.pf.vqa_unseen_accuracy || 0;
+    maxVal = Math.max(maxVal, rawSeen, pfSeen, rawUnseen, pfUnseen);
+    return {
+      label: c.label, rawSeen, pfSeen, rawUnseen, pfUnseen,
+      color: COLORS[DATA.indexOf(c)],
+    };
+  });
+  const scale = maxVal > 0 ? 100 / (maxVal * 1.15) : 1;
+
+  let barsHtml = rows.map(r => `
+    <div class="bar-group">
+      <div class="bar-group-label">${esc(r.label)} — Seen</div>
+      <div class="bar-pair">
+        <span class="bar-tag">Raw</span>
+        <div class="bar-track" style="margin-right:60px">
+          <div class="bar-fill bar-fill-end" style="width:${r.rawSeen * scale}%;
+               background:${r.color}; opacity:${RAW_OPACITY}">
+            <span class="bar-val">${fmt(r.rawSeen, 2)}%</span>
+          </div>
+        </div>
+      </div>
+      <div class="bar-pair">
+        <span class="bar-tag">PF</span>
+        <div class="bar-track" style="margin-right:60px">
+          <div class="bar-fill bar-fill-end" style="width:${r.pfSeen * scale}%;
+               background:${r.color}">
+            <span class="bar-val">${fmt(r.pfSeen, 2)}%</span>
+          </div>
+        </div>
+        <span class="bar-delta ${deltaClass(r.rawSeen, r.pfSeen, true)}">${delta(r.rawSeen, r.pfSeen)}</span>
+      </div>
+      <div class="bar-group-label" style="margin-top:8px">${esc(r.label)} — Unseen</div>
+      <div class="bar-pair">
+        <span class="bar-tag">Raw</span>
+        <div class="bar-track" style="margin-right:60px">
+          <div class="bar-fill bar-fill-end" style="width:${r.rawUnseen * scale}%;
+               background:${r.color}; opacity:${RAW_OPACITY}">
+            <span class="bar-val">${fmt(r.rawUnseen, 2)}%</span>
+          </div>
+        </div>
+      </div>
+      <div class="bar-pair">
+        <span class="bar-tag">PF</span>
+        <div class="bar-track" style="margin-right:60px">
+          <div class="bar-fill bar-fill-end" style="width:${r.pfUnseen * scale}%;
+               background:${r.color}">
+            <span class="bar-val">${fmt(r.pfUnseen, 2)}%</span>
+          </div>
+        </div>
+        <span class="bar-delta ${deltaClass(r.rawUnseen, r.pfUnseen, true)}">${delta(r.rawUnseen, r.pfUnseen)}</span>
+      </div>
+    </div>
+  `).join('');
+
+  let tableHtml = `<table>
+    <tr><th>Config</th><th>Split</th><th>Raw (%)</th><th>PF (%)</th><th>Delta</th></tr>
+    ${rows.map(r => `
+      <tr><td>${esc(r.label)}</td><td>Seen</td><td>${fmt(r.rawSeen,2)}</td>
+          <td>${fmt(r.pfSeen,2)}</td>
+          <td class="${deltaClass(r.rawSeen, r.pfSeen, true)}">${delta(r.rawSeen, r.pfSeen)}</td></tr>
+      <tr><td>${esc(r.label)}</td><td>Unseen</td><td>${fmt(r.rawUnseen,2)}</td>
+          <td>${fmt(r.pfUnseen,2)}</td>
+          <td class="${deltaClass(r.rawUnseen, r.pfUnseen, true)}">${delta(r.rawUnseen, r.pfUnseen)}</td></tr>
+    `).join('')}
+  </table>`;
+
+  return chartCard('Seen vs Unseen Impact',
+    'Post-filter improvement by question split (fine-tuned configs only)',
+    barsHtml, tableHtml, 'split');
+}
+
+// ═══════════════════════════════════════════════════
+// CHART 3: Corrections Breakdown
+// ═══════════════════════════════════════════════════
+
+function renderCorrectionsChart() {
+  let maxVal = 0;
+  const rows = DATA.map((c, i) => {
+    const total = parseInt(c.stats.vqa_corrections_total || '0');
+    const seen = parseInt(c.stats.vqa_corrections_seen || '0');
+    const unseen = parseInt(c.stats.vqa_corrections_unseen || '0');
+    maxVal = Math.max(maxVal, total);
+    return { label: c.label, total, seen, unseen, color: COLORS[i] };
+  });
+  const scale = maxVal > 0 ? 100 / (maxVal * 1.15) : 1;
+
+  let barsHtml = rows.map(r => `
+    <div class="bar-group">
+      <div class="bar-group-label">${esc(r.label)}</div>
+      <div class="bar-pair">
+        <span class="bar-tag" style="width:48px">Total</span>
+        <div class="bar-track" style="margin-right:60px">
+          <div class="bar-fill bar-fill-end" style="width:${r.total * scale}%;
+               background:${r.color}">
+            <span class="bar-val">${r.total.toLocaleString()}</span>
+          </div>
+        </div>
+      </div>
+      <div class="bar-pair">
+        <span class="bar-tag" style="width:48px">Seen</span>
+        <div class="bar-track" style="margin-right:60px">
+          <div class="bar-fill bar-fill-end" style="width:${r.seen * scale}%;
+               background:${r.color}; opacity:0.6">
+            <span class="bar-val">${r.seen.toLocaleString()}</span>
+          </div>
+        </div>
+      </div>
+      <div class="bar-pair">
+        <span class="bar-tag" style="width:48px">Unseen</span>
+        <div class="bar-track" style="margin-right:60px">
+          <div class="bar-fill bar-fill-end" style="width:${r.unseen * scale}%;
+               background:${r.color}; opacity:0.8">
+            <span class="bar-val">${r.unseen.toLocaleString()}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  let tableHtml = `<table>
+    <tr><th>Config</th><th>Total</th><th>Seen</th><th>Unseen</th></tr>
+    ${rows.map(r => `<tr><td>${esc(r.label)}</td><td>${r.total}</td>
+        <td>${r.seen}</td><td>${r.unseen}</td></tr>`).join('')}
+  </table>`;
+
+  return chartCard('VQA Corrections Breakdown',
+    'Number of yes/no answers corrected by post-filter',
+    barsHtml, tableHtml, 'corr');
+}
+
+// ═══════════════════════════════════════════════════
+// CHART 4: Post-Filter Statistics
+// ═══════════════════════════════════════════════════
+
+function renderStatsChart() {
+  const statKeys = [
+    { key: 'ingredients_removed', label: 'Ingredients Removed' },
+    { key: 'atwater_inconsistent', label: 'Atwater Inconsistent' },
+    { key: 'cross_task_inconsistencies', label: 'Cross-Task Inconsistencies' },
+  ];
+
+  let maxVal = 0;
+  statKeys.forEach(sk => {
+    DATA.forEach(c => {
+      maxVal = Math.max(maxVal, parseInt(c.stats[sk.key] || '0'));
+    });
+  });
+  const scale = maxVal > 0 ? 100 / (maxVal * 1.15) : 1;
+
+  let barsHtml = statKeys.map(sk => {
+    let groupHtml = `<div class="bar-group">
+      <div class="bar-group-label">${esc(sk.label)}</div>`;
+    DATA.forEach((c, i) => {
+      const val = parseInt(c.stats[sk.key] || '0');
+      groupHtml += `
+      <div class="bar-pair">
+        <span class="bar-tag" style="width:72px; font-size:10px">${esc(c.label)}</span>
+        <div class="bar-track" style="margin-right:60px">
+          <div class="bar-fill bar-fill-end" style="width:${val * scale}%;
+               background:${COLORS[i]}">
+            <span class="bar-val">${val.toLocaleString()}</span>
+          </div>
+        </div>
+      </div>`;
+    });
+    groupHtml += '</div>';
+    return groupHtml;
+  }).join('');
+
+  let tableHtml = `<table>
+    <tr><th>Statistic</th>${DATA.map(c => '<th>' + esc(c.label) + '</th>').join('')}</tr>
+    ${statKeys.map(sk => `<tr><td>${esc(sk.label)}</td>
+      ${DATA.map(c => '<td>' + (c.stats[sk.key] || '0') + '</td>').join('')}
+    </tr>`).join('')}
+  </table>`;
+
+  return chartCard('Post-Filter Statistics',
+    'Flags and corrections across all checks',
+    barsHtml, tableHtml, 'stats');
+}
+
+// ═══════════════════════════════════════════════════
+// CARD WRAPPER + TABLE TOGGLE
+// ═══════════════════════════════════════════════════
+
+function chartCard(title, subtitle, chartHtml, tableHtml, id) {
+  return `
+  <div class="chart-card">
+    <div class="chart-title">${esc(title)}</div>
+    <div class="chart-sub">${esc(subtitle)}</div>
+    <div class="toggle-row">
+      <button class="toggle-btn" onclick="toggleView('${id}')"
+              id="toggle-${id}">Table view</button>
+    </div>
+    <div class="chart-area">
+      <div class="chart-view" id="chart-${id}">${chartHtml}</div>
+      <div class="table-view" id="table-${id}">${tableHtml}</div>
+    </div>
+  </div>`;
+}
+
+function toggleView(id) {
+  const chart = document.getElementById('chart-' + id);
+  const table = document.getElementById('table-' + id);
+  const btn = document.getElementById('toggle-' + id);
+  const showingTable = table.classList.contains('active');
+  if (showingTable) {
+    table.classList.remove('active');
+    chart.classList.remove('hidden');
+    btn.textContent = 'Table view';
+  } else {
+    table.classList.add('active');
+    chart.classList.add('hidden');
+    btn.textContent = 'Chart view';
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════════════
+
+document.getElementById('dashboard').innerHTML =
+  renderStatTiles() +
+  renderAccuracyChart() +
+  renderSeenUnseenChart() +
+  renderCorrectionsChart() +
+  renderStatsChart();
+</script>
+</body>
+</html>

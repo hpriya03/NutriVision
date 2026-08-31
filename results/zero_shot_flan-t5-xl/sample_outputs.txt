@@ -1,0 +1,102 @@
+
+============================================================
+DISH: dish_1556575327
+============================================================
+
+--- What's On Your Plate ---
+Prompt: Describe this food plate in detail.
+Output: brussel sprouts, green beans, and olives are on a plate
+
+--- Ingredients Detected ---
+Prompt: List all the ingredients visible in this dish.
+Output: green beans, brussel sprouts, olives, tomatoes, and arugula
+
+--- Estimated Calories ---
+Prompt: Estimate the total calories in this dish.
+Output: 240
+
+--- Nutrition Breakdown ---
+Prompt: What is the macronutrient breakdown of this dish? Include protein, fat, and carbohydrates in grams.
+Output: 0 grams of protein 0 grams of fat 0 grams of carbohydrates
+
+--- Dietary Insights ---
+Q: What is the approximate carbohydrate content?
+A: a cup of brussels sprouts has about a quarter of a cup of brussels sprouts
+
+Q: Is this dish high in protein?
+A: yes
+
+Q: How many calories does this dish have?
+A: 0
+
+Q: Is this dish suitable for a low-carb diet?
+A: yes
+
+
+============================================================
+DISH: dish_1557861216
+============================================================
+
+--- What's On Your Plate ---
+Prompt: Describe this food plate in detail.
+Output: a white plate with a qr code on it
+
+--- Ingredients Detected ---
+Prompt: List all the ingredients visible in this dish.
+Output: qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr code, qr
+
+--- Estimated Calories ---
+Prompt: Estimate the total calories in this dish.
+Output: a calorie count is a calorie count that is calculated by multiplying the number of calories in a food by the number of calories in a serving
+
+--- Nutrition Breakdown ---
+Prompt: What is the macronutrient breakdown of this dish? Include protein, fat, and carbohydrates in grams.
+Output: if you are using a food processor, you can use the following macronutrients
+
+--- Dietary Insights ---
+Q: Would this be considered a balanced meal?
+A: a plate of fried chicken, mashed potatoes, and a side of mashed potatoes
+
+Q: Would this dish be appropriate for a diabetic diet?
+A: qr code on a plate
+
+Q: What are the main ingredients in this dish?
+A: a white plate, a qr code, and a qr code
+
+Q: Is this dish high in protein?
+A: a qr code on a plate
+
+
+============================================================
+DISH: dish_1557862345
+============================================================
+
+--- What's On Your Plate ---
+Prompt: Describe this food plate in detail.
+Output: It has a piece of chicken on it
+
+--- Ingredients Detected ---
+Prompt: List all the ingredients visible in this dish.
+Output: chicken, rice, qr code
+
+--- Estimated Calories ---
+Prompt: Estimate the total calories in this dish.
+Output: a plate of chicken with a qr code
+
+--- Nutrition Breakdown ---
+Prompt: What is the macronutrient breakdown of this dish? Include protein, fat, and carbohydrates in grams.
+Output: 0 grams of protein 0 grams of fat 0 grams of carbohydrates 0 grams of fiber
+
+--- Dietary Insights ---
+Q: What is the approximate carbohydrate content?
+A: a cup of chicken breast has about 66 grams of carbs
+
+Q: Is this dish suitable for someone watching their calorie intake?
+A: yes, it is low in calories and fat
+
+Q: Is this dish high in protein?
+A: yes, it is high in protein
+
+Q: Is this a healthy meal option?
+A: qr codes on a plate of chicken
+

@@ -1,0 +1,102 @@
+
+============================================================
+DISH: dish_1556575327
+============================================================
+
+--- What's On Your Plate ---
+Prompt: Question: Describe this food plate. Answer:
+Output: Vegetables
+
+--- Ingredients Detected ---
+Prompt: Question: What are the ingredients in this dish? Answer:
+Output: Brussel sprouts, green peppers, and olives
+
+--- Estimated Calories ---
+Prompt: Question: How many total calories are in this dish? Answer:
+Output: 4
+
+--- Nutrition Breakdown ---
+Prompt: Question: What are the protein, fat, and carbohydrate amounts in grams for this dish? Answer:
+Output: 1.5g protein, 1g fat, and 1g carbohydrate
+
+--- Dietary Insights ---
+Q: What is the approximate carbohydrate content?
+A: The approximate carbohydrate content of this food is:
+
+Q: Is this dish high in protein?
+A: Yes, it is
+
+Q: How many calories does this dish have?
+A: It depends on how many vegetables you eat
+
+Q: Is this dish suitable for a low-carb diet?
+A: Yes, but it's not a good idea to eat it every day
+
+
+============================================================
+DISH: dish_1557861216
+============================================================
+
+--- What's On Your Plate ---
+Prompt: Question: Describe this food plate. Answer:
+Output: it is a plate with a white surface and a black border
+
+--- Ingredients Detected ---
+Prompt: Question: What are the ingredients in this dish? Answer:
+Output: it's a plate
+
+--- Estimated Calories ---
+Prompt: Question: How many total calories are in this dish? Answer:
+Output: 0
+
+--- Nutrition Breakdown ---
+Prompt: Question: What are the protein, fat, and carbohydrate amounts in grams for this dish? Answer:
+Output: 
+
+--- Dietary Insights ---
+Q: Would this be considered a balanced meal?
+A: yes
+
+Q: Would this dish be appropriate for a diabetic diet?
+A: yes
+
+Q: What are the main ingredients in this dish?
+A: paper, water, and qr code
+
+Q: Is this dish high in protein?
+A: yes
+
+
+============================================================
+DISH: dish_1557862345
+============================================================
+
+--- What's On Your Plate ---
+Prompt: Question: Describe this food plate. Answer:
+Output: chicken
+
+--- Ingredients Detected ---
+Prompt: Question: What are the ingredients in this dish? Answer:
+Output: chicken, rice, and a qr code
+
+--- Estimated Calories ---
+Prompt: Question: How many total calories are in this dish? Answer:
+Output: 0
+
+--- Nutrition Breakdown ---
+Prompt: Question: What are the protein, fat, and carbohydrate amounts in grams for this dish? Answer:
+Output: 1, 2, and 3
+
+--- Dietary Insights ---
+Q: What is the approximate carbohydrate content?
+A: 1g
+
+Q: Is this dish suitable for someone watching their calorie intake?
+A: yes
+
+Q: Is this dish high in protein?
+A: yes
+
+Q: Is this a healthy meal option?
+A: yes
+

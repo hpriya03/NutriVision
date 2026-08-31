@@ -1,0 +1,23 @@
+task,metric,opt_mean,opt_ci,flan_mean,flan_ci,winner,ci_overlap
+Captioning,BLEU-1,0.2537,[0.2397 – 0.2684],0.2802,[0.2658 – 0.2953],FlanT5,overlapping
+Captioning,BLEU-2,0.1668,[0.1563 – 0.1780],0.1763,[0.1646 – 0.1886],FlanT5,overlapping
+Captioning,BLEU-4,0.0588,[0.0540 – 0.0644],0.0716,[0.0648 – 0.0793],FlanT5,non-overlapping
+Captioning,ROUGE-1,0.3785,[0.3643 – 0.3922],0.4268,[0.4123 – 0.4419],FlanT5,non-overlapping
+Captioning,ROUGE-L,0.3575,[0.3446 – 0.3702],0.3733,[0.3607 – 0.3875],FlanT5,overlapping
+Captioning,METEOR,0.2968,[0.2809 – 0.3142],0.3094,[0.2917 – 0.3280],FlanT5,overlapping
+Ingredients,Precision,0.4863,[0.4535 – 0.5173],0.3046,[0.2778 – 0.3325],OPT,non-overlapping
+Ingredients,Recall,0.4144,[0.3782 – 0.4495],0.4438,[0.4092 – 0.4762],FlanT5,overlapping
+Ingredients,F1,0.3841,[0.3524 – 0.4139],0.2904,[0.2648 – 0.3162],OPT,non-overlapping
+Ingredients,Hallucination Rate,0.7688,[0.7351 – 0.8044],0.9091,[0.8834 – 0.9328],OPT,non-overlapping
+Calories,MAE (cal),244.7465,[226.6628 – 263.0947],152.8434,[137.5358 – 170.9171],FlanT5,non-overlapping
+Calories,MAPE (%),98.8982,[97.7158 – 100.5427],67.3048,[59.5100 – 77.1994],FlanT5,non-overlapping
+Calories,Hallucination Rate,0.0042,[0.0000 – 0.0105],0.0871,[0.0590 – 0.1152],OPT,non-overlapping
+Macros,Protein MAE (g),14.1702,[12.4258 – 15.9544],17.7203,[16.1069 – 19.5149],OPT,non-overlapping
+Macros,Protein MAPE (%),95.7894,[85.7705 – 109.5441],100.0000,[100.0000 – 100.0000],OPT,overlapping
+Macros,Fat MAE (g),10.4804,[9.2401 – 11.7248],13.3796,[12.0166 – 14.7547],OPT,non-overlapping
+Macros,Fat MAPE (%),287.7429,[221.1199 – 371.8806],100.0000,[100.0000 – 100.0000],FlanT5,non-overlapping
+Macros,Carb MAE (g),16.4175,[14.7932 – 17.9192],20.6891,[19.1354 – 22.2207],OPT,non-overlapping
+Macros,Carb MAPE (%),108.4763,[92.1433 – 130.1154],100.0000,[100.0000 – 100.0000],FlanT5,overlapping
+VQA,Yes/No Accuracy (%),56.5134,[53.4483 – 59.6743],58.2933,[55.0481 – 61.5385],FlanT5,overlapping
+VQA,Numeric MAE,33.7393,[25.2450 – 43.2180],74.9152,[62.6598 – 87.6865],OPT,non-overlapping
+VQA,Hallucination Rate,0.0184,[0.0037 – 0.0368],0.1270,[0.0970 – 0.1594],OPT,non-overlapping
