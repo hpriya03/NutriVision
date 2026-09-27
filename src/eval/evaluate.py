@@ -18,7 +18,7 @@ What it does:
     2. Parses model text into structured values (extracts numbers, ingredient lists)
     3. Computes per-dish scores for each task
     4. Aggregates into summary metrics with bootstrapped 95% CIs
-    5. Saves CSV tables for the dissertation
+    5. Saves CSV summary tables
 
 Metrics by task:
     Task 1 (Captioning):  BLEU-1/2/4, ROUGE-1, ROUGE-L, METEOR

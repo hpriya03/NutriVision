@@ -36,7 +36,7 @@ from src.data_prep.metadata_parser import load_metadata, get_ingredient_names
 
 # ── VQA Thresholds Based on Dietary Guidelines ──
 # These are per-meal thresholds derived from established nutrition standards.
-# Each threshold is citable in the dissertation.
+# Each threshold is traceable to a published dietary guideline.
 #
 # Sources:
 #   - FDA Daily Values (2,000 cal/day reference diet)
@@ -486,7 +486,7 @@ def compute_dataset_stats(metadata: dict) -> dict:
     """
     Compute dataset-wide statistics for reporting purposes.
     These are NOT used for thresholds (thresholds are guideline-based),
-    but they're useful context for the dissertation — e.g., "the median
+    but they provide useful context for interpreting results — e.g., "the median
     calorie content in Nutrition5K is X, compared to the FDA per-meal
     guideline of 667 cal."
     """

@@ -9,19 +9,19 @@ Usage:
     # Zero-shot vs Q-Former fine-tuned:
     python -m src.eval.compare_ablation \
         --baseline results/zero_shot_flan-t5-xl \
-        --experiment results/finetuned_qformer \
+        --experiment results/v2_finetuned_qformer \
         --labels "Zero-Shot FlanT5" "Q-Former LoRA"
 
     # Compare two ablation targets:
     python -m src.eval.compare_ablation \
-        --baseline results/finetuned_qformer \
-        --experiment results/finetuned_llm \
+        --baseline results/v2_finetuned_qformer \
+        --experiment results/v2_finetuned_llm \
         --labels "Q-Former Only" "LLM Only"
 
     # Three-way comparison (all ablations):
     python -m src.eval.compare_ablation \
         --baseline results/zero_shot_flan-t5-xl \
-        --experiment results/finetuned_qformer results/finetuned_llm results/finetuned_both \
+        --experiment results/v2_finetuned_qformer results/v2_finetuned_llm results/v2_finetuned_both \
         --labels "Zero-Shot" "Q-Former" "LLM" "Both"
 
 Outputs:

@@ -321,7 +321,7 @@ def print_comparison(data: dict):
 # ═══════════════════════════════════════════════════════════
 
 def save_comparison_csv(data: dict, output_path: str):
-    """Save comparison as CSV for dissertation tables."""
+    """Save comparison as CSV for reporting."""
     path = Path(output_path)
     path.parent.mkdir(parents=True, exist_ok=True)
 

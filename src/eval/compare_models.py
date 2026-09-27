@@ -9,7 +9,7 @@ What it does:
     2. Builds a comparison table with mean ± CI for each metric
     3. Marks the winner for each metric
     4. Prints a summary recommendation
-    5. Saves comparison CSV for the dissertation
+    5. Saves comparison CSV for reporting
 
 Usage:
     python -m src.eval.compare_models 2>&1 | tee logs/10_comparison.log

@@ -100,7 +100,7 @@ VQA_QUESTION_TEMPLATES = [
 # ── Held-out VQA question templates (unseen during training) ──
 # These 8 questions are NEVER included in training data.
 # They test the model's ability to generalise its nutritional reasoning
-# to novel question formulations — a key contribution of this work.
+# to novel question formulations that were never seen during training.
 # All have computable ground truth from Nutrition5K metadata.
 VQA_HELD_OUT_TEMPLATES = [
     "Is this dish low in fat?",

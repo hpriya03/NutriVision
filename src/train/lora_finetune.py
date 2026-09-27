@@ -57,7 +57,7 @@ from src import config
 
 # ── Training hyperparameters ──
 # These are standard values for LoRA fine-tuning of VLMs.
-# Each choice is explainable in the dissertation.
+# Each choice is explained in the comment beside it.
 
 TRAIN_CONFIG = {
     # ── LoRA architecture ──

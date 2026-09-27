@@ -11,7 +11,6 @@ the training set (safe - they have no scan partners in test).
 Final split: ~2983 train / 507 test (85/15).
 
 Usage:
-    cd ~/nutrivision
     python src/data_prep/create_splits.py
 """
 

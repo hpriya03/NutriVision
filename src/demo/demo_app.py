@@ -1,7 +1,7 @@
 """
 NutriVision — Interactive Demo (Gradio)
 
-A polished dissertation demo that lets examiners:
+An interactive web demo that lets you:
   • Upload any food image
   • See all 5 tasks (captioning, ingredients, calories, macros, VQA)
   • Ask free-form VQA questions
@@ -10,7 +10,7 @@ A polished dissertation demo that lets examiners:
   • See raw vs post-filtered outputs side-by-side with explanations
 
 Usage:
-    # Launch locally on RONIN (accessible via port forwarding):
+    # Launch locally (default port 7860):
     python -m src.demo.demo_app
 
     # Launch with a shareable public link:
@@ -24,8 +24,6 @@ Architecture:
       └── loads BLIP-2 + LoRA adapter
       └── imports post_filter.py functions for live correction
       └── Gradio UI with tabs for each task
-
-Place at: src/demo/demo_app.py
 """
 
 import argparse

@@ -2,6 +2,8 @@
 
 Food image understanding and nutrition estimation with BLIP-2 and LoRA fine-tuning.
 
+**Highlights:** LoRA fine-tuning of BLIP-2 (Flan-T5-XL) on Nutrition5K cut calorie error from 153 to 92 kcal while answering for almost every dish (506/507, up from 356/507 zero-shot), more than doubled ingredient F1 (0.29 → 0.66), and reached 84% accuracy on trained dietary question types. A rule-based post-filter raised accuracy on 8 never-seen question types from 61% to 80%.
+
 Given a photo of a plate of food, NutriVision:
 
 1. **Describes** the dish (captioning)
@@ -51,6 +53,13 @@ Flan-T5-XL was chosen for fine-tuning (instruction-tuned, better calorie estimat
 | VQA seen accuracy (%) | — | 74.7 | 80.7 | **83.7** |
 | VQA unseen accuracy (%) | — | 58.6 | **64.8** | 60.7 |
 
+Notes on reading this table:
+
+- **Calories:** zero-shot Flan-T5 produced a usable number for only 356 of 507 dishes, so its MAE is averaged over those; fine-tuned models answered 506/507.
+- **Macros:** zero-shot Flan-T5 almost never produced gram values (MAPE is exactly 100%), so its macro MAEs are effectively a predict-zero baseline.
+- **VQA:** zero-shot was scored on 4 randomly sampled trained-type questions per dish against one-word answers, so it is not directly comparable to the fine-tuned seen/unseen accuracies, which cover all 20 questions with sentence-level answers. Zero-shot yes/no accuracy was 58.3%.
+- Each configuration is a single training run (one seed), so small differences between the three LoRA variants may not be significant.
+
 ### Effect of the post-filter on VQA accuracy (%)
 
 | Config | Raw | Post-filtered |
@@ -61,9 +70,22 @@ Flan-T5-XL was chosen for fine-tuning (instruction-tuned, better calorie estimat
 | Both LoRA — unseen questions | 60.7 | 80.3 |
 | Both LoRA — overall | 70.6 | **81.7** |
 
+The post-filter mainly helps on unseen question types. On trained question types it is neutral or slightly negative (e.g. Q-Former 74.7% → 71.3%).
+
 Full table: [`results/post_filter_comparison.csv`](results/post_filter_comparison.csv). Interactive version: [`results/post_filter_comparison.html`](results/post_filter_comparison.html).
 
-![Ablation comparison](results/training_plots/ablation_comparison.png)
+### Training loss
+
+![Training loss for the three LoRA variants](results/training_plots/ablation_comparison.png)
+
+The LLM and Both runs reach a lower loss early but become unstable after about 1,000 steps and eventually produce NaN losses, which is where their curves end. The evaluated checkpoints are the best epoch before divergence (LLM: epoch 1, Both: epoch 2). See [Known limitations](#known-limitations).
+
+## Known limitations
+
+- **Training instability in float16.** The model is fine-tuned in float16 without loss scaling. Flan-T5 is known to overflow in float16, and the LLM and Both runs diverged to NaN. Lowering the learning rate from 2e-4 to 1e-4 only delayed it. Training in bfloat16 would be the fix.
+- **Learning-rate schedule.** The scheduler's total step count is computed from batches rather than optimizer steps (gradient accumulation is 8), so warmup lasts about a quarter of training and the learning rate never decays below ~90% of peak. This likely contributed to the divergence above.
+- Because of these two issues, the LLM and Both results probably understate what those variants can achieve, and the ablation should be read with that in mind.
+- Single seed per configuration; no separate validation set, so the best checkpoint is selected on training loss.
 
 ## Repository structure
 
@@ -90,9 +112,12 @@ src/
     demo_app.py             Gradio demo
 results/                    Model outputs, metrics, comparison tables and plots
 logs/                       Console logs from every run, numbered in execution order
+archive/v1/                 Results and logs from the first fine-tuning iteration
 ```
 
-Files prefixed `v2_` are the final runs: sentence-level VQA answers and the seen/unseen question split. Unprefixed fine-tuning files are from the first iteration and are kept for reference.
+Files prefixed `v2_` are the final fine-tuning runs: sentence-level VQA answers and a split into 12 trained and 8 held-out question types. The zero-shot runs have no prefix; they were only run once and serve as the baseline.
+
+`archive/v1/` holds the first iteration (one-word VQA answers, Q-Former only), kept for reference. It is not used by any reported result.
 
 ## Setup
 
@@ -123,7 +148,7 @@ data/
 Run all commands from the repository root. The numbers match the files in `logs/`.
 
 ```bash
-# 1–2. Splits
+# 1. Splits
 python src/data_prep/create_splits.py
 
 # 3–6. Zero-shot inference (add --test-run for a 5-dish sanity check)
@@ -143,17 +168,17 @@ python -m src.data_prep.prepare_training_data
 
 # 12. LoRA fine-tuning (ablation)
 python -m src.train.lora_finetune --target qformer
-python -m src.train.lora_finetune --target llm --lr 1e-4   # lower LR avoids float16 NaNs
+python -m src.train.lora_finetune --target llm --lr 1e-4   # 1e-4 used for the reported run
 python -m src.train.lora_finetune --target both
 
-# 13. Training plots
+# Training plots (no log file)
 python -m src.train.plot_training --runs qformer llm both
 
 # 13–14. Fine-tuned inference and evaluation (repeat for llm and both)
 python -m src.eval.finetuned_inference --target qformer
 python -m src.eval.evaluate --results-dir results/v2_finetuned_qformer
 
-# 15. Post-filter (repeat per results directory) and comparison
+# 15. Post-filter (repeat for each v2 results directory and zero_shot_flan-t5-xl) and comparison
 python -m src.eval.post_filter --results-dir results/v2_finetuned_qformer
 python -m src.eval.compare_post_filter
 ```
