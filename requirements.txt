@@ -1,0 +1,11 @@
+# Python 3.12, CUDA GPU required for inference and training
+torch>=2.1
+transformers>=4.40
+peft>=0.10
+accelerate>=0.27
+Pillow
+numpy
+matplotlib
+nltk
+rouge-score
+gradio>=4.0
